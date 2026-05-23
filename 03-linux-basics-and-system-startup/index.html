@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3-linux-basics-and-system-startup" class="md-skip">
+        <a href="#linux-basics-and-system-startup" class="md-skip">
           Skip to content
         </a>
       
@@ -399,43 +399,538 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-the-boot-process-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. The Boot Process Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The Boot Process Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-boot-sequence-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Boot Sequence at a Glance
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-boot-stages-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        1.2 Boot Stages Summary
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+  <a href="#2-bios-and-uefi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        2. BIOS and UEFI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. BIOS and UEFI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bios-basic-inputoutput-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 BIOS (Basic Input/Output System)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-uefi-unified-extensible-firmware-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        2.2 UEFI (Unified Extensible Firmware Interface)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-secure-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Secure Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-disk-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Disk Partitioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Disk Partitioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mbr-vs-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 MBR vs GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-recommended-partition-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Recommended Partition Layout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Recommended Partition Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-typical-linux-desktop-uefi-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a typical Linux desktop (UEFI + GPT):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-a-server-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a server (minimal):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-common-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Common Filesystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-bootloader-grub2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Bootloader (GRUB2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. The Bootloader (GRUB2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is GRUB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-grub-boot-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 GRUB Boot Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-key-grub-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Key GRUB Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-editing-grub-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Editing GRUB Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-common-grub-parameters-etcdefaultgrub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Common GRUB Parameters (/etc/default/grub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-useful-kernel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Useful Kernel Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-linux-kernel-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Linux Kernel Initialization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Linux Kernel Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-the-kernel-does-at-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What the Kernel Does at Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-initramfs-initrd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 initramfs / initrd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-kernel-image-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Kernel Image Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-init-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Init Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Init Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-what-is-an-init-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 What is an Init System?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-init-system-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Init System Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 systemd
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 systemd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-systemd-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key systemd Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-unit-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemd Unit Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-targets-runlevel-equivalents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemd Targets (Runlevel Equivalents)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-managing-services-with-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Managing Services with systemctl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Managing Services with systemctl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-basic-service-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Basic Service Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-viewing-system-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Viewing System State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-example-nginx-service-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Example: nginx Service Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-system-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. System Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. System Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-journald-systemd-journal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 journald (systemd Journal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-traditional-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Traditional Log Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-shutdown-and-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Shutdown and Reboot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Shutdown and Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-systemctl-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 systemctl Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-shutdown-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 shutdown Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-other-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Other Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Quick Reference Cheat Sheet
       
     </span>
   </a>
@@ -882,43 +1377,538 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-the-boot-process-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. The Boot Process Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. The Boot Process Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-boot-sequence-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Boot Sequence at a Glance
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-boot-stages-summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        1.2 Boot Stages Summary
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+  <a href="#2-bios-and-uefi" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        2. BIOS and UEFI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. BIOS and UEFI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-bios-basic-inputoutput-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 BIOS (Basic Input/Output System)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#22-uefi-unified-extensible-firmware-interface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        2.2 UEFI (Unified Extensible Firmware Interface)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-secure-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Secure Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-disk-partitioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Disk Partitioning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Disk Partitioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-mbr-vs-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 MBR vs GPT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-recommended-partition-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Recommended Partition Layout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Recommended Partition Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-typical-linux-desktop-uefi-gpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a typical Linux desktop (UEFI + GPT):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-a-server-minimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a server (minimal):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-common-filesystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Common Filesystems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-the-bootloader-grub2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. The Bootloader (GRUB2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. The Bootloader (GRUB2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-grub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is GRUB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-grub-boot-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 GRUB Boot Menu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-key-grub-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Key GRUB Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-editing-grub-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Editing GRUB Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-common-grub-parameters-etcdefaultgrub" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Common GRUB Parameters (/etc/default/grub)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-useful-kernel-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Useful Kernel Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-linux-kernel-initialization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Linux Kernel Initialization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Linux Kernel Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-the-kernel-does-at-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What the Kernel Does at Boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-initramfs-initrd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 initramfs / initrd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-kernel-image-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Kernel Image Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-init-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Init Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Init Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-what-is-an-init-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 What is an Init System?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-init-system-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Init System Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-systemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 systemd
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 systemd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-systemd-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key systemd Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-unit-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemd Unit Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemd-targets-runlevel-equivalents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        systemd Targets (Runlevel Equivalents)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-managing-services-with-systemctl" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Managing Services with systemctl
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Managing Services with systemctl">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-basic-service-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Basic Service Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-viewing-system-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Viewing System State
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-example-nginx-service-unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Example: nginx Service Unit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-system-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. System Logging
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. System Logging">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-journald-systemd-journal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 journald (systemd Journal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-traditional-log-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Traditional Log Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-shutdown-and-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Shutdown and Reboot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Shutdown and Reboot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-systemctl-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 systemctl Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-shutdown-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 shutdown Command
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-other-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 Other Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Quick Reference Cheat Sheet
       
     </span>
   </a>
@@ -945,13 +1935,934 @@
   
 
 
-<h1 id="chapter-3-linux-basics-and-system-startup">Chapter 3: Linux Basics and System Startup<a class="headerlink" href="#chapter-3-linux-basics-and-system-startup" title="Permanent link">&para;</a></h1>
-<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<h2 id="key-commands">Key Commands<a class="headerlink" href="#key-commands" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<h1 id="linux-basics-and-system-startup">🚀 Linux Basics and System Startup<a class="headerlink" href="#linux-basics-and-system-startup" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Understanding how Linux boots and starts up is fundamental to system administration. This covers the full boot sequence from power-on to login prompt, init systems, partition layouts, and essential filesystem concepts.</p>
+</blockquote>
+<hr />
+<h2 id="1-the-boot-process-overview">1. The Boot Process Overview<a class="headerlink" href="#1-the-boot-process-overview" title="Permanent link">&para;</a></h2>
+<h3 id="11-boot-sequence-at-a-glance">1.1 Boot Sequence at a Glance<a class="headerlink" href="#11-boot-sequence-at-a-glance" title="Permanent link">&para;</a></h3>
+<p>When you power on a Linux machine, it goes through a precise sequence of steps before handing control to the user.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Power On
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>BIOS / UEFI (Firmware)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Bootloader (GRUB2)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Linux Kernel
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>   ↓
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>initramfs / initrd
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   ↓
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Init System (systemd / SysVinit / Upstart)
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>   ↓
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Login Prompt / Desktop
 </code></pre></div>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h3 id="12-boot-stages-summary">1.2 Boot Stages Summary<a class="headerlink" href="#12-boot-stages-summary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BIOS / UEFI</td>
+<td>POST, finds bootable device</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bootloader</td>
+<td>Loads the kernel into memory</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Kernel</td>
+<td>Initializes hardware, mounts root fs</td>
+</tr>
+<tr>
+<td>4</td>
+<td>initramfs</td>
+<td>Temporary root fs for early boot tasks</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Init System</td>
+<td>Starts all services and processes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Shell / Display Manager</td>
+<td>Presents login prompt or GUI</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-bios-and-uefi">2. BIOS and UEFI<a class="headerlink" href="#2-bios-and-uefi" title="Permanent link">&para;</a></h2>
+<h3 id="21-bios-basic-inputoutput-system">2.1 BIOS (Basic Input/Output System)<a class="headerlink" href="#21-bios-basic-inputoutput-system" title="Permanent link">&para;</a></h3>
+<p><strong>BIOS</strong> is the legacy firmware found on older hardware. It runs immediately on power-on before any OS code.</p>
+<ul>
+<li>Performs <strong>POST</strong> (Power-On Self-Test) — checks hardware</li>
+<li>Reads the <strong>MBR</strong> (Master Boot Record) from the first 512 bytes of a disk</li>
+<li>Hands off to the bootloader found in the MBR</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>BIOS is limited to <strong>2 TB</strong> disk sizes and <strong>4 primary</strong> partitions with MBR. It is being replaced by UEFI on modern hardware.</p>
+</div>
+<h3 id="22-uefi-unified-extensible-firmware-interface">2.2 UEFI (Unified Extensible Firmware Interface)<a class="headerlink" href="#22-uefi-unified-extensible-firmware-interface" title="Permanent link">&para;</a></h3>
+<p><strong>UEFI</strong> is the modern replacement for BIOS with far more features.</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>BIOS</th>
+<th>UEFI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max disk size</td>
+<td>2 TB (MBR)</td>
+<td>9.4 ZB (GPT)</td>
+</tr>
+<tr>
+<td>Partition scheme</td>
+<td>MBR</td>
+<td>GPT</td>
+</tr>
+<tr>
+<td>Boot mode</td>
+<td>16-bit real mode</td>
+<td>32/64-bit protected mode</td>
+</tr>
+<tr>
+<td>Secure Boot</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Boot speed</td>
+<td>Slower</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td>GUI setup</td>
+<td>❌ (text only)</td>
+<td>✅ (often graphical)</td>
+</tr>
+<tr>
+<td>Network boot</td>
+<td>Limited</td>
+<td>Full PXE support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-secure-boot">2.3 Secure Boot<a class="headerlink" href="#23-secure-boot" title="Permanent link">&para;</a></h3>
+<p><strong>Secure Boot</strong> is a UEFI feature that ensures only signed bootloaders and kernels can run. Linux distributions ship with <strong>shim</strong> — a small signed bootloader that can chain-load GRUB.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Secure Boot can cause issues when installing custom kernels or unsigned drivers. It can be disabled in UEFI settings if needed.</p>
+</div>
+<hr />
+<h2 id="3-disk-partitioning">3. Disk Partitioning<a class="headerlink" href="#3-disk-partitioning" title="Permanent link">&para;</a></h2>
+<h3 id="31-mbr-vs-gpt">3.1 MBR vs GPT<a class="headerlink" href="#31-mbr-vs-gpt" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MBR</th>
+<th>GPT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Max partitions</td>
+<td>4 primary (or 3 + extended)</td>
+<td>128 primary</td>
+</tr>
+<tr>
+<td>Max disk size</td>
+<td>2 TB</td>
+<td>9.4 ZB</td>
+</tr>
+<tr>
+<td>Partition table location</td>
+<td>Sector 0</td>
+<td>Sector 1 (with backup at end)</td>
+</tr>
+<tr>
+<td>Redundancy</td>
+<td>None</td>
+<td>Backup table at end of disk</td>
+</tr>
+<tr>
+<td>Required for UEFI</td>
+<td>❌</td>
+<td>✅ (recommended)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-recommended-partition-layout">3.2 Recommended Partition Layout<a class="headerlink" href="#32-recommended-partition-layout" title="Permanent link">&para;</a></h3>
+<h4 id="for-a-typical-linux-desktop-uefi-gpt">For a typical Linux desktop (UEFI + GPT):<a class="headerlink" href="#for-a-typical-linux-desktop-uefi-gpt" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Mount Point</th>
+<th>Size</th>
+<th>Filesystem</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EFI System</td>
+<td><code>/boot/efi</code></td>
+<td>512 MB – 1 GB</td>
+<td>FAT32</td>
+<td>UEFI bootloader files</td>
+</tr>
+<tr>
+<td>Boot</td>
+<td><code>/boot</code></td>
+<td>1 GB</td>
+<td>ext4</td>
+<td>Kernel and initramfs</td>
+</tr>
+<tr>
+<td>Root</td>
+<td><code>/</code></td>
+<td>20–50 GB</td>
+<td>ext4 / btrfs</td>
+<td>OS and installed packages</td>
+</tr>
+<tr>
+<td>Home</td>
+<td><code>/home</code></td>
+<td>Remaining</td>
+<td>ext4 / btrfs</td>
+<td>User data and configs</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td><code>[swap]</code></td>
+<td>1× or 2× RAM</td>
+<td>swap</td>
+<td>Virtual memory overflow</td>
+</tr>
+</tbody>
+</table>
+<h4 id="for-a-server-minimal">For a server (minimal):<a class="headerlink" href="#for-a-server-minimal" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Partition</th>
+<th>Mount</th>
+<th>Size</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EFI</td>
+<td><code>/boot/efi</code></td>
+<td>512 MB</td>
+<td>UEFI only</td>
+</tr>
+<tr>
+<td>Root</td>
+<td><code>/</code></td>
+<td>20+ GB</td>
+<td>All data</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td><code>[swap]</code></td>
+<td>= RAM</td>
+<td>Hibernation support</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>On systems with 16+ GB RAM, a swap partition of <strong>4–8 GB</strong> is usually sufficient unless you need hibernation (which requires swap ≥ RAM size).</p>
+</div>
+<h3 id="33-common-filesystems">3.3 Common Filesystems<a class="headerlink" href="#33-common-filesystems" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Filesystem</th>
+<th>Distro Default</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ext4</strong></td>
+<td>Ubuntu, Debian</td>
+<td>Stable, journaling, widely supported</td>
+</tr>
+<tr>
+<td><strong>xfs</strong></td>
+<td>RHEL, Fedora</td>
+<td>High performance, large files</td>
+</tr>
+<tr>
+<td><strong>btrfs</strong></td>
+<td>openSUSE, Fedora</td>
+<td>Snapshots, RAID, COW</td>
+</tr>
+<tr>
+<td><strong>f2fs</strong></td>
+<td>Some embedded</td>
+<td>Flash-optimized</td>
+</tr>
+<tr>
+<td><strong>FAT32</strong></td>
+<td>EFI partition</td>
+<td>Required for UEFI ESP</td>
+</tr>
+<tr>
+<td><strong>tmpfs</strong></td>
+<td><code>/tmp</code>, <code>/run</code></td>
+<td>RAM-based, cleared on reboot</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-the-bootloader-grub2">4. The Bootloader (GRUB2)<a class="headerlink" href="#4-the-bootloader-grub2" title="Permanent link">&para;</a></h2>
+<h3 id="41-what-is-grub">4.1 What is GRUB?<a class="headerlink" href="#41-what-is-grub" title="Permanent link">&para;</a></h3>
+<p><strong>GRUB2</strong> (GRand Unified Bootloader version 2) is the standard Linux bootloader. It:</p>
+<ul>
+<li>Presents a boot menu (if multiple OS/kernels are installed)</li>
+<li>Loads the selected kernel into RAM</li>
+<li>Passes kernel parameters (options) to the kernel</li>
+<li>Hands off execution to the kernel</li>
+</ul>
+<h3 id="42-grub-boot-menu">4.2 GRUB Boot Menu<a class="headerlink" href="#42-grub-boot-menu" title="Permanent link">&para;</a></h3>
+<p>At startup, GRUB may display a menu where you can:</p>
+<ul>
+<li>Select which kernel to boot</li>
+<li>Boot into <strong>recovery mode</strong></li>
+<li>Edit kernel parameters temporarily</li>
+<li>Boot a different OS (dual-boot)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Hold <strong><code>Shift</code></strong> (BIOS) or <strong><code>Esc</code></strong> (UEFI) during boot to force the GRUB menu to appear if it is hidden.</p>
+</div>
+<h3 id="43-key-grub-files">4.3 Key GRUB Files<a class="headerlink" href="#43-key-grub-files" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>File / Directory</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/boot/grub/grub.cfg</code></td>
+<td>Main GRUB configuration (auto-generated, do not edit)</td>
+</tr>
+<tr>
+<td><code>/etc/default/grub</code></td>
+<td>User-editable GRUB settings</td>
+</tr>
+<tr>
+<td><code>/etc/grub.d/</code></td>
+<td>Scripts that generate <code>grub.cfg</code></td>
+</tr>
+<tr>
+<td><code>/boot/efi/EFI/</code></td>
+<td>UEFI bootloader files</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-editing-grub-settings">4.4 Editing GRUB Settings<a class="headerlink" href="#44-editing-grub-settings" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Edit user settings</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/default/grub
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Regenerate grub.cfg after editing</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo<span class="w"> </span>update-grub<span class="w">           </span><span class="c1"># Debian/Ubuntu</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>sudo<span class="w"> </span>grub2-mkconfig<span class="w"> </span>-o<span class="w"> </span>/boot/grub2/grub.cfg<span class="w">  </span><span class="c1"># RHEL/Fedora</span>
+</code></pre></div>
+<h3 id="45-common-grub-parameters-etcdefaultgrub">4.5 Common GRUB Parameters (<code>/etc/default/grub</code>)<a class="headerlink" href="#45-common-grub-parameters-etcdefaultgrub" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">GRUB_DEFAULT</span><span class="o">=</span><span class="m">0</span><span class="w">                  </span><span class="c1"># Default menu entry (0 = first)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nv">GRUB_TIMEOUT</span><span class="o">=</span><span class="m">5</span><span class="w">                  </span><span class="c1"># Seconds to show menu before auto-boot</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">GRUB_TIMEOUT_STYLE</span><span class="o">=</span>menu<span class="w">         </span><span class="c1"># hidden, countdown, or menu</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;quiet splash&quot;</span><span class="w">  </span><span class="c1"># Kernel params for normal boot</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w">           </span><span class="c1"># Extra kernel params for all boots</span>
+</code></pre></div>
+<h3 id="46-useful-kernel-parameters">4.6 Useful Kernel Parameters<a class="headerlink" href="#46-useful-kernel-parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>quiet</code></td>
+<td>Suppress most boot messages</td>
+</tr>
+<tr>
+<td><code>splash</code></td>
+<td>Show splash screen</td>
+</tr>
+<tr>
+<td><code>nomodeset</code></td>
+<td>Disable GPU mode-setting (fix display issues)</td>
+</tr>
+<tr>
+<td><code>single</code> / <code>1</code></td>
+<td>Boot into single-user (rescue) mode</td>
+</tr>
+<tr>
+<td><code>ro</code></td>
+<td>Mount root filesystem read-only initially</td>
+</tr>
+<tr>
+<td><code>rw</code></td>
+<td>Mount root filesystem read-write from start</td>
+</tr>
+<tr>
+<td><code>init=/bin/bash</code></td>
+<td>Boot directly to shell (recovery)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-the-linux-kernel-initialization">5. The Linux Kernel Initialization<a class="headerlink" href="#5-the-linux-kernel-initialization" title="Permanent link">&para;</a></h2>
+<h3 id="51-what-the-kernel-does-at-boot">5.1 What the Kernel Does at Boot<a class="headerlink" href="#51-what-the-kernel-does-at-boot" title="Permanent link">&para;</a></h3>
+<p>Once GRUB loads the kernel image (<code>vmlinuz</code>) into memory and executes it:</p>
+<ol>
+<li>Kernel decompresses itself</li>
+<li>Detects and initializes CPU, memory, and hardware</li>
+<li>Sets up memory management (MMU)</li>
+<li>Mounts <strong>initramfs</strong> as a temporary root filesystem</li>
+<li>Executes <code>/init</code> inside initramfs</li>
+<li>Performs final hardware setup (drivers, modules)</li>
+<li>Mounts the real root filesystem (<code>/</code>)</li>
+<li>Executes the <strong>init system</strong> (PID 1)</li>
+</ol>
+<h3 id="52-initramfs-initrd">5.2 initramfs / initrd<a class="headerlink" href="#52-initramfs-initrd" title="Permanent link">&para;</a></h3>
+<p><strong>initramfs</strong> (initial RAM filesystem) is a compressed archive containing a minimal temporary root filesystem used during early boot.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GRUB loads:
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  ├── vmlinuz      ← compressed kernel image
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  └── initramfs    ← temporary root filesystem (cpio archive)
+</code></pre></div>
+<p><strong>Purpose of initramfs:</strong></p>
+<ul>
+<li>Load kernel modules needed to mount the real root (e.g., disk drivers)</li>
+<li>Handle encrypted disks (LUKS), LVM, software RAID</li>
+<li>Mount the real root filesystem</li>
+<li>Hand control to the real init system</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>On Debian/Ubuntu: <code>initramfs-tools</code> manages initramfs. On RHEL/Fedora: <code>dracut</code> is used instead.</p>
+</div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Rebuild initramfs (Ubuntu/Debian)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>update-initramfs<span class="w"> </span>-u
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Rebuild initramfs (RHEL/Fedora)</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>sudo<span class="w"> </span>dracut<span class="w"> </span>--force
+</code></pre></div>
+<h3 id="53-kernel-image-files">5.3 Kernel Image Files<a class="headerlink" href="#53-kernel-image-files" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vmlinux</code></td>
+<td>Uncompressed kernel ELF binary</td>
+</tr>
+<tr>
+<td><code>vmlinuz</code></td>
+<td>Compressed kernel image (z = zlib)</td>
+</tr>
+<tr>
+<td><code>bzImage</code></td>
+<td>Big zImage — most common on x86</td>
+</tr>
+<tr>
+<td><code>uImage</code></td>
+<td>U-Boot wrapped kernel (embedded)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># View kernel images in /boot</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ls<span class="w"> </span>-lh<span class="w"> </span>/boot/vmlinuz*
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>ls<span class="w"> </span>-lh<span class="w"> </span>/boot/initrd*
+</code></pre></div>
+<hr />
+<h2 id="6-init-systems">6. Init Systems<a class="headerlink" href="#6-init-systems" title="Permanent link">&para;</a></h2>
+<h3 id="61-what-is-an-init-system">6.1 What is an Init System?<a class="headerlink" href="#61-what-is-an-init-system" title="Permanent link">&para;</a></h3>
+<p>The <strong>init system</strong> is the first process started by the kernel (PID 1). It is responsible for:</p>
+<ul>
+<li>Starting all system services and daemons</li>
+<li>Managing system runlevels / targets</li>
+<li>Handling service dependencies</li>
+<li>Rebooting or shutting down the system</li>
+</ul>
+<h3 id="62-init-system-comparison">6.2 Init System Comparison<a class="headerlink" href="#62-init-system-comparison" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Init System</th>
+<th>Used By</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>systemd</strong></td>
+<td>Ubuntu, Fedora, RHEL, Debian (modern)</td>
+<td>Unit files in <code>/etc/systemd/system/</code></td>
+</tr>
+<tr>
+<td><strong>SysVinit</strong></td>
+<td>Legacy RHEL, older Debian</td>
+<td>Shell scripts in <code>/etc/init.d/</code></td>
+</tr>
+<tr>
+<td><strong>Upstart</strong></td>
+<td>Older Ubuntu (pre-15.04)</td>
+<td>Jobs in <code>/etc/init/</code></td>
+</tr>
+<tr>
+<td><strong>OpenRC</strong></td>
+<td>Gentoo, Alpine</td>
+<td>Scripts in <code>/etc/init.d/</code></td>
+</tr>
+<tr>
+<td><strong>runit</strong></td>
+<td>Void Linux</td>
+<td>Service dirs in <code>/etc/sv/</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>systemd</strong> is now the default init system on nearly all major Linux distributions.</p>
+</div>
+<h3 id="63-systemd">6.3 systemd<a class="headerlink" href="#63-systemd" title="Permanent link">&para;</a></h3>
+<p><strong>systemd</strong> is a system and service manager that handles parallel service startup, dependency resolution, logging (journald), and more.</p>
+<h4 id="key-systemd-concepts">Key systemd Concepts<a class="headerlink" href="#key-systemd-concepts" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit</strong></td>
+<td>A configuration object (service, socket, mount, etc.)</td>
+</tr>
+<tr>
+<td><strong>Target</strong></td>
+<td>Group of units (replaces SysV runlevels)</td>
+</tr>
+<tr>
+<td><strong>Journal</strong></td>
+<td>Binary logging system (<code>journald</code>)</td>
+</tr>
+<tr>
+<td><strong>Socket activation</strong></td>
+<td>Start services on-demand when a socket receives a connection</td>
+</tr>
+<tr>
+<td><strong>Cgroups</strong></td>
+<td>Resource isolation per service</td>
+</tr>
+</tbody>
+</table>
+<h4 id="systemd-unit-types">systemd Unit Types<a class="headerlink" href="#systemd-unit-types" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Unit Type</th>
+<th>Extension</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service</td>
+<td><code>.service</code></td>
+<td>Background daemons</td>
+</tr>
+<tr>
+<td>Target</td>
+<td><code>.target</code></td>
+<td>Grouping / runlevel equivalent</td>
+</tr>
+<tr>
+<td>Socket</td>
+<td><code>.socket</code></td>
+<td>Socket-based activation</td>
+</tr>
+<tr>
+<td>Mount</td>
+<td><code>.mount</code></td>
+<td>Filesystem mount points</td>
+</tr>
+<tr>
+<td>Timer</td>
+<td><code>.timer</code></td>
+<td>Scheduled tasks (cron replacement)</td>
+</tr>
+<tr>
+<td>Path</td>
+<td><code>.path</code></td>
+<td>Trigger on filesystem path change</td>
+</tr>
+<tr>
+<td>Device</td>
+<td><code>.device</code></td>
+<td>Hardware device units</td>
+</tr>
+</tbody>
+</table>
+<h4 id="systemd-targets-runlevel-equivalents">systemd Targets (Runlevel Equivalents)<a class="headerlink" href="#systemd-targets-runlevel-equivalents" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>systemd Target</th>
+<th>SysV Runlevel</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>poweroff.target</code></td>
+<td>0</td>
+<td>Halt / power off</td>
+</tr>
+<tr>
+<td><code>rescue.target</code></td>
+<td>1</td>
+<td>Single-user / rescue mode</td>
+</tr>
+<tr>
+<td><code>multi-user.target</code></td>
+<td>3</td>
+<td>Multi-user, no GUI</td>
+</tr>
+<tr>
+<td><code>graphical.target</code></td>
+<td>5</td>
+<td>Multi-user with GUI</td>
+</tr>
+<tr>
+<td><code>reboot.target</code></td>
+<td>6</td>
+<td>Reboot</td>
+</tr>
+<tr>
+<td><code>emergency.target</code></td>
+<td>—</td>
+<td>Minimal emergency shell</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Check current target</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>systemctl<span class="w"> </span>get-default
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Set default target</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>set-default<span class="w"> </span>multi-user.target
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1"># Switch to a target immediately</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>isolate<span class="w"> </span>rescue.target
+</code></pre></div>
+<hr />
+<h2 id="7-managing-services-with-systemctl">7. Managing Services with systemctl<a class="headerlink" href="#7-managing-services-with-systemctl" title="Permanent link">&para;</a></h2>
+<h3 id="71-basic-service-commands">7.1 Basic Service Commands<a class="headerlink" href="#71-basic-service-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Start a service</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># Stop a service</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Restart a service</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># Reload config without restarting</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reload<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># Enable service at boot</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># Disable service at boot</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="c1"># Check service status</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>systemctl<span class="w"> </span>status<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1"># Check if service is active</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>systemctl<span class="w"> </span>is-active<span class="w"> </span>&lt;service&gt;
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="c1"># Check if service is enabled</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>systemctl<span class="w"> </span>is-enabled<span class="w"> </span>&lt;service&gt;
+</code></pre></div>
+<h3 id="72-viewing-system-state">7.2 Viewing System State<a class="headerlink" href="#72-viewing-system-state" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># List all running services</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>systemctl<span class="w"> </span>list-units<span class="w"> </span>--type<span class="o">=</span>service<span class="w"> </span>--state<span class="o">=</span>running
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># List all failed units</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>systemctl<span class="w"> </span>--failed
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># List all unit files</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>systemctl<span class="w"> </span>list-unit-files
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1"># Show dependencies of a unit</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>systemctl<span class="w"> </span>list-dependencies<span class="w"> </span>&lt;service&gt;
+</code></pre></div>
+<h3 id="73-example-nginx-service-unit">7.3 Example: nginx Service Unit<a class="headerlink" href="#73-example-nginx-service-unit" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># /etc/systemd/system/nginx.service</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">[Unit]</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="na">Description</span><span class="o">=</span><span class="s">The NGINX HTTP Server</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network.target</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">[Service]</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">forking</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="na">PIDFile</span><span class="o">=</span><span class="s">/run/nginx.pid</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="na">ExecStartPre</span><span class="o">=</span><span class="s">/usr/sbin/nginx -t</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/sbin/nginx</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="na">ExecReload</span><span class="o">=</span><span class="s">/bin/kill -s HUP $MAINPID</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="na">ExecStop</span><span class="o">=</span><span class="s">/bin/kill -s QUIT $MAINPID</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="k">[Install]</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After creating or editing a unit file, run <code>sudo systemctl daemon-reload</code> before starting the service.</p>
+</div>
+<hr />
+<h2 id="8-system-logging">8. System Logging<a class="headerlink" href="#8-system-logging" title="Permanent link">&para;</a></h2>
+<h3 id="81-journald-systemd-journal">8.1 journald (systemd Journal)<a class="headerlink" href="#81-journald-systemd-journal" title="Permanent link">&para;</a></h3>
+<p><strong>journald</strong> collects logs from the kernel, services, and applications into a structured binary log.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># View all logs (newest at bottom)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>journalctl
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># Follow new log entries in real time</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>journalctl<span class="w"> </span>-f
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1"># View logs for a specific service</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>nginx.service
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="c1"># View logs since last boot</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>journalctl<span class="w"> </span>-b
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="c1"># View logs from previous boot</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>journalctl<span class="w"> </span>-b<span class="w"> </span>-1
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c1"># View kernel messages</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>journalctl<span class="w"> </span>-k
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="c1"># Filter by priority (0=emerg ... 7=debug)</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>journalctl<span class="w"> </span>-p<span class="w"> </span>err
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="c1"># Show logs since a time</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>journalctl<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;2024-01-01 10:00:00&quot;</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>journalctl<span class="w"> </span>--since<span class="w"> </span><span class="s2">&quot;1 hour ago&quot;</span>
+</code></pre></div>
+<h3 id="82-traditional-log-files">8.2 Traditional Log Files<a class="headerlink" href="#82-traditional-log-files" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/var/log/syslog</code></td>
+<td>General system messages (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td><code>/var/log/messages</code></td>
+<td>General system messages (RHEL/Fedora)</td>
+</tr>
+<tr>
+<td><code>/var/log/auth.log</code></td>
+<td>Authentication logs</td>
+</tr>
+<tr>
+<td><code>/var/log/kern.log</code></td>
+<td>Kernel messages</td>
+</tr>
+<tr>
+<td><code>/var/log/boot.log</code></td>
+<td>Boot process messages</td>
+</tr>
+<tr>
+<td><code>/var/log/dmesg</code></td>
+<td>Kernel ring buffer (hardware init)</td>
+</tr>
+<tr>
+<td><code>/var/log/apt/</code></td>
+<td>Package manager logs (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td><code>/var/log/dnf.log</code></td>
+<td>Package manager logs (Fedora/RHEL)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># View kernel ring buffer</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>dmesg
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>error
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>dmesg<span class="w"> </span>--level<span class="o">=</span>err,warn
+</code></pre></div>
+<hr />
+<h2 id="9-shutdown-and-reboot">9. Shutdown and Reboot<a class="headerlink" href="#9-shutdown-and-reboot" title="Permanent link">&para;</a></h2>
+<h3 id="91-systemctl-commands">9.1 systemctl Commands<a class="headerlink" href="#91-systemctl-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Shutdown immediately</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>poweroff
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Reboot immediately</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>reboot
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1"># Suspend (sleep)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">suspend</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="c1"># Hibernate</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>hibernate
+</code></pre></div>
+<h3 id="92-shutdown-command">9.2 shutdown Command<a class="headerlink" href="#92-shutdown-command" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Shutdown now</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span>now
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Shutdown at a specific time</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span><span class="m">22</span>:00
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="c1"># Shutdown in N minutes</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span>+10
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="c1"># Reboot now</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="c1"># Reboot in 5 minutes with a message</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>+5<span class="w"> </span><span class="s2">&quot;System update in progress&quot;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="c1"># Cancel a scheduled shutdown</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-c
+</code></pre></div>
+<h3 id="93-other-commands">9.3 Other Commands<a class="headerlink" href="#93-other-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Reboot</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>sudo<span class="w"> </span>reboot
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Halt (stop CPU, don&#39;t power off)</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>sudo<span class="w"> </span>halt
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># Power off</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>sudo<span class="w"> </span>poweroff
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always use <code>shutdown</code> with a time delay on shared/production systems to warn logged-in users before rebooting.</p>
+</div>
+<hr />
+<h2 id="quick-reference-cheat-sheet">📋 Quick Reference Cheat Sheet<a class="headerlink" href="#quick-reference-cheat-sheet" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="c1"># --- Boot &amp; Kernel ---</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>uname<span class="w"> </span>-r<span class="w">                          </span><span class="c1"># Kernel version</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>uname<span class="w"> </span>-a<span class="w">                          </span><span class="c1"># All system info</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>cat<span class="w"> </span>/proc/cmdline<span class="w">                 </span><span class="c1"># Kernel boot parameters</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-50<span class="w">                  </span><span class="c1"># Early kernel messages</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>ls<span class="w"> </span>/boot/<span class="w">                         </span><span class="c1"># List boot files</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="c1"># --- GRUB ---</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>sudo<span class="w"> </span>update-grub<span class="w">                  </span><span class="c1"># Regenerate grub.cfg (Debian/Ubuntu)</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>sudo<span class="w"> </span>grub2-mkconfig<span class="w"> </span>-o<span class="w"> </span>/boot/grub2/grub.cfg<span class="w">  </span><span class="c1"># (RHEL/Fedora)</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>cat<span class="w"> </span>/etc/default/grub<span class="w">             </span><span class="c1"># View GRUB settings</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="c1"># --- systemd / Services ---</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>systemctl<span class="w"> </span>status<span class="w"> </span>&lt;service&gt;<span class="w">        </span><span class="c1"># Check service status</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>&lt;service&gt;<span class="w">    </span><span class="c1"># Start service</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>&lt;service&gt;<span class="w">     </span><span class="c1"># Stop service</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>&lt;service&gt;<span class="w">  </span><span class="c1"># Restart service</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>&lt;service&gt;<span class="w">   </span><span class="c1"># Enable at boot</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>disable<span class="w"> </span>&lt;service&gt;<span class="w">  </span><span class="c1"># Disable at boot</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>systemctl<span class="w"> </span>list-units<span class="w"> </span>--failed<span class="w">     </span><span class="c1"># Show failed units</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>systemctl<span class="w"> </span>get-default<span class="w">             </span><span class="c1"># Show default target</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>set-default<span class="w"> </span>graphical.target<span class="w">  </span><span class="c1"># Set GUI boot</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="c1"># --- Logging ---</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a>journalctl<span class="w"> </span>-f<span class="w">                     </span><span class="c1"># Follow live logs</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26" href="#__codelineno-15-26"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>&lt;service&gt;<span class="w">           </span><span class="c1"># Logs for one service</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27" href="#__codelineno-15-27"></a>journalctl<span class="w"> </span>-b<span class="w">                     </span><span class="c1"># Logs since last boot</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28" href="#__codelineno-15-28"></a>journalctl<span class="w"> </span>-p<span class="w"> </span>err<span class="w">                 </span><span class="c1"># Error-level logs only</span>
+<a id="__codelineno-15-29" name="__codelineno-15-29" href="#__codelineno-15-29"></a>dmesg<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>error<span class="w">             </span><span class="c1"># Kernel errors</span>
+<a id="__codelineno-15-30" name="__codelineno-15-30" href="#__codelineno-15-30"></a>
+<a id="__codelineno-15-31" name="__codelineno-15-31" href="#__codelineno-15-31"></a><span class="c1"># --- Shutdown / Reboot ---</span>
+<a id="__codelineno-15-32" name="__codelineno-15-32" href="#__codelineno-15-32"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span>now<span class="w">              </span><span class="c1"># Shutdown immediately</span>
+<a id="__codelineno-15-33" name="__codelineno-15-33" href="#__codelineno-15-33"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now<span class="w">              </span><span class="c1"># Reboot immediately</span>
+<a id="__codelineno-15-34" name="__codelineno-15-34" href="#__codelineno-15-34"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-h<span class="w"> </span>+5<span class="w"> </span><span class="s2">&quot;Going down&quot;</span><span class="w">  </span><span class="c1"># Shutdown in 5 min with message</span>
+<a id="__codelineno-15-35" name="__codelineno-15-35" href="#__codelineno-15-35"></a>sudo<span class="w"> </span>shutdown<span class="w"> </span>-c<span class="w">                  </span><span class="c1"># Cancel scheduled shutdown</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36" href="#__codelineno-15-36"></a>sudo<span class="w"> </span>reboot<span class="w">                       </span><span class="c1"># Quick reboot</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>uname -r</code></td>
+<td>Show running kernel version</td>
+</tr>
+<tr>
+<td><code>dmesg</code></td>
+<td>Kernel ring buffer / boot messages</td>
+</tr>
+<tr>
+<td><code>systemctl status &lt;svc&gt;</code></td>
+<td>Service status</td>
+</tr>
+<tr>
+<td><code>systemctl enable &lt;svc&gt;</code></td>
+<td>Enable service at boot</td>
+</tr>
+<tr>
+<td><code>journalctl -f</code></td>
+<td>Live log tail</td>
+</tr>
+<tr>
+<td><code>journalctl -b</code></td>
+<td>Logs from current boot</td>
+</tr>
+<tr>
+<td><code>systemctl get-default</code></td>
+<td>Show current boot target</td>
+</tr>
+<tr>
+<td><code>sudo update-grub</code></td>
+<td>Regenerate GRUB config</td>
+</tr>
+<tr>
+<td><code>sudo shutdown -r now</code></td>
+<td>Reboot immediately</td>
+</tr>
+<tr>
+<td><code>sudo shutdown -h +10</code></td>
+<td>Shutdown in 10 minutes</td>
+</tr>
+</tbody>
+</table>
 
 
 
