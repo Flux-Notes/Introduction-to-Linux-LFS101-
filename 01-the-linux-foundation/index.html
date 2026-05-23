@@ -1,0 +1,3553 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://your-username.github.io/Introduction-to-Linux/01-the-linux-foundation/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../02-linux-philosophy-and-concepts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>🏛️ The Linux Foundation - Introduction to Linux</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-linux-foundation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Introduction to Linux" class="md-header__button md-logo" aria-label="Introduction to Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Linux
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🏛️ The Linux Foundation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/your-username/Introduction-to-Linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Introduction to Linux" class="md-nav__button md-logo" aria-label="Introduction to Linux" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introduction to Linux
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/your-username/Introduction-to-Linux" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏠 Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ The Linux Foundation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏛️ The Linux Foundation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-linux-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is the Linux Foundation?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is the Linux Foundation?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mission-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Mission Statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-history-of-linux-and-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. History of Linux and the Foundation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. History of Linux and the Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-birth-of-linux-1991" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 The Birth of Linux (1991)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-timeline-of-key-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Timeline of Key Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-the-gnu-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 The GNU Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-linux-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linux Kernel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Linux Kernel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-what-is-a-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 What is a Kernel?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-what-the-kernel-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 What the Kernel Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-kernel-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Kernel Versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-kernel-development-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Kernel Development Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-long-term-support-lts-kernels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Long-Term Support (LTS) Kernels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-linux-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Linux Distributions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Linux Distributions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-a-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is a Distribution?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-major-distribution-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Major Distribution Families
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-choosing-a-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Choosing a Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-package-managers-by-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Package Managers by Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-linux-foundation-organization-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Linux Foundation — Organization &amp; Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Linux Foundation — Organization &amp; Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-how-its-organized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 How It's Organized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-membership-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Membership Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-how-the-foundation-is-funded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 How the Foundation is Funded
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-major-linux-foundation-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Major Linux Foundation Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Major Linux Foundation Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Core Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cloud-container-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cloud &amp; Container Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-networking-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Networking Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-security-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Security Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-the-cloud-native-computing-foundation-cncf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 The Cloud Native Computing Foundation (CNCF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-linux-kernel-development-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Linux Kernel Development &amp; Governance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Linux Kernel Development &amp; Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-who-controls-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Who Controls Linux?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-the-kernel-development-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 The Kernel Development Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-kernel-release-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Kernel Release Cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-contributor-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Contributor Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-open-source-philosophy-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Open Source Philosophy &amp; Licensing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Open Source Philosophy &amp; Licensing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What is Open Source?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-free-software-vs-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Free Software vs Open Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-common-open-source-licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Common Open Source Licenses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-why-linux-uses-gpl-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Why Linux Uses GPL v2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-linux-foundation-training-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Linux Foundation Training &amp; Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Linux Foundation Training &amp; Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-training-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Training Programs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-certifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Certifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-how-to-get-certified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 How to Get Certified
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-linux-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Linux in the Real World
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Linux in the Real World">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-where-linux-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Where Linux Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-linux-market-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Linux Market Share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-companies-built-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Companies Built on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-linux-community-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Linux Community &amp; Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Linux Community &amp; Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-open-source-community-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Open Source Community Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-key-community-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Key Community Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-annual-linux-foundation-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Annual Linux Foundation Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-getting-started-with-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Getting Started with Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Getting Started with Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-ways-to-try-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Ways to Try Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-installing-ubuntu-most-beginner-friendly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Installing Ubuntu (Most Beginner-Friendly)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-essential-first-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Essential First Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-linux-foundation-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Linux Foundation Cheat Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Linux Foundation Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-facts-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Facts to Remember
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-system-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your System Info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-directories-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Directories to Know
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-linux-philosophy-and-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    💡 Linux Philosophy and Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-linux-basics-and-system-startup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🚀 Linux Basics and System Startup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-graphical-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖥️ Graphical Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-system-configuration-from-graphical-interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ System Configuration from Graphical Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-common-applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📦 Common Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-command-line-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⌨️ Command Line Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-finding-linux-documentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Finding Linux Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-processes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔄 Processes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-file-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🗃️ File Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-text-editors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Text Editors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-user-environment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    👤 User Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-manipulating-text/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ✂️ Manipulating Text
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-network-operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌐 Network Operations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-bash-shell-and-basic-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🐚 Bash Shell and Basic Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-more-on-bash-shell-scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔧 More on Bash Shell Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🖨️ Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-local-security-principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔒 Local Security Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-linux-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is the Linux Foundation?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is the Linux Foundation?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-mission-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Mission Statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-why-it-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Why It Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-history-of-linux-and-the-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. History of Linux and the Foundation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. History of Linux and the Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-the-birth-of-linux-1991" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 The Birth of Linux (1991)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-timeline-of-key-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Timeline of Key Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-the-gnu-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 The GNU Connection
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-linux-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linux Kernel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Linux Kernel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-what-is-a-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 What is a Kernel?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-what-the-kernel-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 What the Kernel Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-kernel-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Kernel Versions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-kernel-development-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Kernel Development Process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-long-term-support-lts-kernels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Long-Term Support (LTS) Kernels
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-linux-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Linux Distributions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Linux Distributions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-what-is-a-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 What is a Distribution?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-major-distribution-families" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Major Distribution Families
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-choosing-a-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Choosing a Distribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-package-managers-by-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Package Managers by Family
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-the-linux-foundation-organization-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. The Linux Foundation — Organization &amp; Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. The Linux Foundation — Organization &amp; Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-how-its-organized" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 How It's Organized
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-membership-tiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Membership Tiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-how-the-foundation-is-funded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 How the Foundation is Funded
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-major-linux-foundation-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Major Linux Foundation Projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Major Linux Foundation Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-core-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Core Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cloud-container-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Cloud &amp; Container Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-networking-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Networking Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-security-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Security Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#65-the-cloud-native-computing-foundation-cncf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 The Cloud Native Computing Foundation (CNCF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-linux-kernel-development-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Linux Kernel Development &amp; Governance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Linux Kernel Development &amp; Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-who-controls-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Who Controls Linux?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-the-kernel-development-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 The Kernel Development Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-kernel-release-cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Kernel Release Cycle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-contributor-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Contributor Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-open-source-philosophy-licensing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Open Source Philosophy &amp; Licensing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Open Source Philosophy &amp; Licensing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-what-is-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 What is Open Source?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-free-software-vs-open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 Free Software vs Open Source
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-common-open-source-licenses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 Common Open Source Licenses
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-why-linux-uses-gpl-v2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Why Linux Uses GPL v2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-linux-foundation-training-certification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Linux Foundation Training &amp; Certification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Linux Foundation Training &amp; Certification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-training-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 Training Programs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-certifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 Certifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-how-to-get-certified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 How to Get Certified
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-linux-in-the-real-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Linux in the Real World
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Linux in the Real World">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-where-linux-runs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Where Linux Runs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-linux-market-share" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Linux Market Share
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-companies-built-on-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 Companies Built on Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-linux-community-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Linux Community &amp; Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Linux Community &amp; Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-open-source-community-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 The Open Source Community Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-key-community-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Key Community Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-annual-linux-foundation-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Annual Linux Foundation Events
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-getting-started-with-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Getting Started with Linux
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Getting Started with Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-ways-to-try-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 Ways to Try Linux
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-installing-ubuntu-most-beginner-friendly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Installing Ubuntu (Most Beginner-Friendly)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-essential-first-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 Essential First Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-linux-foundation-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Linux Foundation Cheat Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick Reference: Linux Foundation Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-facts-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Facts to Remember
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-your-system-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check Your System Info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-directories-to-know" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Directories to Know
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="the-linux-foundation">🏛️ The Linux Foundation<a class="headerlink" href="#the-linux-foundation" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><em>"Linux is not just an operating system — it's a movement, a philosophy, and the backbone of the modern digital world."</em></p>
+</blockquote>
+<p>This document covers the <strong>A to Z of The Linux Foundation</strong> — its history, mission, governance, projects, and why it matters — as part of the LFS101 Introduction to Linux course.</p>
+<hr />
+<h2 id="1-what-is-the-linux-foundation">1. What is the Linux Foundation?<a class="headerlink" href="#1-what-is-the-linux-foundation" title="Permanent link">&para;</a></h2>
+<p>The <strong>Linux Foundation</strong> is a non-profit consortium founded in <strong>2000</strong> by merging two organizations:
+- <strong>Open Source Development Labs (OSDL)</strong>
+- <strong>Free Standards Group (FSG)</strong></p>
+<p>Its primary mission is to <strong>promote, protect, and advance Linux and collaborative open source development</strong> by providing a neutral home for the world's most critical open source projects.</p>
+<h3 id="11-mission-statement">1.1 Mission Statement<a class="headerlink" href="#11-mission-statement" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><em>"The Linux Foundation's mission is to promote, protect, and advance Linux and to support the growth of Linux and open source communities."</em></p>
+</blockquote>
+<p>In simple terms, it:
+- Funds and sponsors Linux kernel development
+- Provides legal protection for Linux developers
+- Organizes events, training, and certification programs
+- Hosts thousands of collaborative open source projects</p>
+<h3 id="12-why-it-matters">1.2 Why It Matters<a class="headerlink" href="#12-why-it-matters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Without Linux Foundation</th>
+<th>With Linux Foundation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fragmented kernel development</td>
+<td>Unified, coordinated development</td>
+</tr>
+<tr>
+<td>No legal protection for contributors</td>
+<td>IP protection and legal support</td>
+</tr>
+<tr>
+<td>- No standard certifications</td>
+<td>Industry-recognized certifications</td>
+</tr>
+<tr>
+<td>Slower adoption in enterprise</td>
+<td>Broad corporate and community adoption</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Did you know?</p>
+<p>The Linux Foundation currently hosts over <strong>900 open source projects</strong> and has members including Google, Microsoft, IBM, Intel, Amazon, and thousands of individual developers worldwide.</p>
+</div>
+<hr />
+<h2 id="2-history-of-linux-and-the-foundation">2. History of Linux and the Foundation<a class="headerlink" href="#2-history-of-linux-and-the-foundation" title="Permanent link">&para;</a></h2>
+<h3 id="21-the-birth-of-linux-1991">2.1 The Birth of Linux (1991)<a class="headerlink" href="#21-the-birth-of-linux-1991" title="Permanent link">&para;</a></h3>
+<p>In <strong>August 1991</strong>, a 21-year-old Finnish computer science student named <strong>Linus Torvalds</strong> posted a now-famous message to a Usenet newsgroup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;Hello everybody out there using minix —
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>I&#39;m doing a (free) operating system (just a hobby, won&#39;t be big and
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>professional like gnu) for 386(486) AT clones.&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                    — Linus Torvalds, August 25, 1991
+</code></pre></div>
+<ul>
+<li>The first version, <strong>Linux 0.01</strong>, was released in <strong>September 1991</strong></li>
+<li>It was inspired by <strong>MINIX</strong>, a small Unix-like OS used for teaching</li>
+<li>Linus released it under the <strong>GNU General Public License (GPL)</strong> in 1992</li>
+<li>This decision made Linux <strong>free and open source</strong> forever</li>
+</ul>
+<h3 id="22-timeline-of-key-events">2.2 Timeline of Key Events<a class="headerlink" href="#22-timeline-of-key-events" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Event</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1969</strong></td>
+<td>Unix created at AT&amp;T Bell Labs by Ken Thompson and Dennis Ritchie</td>
+</tr>
+<tr>
+<td><strong>1983</strong></td>
+<td>Richard Stallman announces the GNU Project</td>
+</tr>
+<tr>
+<td><strong>1987</strong></td>
+<td>MINIX released by Andrew Tanenbaum</td>
+</tr>
+<tr>
+<td><strong>1991</strong></td>
+<td>Linus Torvalds releases Linux 0.01</td>
+</tr>
+<tr>
+<td><strong>1992</strong></td>
+<td>Linux released under GNU GPL — truly free and open</td>
+</tr>
+<tr>
+<td><strong>1993</strong></td>
+<td>Slackware and Debian, the first Linux distributions, released</td>
+</tr>
+<tr>
+<td><strong>1994</strong></td>
+<td>Linux kernel 1.0 released</td>
+</tr>
+<tr>
+<td><strong>1996</strong></td>
+<td>Tux (the penguin) becomes Linux's mascot</td>
+</tr>
+<tr>
+<td><strong>1998</strong></td>
+<td>IBM, Intel, Oracle announce major Linux support</td>
+</tr>
+<tr>
+<td><strong>2000</strong></td>
+<td>Linux Foundation's predecessor organizations formed</td>
+</tr>
+<tr>
+<td><strong>2007</strong></td>
+<td>Linux Foundation officially founded</td>
+</tr>
+<tr>
+<td><strong>2011</strong></td>
+<td>Linux kernel 3.0 released — 20th anniversary</td>
+</tr>
+<tr>
+<td><strong>2015</strong></td>
+<td>Linux Foundation launches Let's Encrypt</td>
+</tr>
+<tr>
+<td><strong>2022</strong></td>
+<td>Linux kernel 6.0 released</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-the-gnu-connection">2.3 The GNU Connection<a class="headerlink" href="#23-the-gnu-connection" title="Permanent link">&para;</a></h3>
+<p>Linux didn't grow in isolation — it was paired with the <strong>GNU Project tools</strong> created by <strong>Richard Stallman</strong> and the Free Software Foundation (FSF):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GNU Project + Linux Kernel = GNU/Linux Operating System
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>GNU provided:  gcc (compiler), bash (shell), glibc (C library),
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>               coreutils (ls, cp, mv...), make, gdb, and much more
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Linux provided: The kernel (hardware management, process scheduling,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                memory management, device drivers)
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">GNU/Linux vs Linux</p>
+<p>Technically, what most people call "Linux" is <strong>GNU/Linux</strong> — the Linux kernel combined with GNU tools. Richard Stallman prefers the term GNU/Linux to acknowledge both contributions. In everyday usage, "Linux" refers to the full system.</p>
+</div>
+<hr />
+<h2 id="3-linux-kernel">3. Linux Kernel<a class="headerlink" href="#3-linux-kernel" title="Permanent link">&para;</a></h2>
+<h3 id="31-what-is-a-kernel">3.1 What is a Kernel?<a class="headerlink" href="#31-what-is-a-kernel" title="Permanent link">&para;</a></h3>
+<p>The <strong>kernel</strong> is the core of the operating system — it is the bridge between software (applications) and hardware (CPU, memory, disk, network).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>┌─────────────────────────────────┐
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>│         User Applications       │  ← What you run (browser, editor, etc.)
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>├─────────────────────────────────┤
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>│         System Libraries        │  ← glibc, system calls
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>├─────────────────────────────────┤
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>│         Linux Kernel            │  ← Process mgmt, memory, drivers, FS
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>├─────────────────────────────────┤
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>│         Hardware                │  ← CPU, RAM, Disk, Network, GPU
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>└─────────────────────────────────┘
+</code></pre></div>
+<h3 id="32-what-the-kernel-does">3.2 What the Kernel Does<a class="headerlink" href="#32-what-the-kernel-does" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Responsibility</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Process Management</strong></td>
+<td>Creates, schedules, and terminates processes</td>
+</tr>
+<tr>
+<td><strong>Memory Management</strong></td>
+<td>Allocates and frees RAM; manages virtual memory</td>
+</tr>
+<tr>
+<td><strong>Device Drivers</strong></td>
+<td>Communicates with hardware (disk, GPU, network card)</td>
+</tr>
+<tr>
+<td><strong>File System Management</strong></td>
+<td>Reads/writes files on ext4, xfs, btrfs, etc.</td>
+</tr>
+<tr>
+<td><strong>Networking</strong></td>
+<td>Manages TCP/IP stack, sockets, network interfaces</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Enforces permissions, namespaces, capabilities</td>
+</tr>
+<tr>
+<td><strong>System Calls</strong></td>
+<td>Provides an API for programs to talk to the kernel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-kernel-versions">3.3 Kernel Versions<a class="headerlink" href="#33-kernel-versions" title="Permanent link">&para;</a></h3>
+<p>Linux kernel versions follow the format: <code>major.minor.patch</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Check your kernel version</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>uname<span class="w"> </span>-r
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Example output: 6.5.0-45-generic</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># Detailed kernel and system info</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>uname<span class="w"> </span>-a
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Example: Linux hostname 6.5.0-45-generic #45-Ubuntu SMP x86_64 GNU/Linux</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Kernel version anatomy:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>6  .  5  .  0  -  45  -  generic
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│     │     │     │       └── Flavor (generic, lowlatency, etc.)
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>│     │     │     └────────── ABI (Application Binary Interface) number
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>│     │     └──────────────── Patch level
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>│     └────────────────────── Minor version
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>└──────────────────────────── Major version
+</code></pre></div>
+<h3 id="34-kernel-development-process">3.4 Kernel Development Process<a class="headerlink" href="#34-kernel-development-process" title="Permanent link">&para;</a></h3>
+<p>The Linux kernel is one of the largest collaborative software projects in history:</p>
+<ul>
+<li><strong>~20 million lines of code</strong> in the kernel</li>
+<li><strong>~4,000–5,000 contributors</strong> per release cycle</li>
+<li>A new kernel version is released approximately every <strong>2–3 months</strong></li>
+<li><strong>Linus Torvalds</strong> still maintains final merge authority</li>
+<li>Development happens publicly on the <strong>Linux Kernel Mailing List (LKML)</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Kernel development flow:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Developer writes patch → Submits to subsystem maintainer
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>→ Subsystem maintainer reviews → Merges into linux-next
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>→ Linus pulls into mainline → Released as stable version
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>→ Stable team backports fixes → Long-Term Support (LTS) maintained
+</code></pre></div>
+<h3 id="35-long-term-support-lts-kernels">3.5 Long-Term Support (LTS) Kernels<a class="headerlink" href="#35-long-term-support-lts-kernels" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Support Duration</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mainline</strong></td>
+<td>Until next release (~2–3 months)</td>
+<td>Latest features</td>
+</tr>
+<tr>
+<td><strong>Stable</strong></td>
+<td>A few months</td>
+<td>General use</td>
+</tr>
+<tr>
+<td><strong>LTS (Long-Term Support)</strong></td>
+<td>2–6 years</td>
+<td>Production servers, embedded</td>
+</tr>
+<tr>
+<td><strong>EOL (End of Life)</strong></td>
+<td>No longer supported</td>
+<td>Avoid</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Keep your kernel updated</p>
+<p>Running an outdated or EOL kernel exposes you to unpatched security vulnerabilities. Always use a supported kernel version, especially on servers.</p>
+</div>
+<hr />
+<h2 id="4-linux-distributions">4. Linux Distributions<a class="headerlink" href="#4-linux-distributions" title="Permanent link">&para;</a></h2>
+<h3 id="41-what-is-a-distribution">4.1 What is a Distribution?<a class="headerlink" href="#41-what-is-a-distribution" title="Permanent link">&para;</a></h3>
+<p>A <strong>Linux distribution</strong> (or "distro") is the Linux kernel + a collection of software bundled together as a complete operating system:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Linux Distribution = Linux Kernel
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>                   + GNU Tools (bash, gcc, coreutils)
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>                   + Package Manager (apt, dnf, pacman)
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>                   + Desktop Environment (GNOME, KDE, XFCE)
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>                   + System Software (systemd, NetworkManager)
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>                   + Default Applications
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>                   + Configuration and Branding
+</code></pre></div>
+<h3 id="42-major-distribution-families">4.2 Major Distribution Families<a class="headerlink" href="#42-major-distribution-families" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>                        Linux Kernel
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                            │
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>          ┌─────────────────┼─────────────────┐
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>          │                 │                 │
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        Debian           Red Hat            Arch
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>          │                 │                 │
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    ┌─────┴─────┐      ┌────┴────┐        ┌───┴───┐
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  Ubuntu     Debian   RHEL     Fedora   Arch   Manjaro
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    │         Mint      │         │
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  Kubuntu    Kali    CentOS   AlmaLinux
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>  Lubuntu    Parrot  Rocky
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  Pop!_OS
+</code></pre></div>
+<h3 id="43-choosing-a-distribution">4.3 Choosing a Distribution<a class="headerlink" href="#43-choosing-a-distribution" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Recommended Distro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Beginners / Desktop</strong></td>
+<td>Ubuntu, Linux Mint, Pop!_OS</td>
+</tr>
+<tr>
+<td><strong>Enterprise Server</strong></td>
+<td>RHEL, Ubuntu Server, SLES</td>
+</tr>
+<tr>
+<td><strong>Security / Penetration Testing</strong></td>
+<td>Kali Linux, Parrot OS</td>
+</tr>
+<tr>
+<td><strong>Privacy-focused</strong></td>
+<td>Tails, Whonix</td>
+</tr>
+<tr>
+<td><strong>Advanced / Customizable</strong></td>
+<td>Arch Linux, Gentoo</td>
+</tr>
+<tr>
+<td><strong>Minimal / Embedded</strong></td>
+<td>Alpine Linux, Buildroot</td>
+</tr>
+<tr>
+<td><strong>Scientific Computing</strong></td>
+<td>Fedora, Scientific Linux</td>
+</tr>
+<tr>
+<td><strong>Containers</strong></td>
+<td>Alpine Linux, Flatcar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-package-managers-by-family">4.4 Package Managers by Family<a class="headerlink" href="#44-package-managers-by-family" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Package Manager</th>
+<th>Install Command</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Debian/Ubuntu</strong></td>
+<td>APT</td>
+<td><code>apt install</code></td>
+<td><code>apt install vim</code></td>
+</tr>
+<tr>
+<td><strong>Red Hat/Fedora</strong></td>
+<td>DNF/YUM</td>
+<td><code>dnf install</code></td>
+<td><code>dnf install vim</code></td>
+</tr>
+<tr>
+<td><strong>Arch</strong></td>
+<td>Pacman</td>
+<td><code>pacman -S</code></td>
+<td><code>pacman -S vim</code></td>
+</tr>
+<tr>
+<td><strong>SUSE</strong></td>
+<td>Zypper</td>
+<td><code>zypper install</code></td>
+<td><code>zypper install vim</code></td>
+</tr>
+<tr>
+<td><strong>Alpine</strong></td>
+<td>APK</td>
+<td><code>apk add</code></td>
+<td><code>apk add vim</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># Debian/Ubuntu — update and install</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim<span class="w"> </span>-y
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># Red Hat/Fedora — update and install</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>vim<span class="w"> </span>-y
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1"># Arch Linux — sync and install</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-Syu<span class="w"> </span>vim
+</code></pre></div>
+<hr />
+<h2 id="5-the-linux-foundation-organization-structure">5. The Linux Foundation — Organization &amp; Structure<a class="headerlink" href="#5-the-linux-foundation-organization-structure" title="Permanent link">&para;</a></h2>
+<h3 id="51-how-its-organized">5.1 How It's Organized<a class="headerlink" href="#51-how-its-organized" title="Permanent link">&para;</a></h3>
+<p>The Linux Foundation operates as a <strong>neutral, non-profit hub</strong> for open source collaboration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Linux Foundation Structure:
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>├── Board of Directors (elected corporate + individual members)
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>├── Technical Advisory Board (TAB)
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>├── Linux Kernel Organization (kernel.org)
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>├── Workgroups and Special Interest Groups
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>└── Hosted Projects (900+ projects)
+</code></pre></div>
+<h3 id="52-membership-tiers">5.2 Membership Tiers<a class="headerlink" href="#52-membership-tiers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Members</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Platinum</strong></td>
+<td>Google, Microsoft, IBM, Intel, Meta, etc.</td>
+<td>Strategic governance</td>
+</tr>
+<tr>
+<td><strong>Gold</strong></td>
+<td>Mid-to-large tech companies</td>
+<td>Active participation</td>
+</tr>
+<tr>
+<td><strong>Silver</strong></td>
+<td>Startups and smaller companies</td>
+<td>Community support</td>
+</tr>
+<tr>
+<td><strong>Associate</strong></td>
+<td>Non-profits, government, academia</td>
+<td>Outreach and education</td>
+</tr>
+<tr>
+<td><strong>Individual</strong></td>
+<td>Independent developers</td>
+<td>Community voice</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Microsoft and Linux?</p>
+<p>Yes — Microsoft is a Platinum member of the Linux Foundation. Microsoft Azure runs more Linux VMs than Windows VMs, and Microsoft contributes significantly to the Linux kernel (especially for Hyper-V and Azure support).</p>
+</div>
+<h3 id="53-how-the-foundation-is-funded">5.3 How the Foundation is Funded<a class="headerlink" href="#53-how-the-foundation-is-funded" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Membership fees</strong> from corporate and individual members</li>
+<li><strong>Training and certification revenue</strong> (LF training courses, LFCS, LFCE, CKA, etc.)</li>
+<li><strong>Event revenue</strong> (Linux Open Source Summit, KubeCon, etc.)</li>
+<li><strong>Project-specific funding</strong> from sponsors</li>
+</ul>
+<hr />
+<h2 id="6-major-linux-foundation-projects">6. Major Linux Foundation Projects<a class="headerlink" href="#6-major-linux-foundation-projects" title="Permanent link">&para;</a></h2>
+<p>The Linux Foundation hosts some of the most critical open source projects in the world:</p>
+<h3 id="61-core-projects">6.1 Core Projects<a class="headerlink" href="#61-core-projects" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Linux Kernel</strong></td>
+<td>The kernel itself — the foundation of everything</td>
+</tr>
+<tr>
+<td><strong>Let's Encrypt</strong></td>
+<td>Free SSL/TLS certificates for the web</td>
+</tr>
+<tr>
+<td><strong>Node.js</strong></td>
+<td>JavaScript runtime built on Chrome's V8 engine</td>
+</tr>
+<tr>
+<td><strong>OpenSSF</strong></td>
+<td>Open Source Security Foundation</td>
+</tr>
+<tr>
+<td><strong>SPDX</strong></td>
+<td>Software Package Data Exchange — software licensing standard</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-cloud-container-projects">6.2 Cloud &amp; Container Projects<a class="headerlink" href="#62-cloud-container-projects" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>Container orchestration (via CNCF)</td>
+</tr>
+<tr>
+<td><strong>Prometheus</strong></td>
+<td>Monitoring and alerting system</td>
+</tr>
+<tr>
+<td><strong>Envoy</strong></td>
+<td>Cloud-native proxy</td>
+</tr>
+<tr>
+<td><strong>containerd</strong></td>
+<td>Industry-standard container runtime</td>
+</tr>
+<tr>
+<td><strong>Argo</strong></td>
+<td>GitOps and workflow automation</td>
+</tr>
+<tr>
+<td><strong>Helm</strong></td>
+<td>Kubernetes package manager</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-networking-projects">6.3 Networking Projects<a class="headerlink" href="#63-networking-projects" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ONAP</strong></td>
+<td>Open Network Automation Platform</td>
+</tr>
+<tr>
+<td><strong>fd.io</strong></td>
+<td>Fast data I/O for networking</td>
+</tr>
+<tr>
+<td><strong>Akraino</strong></td>
+<td>Edge computing infrastructure</td>
+</tr>
+<tr>
+<td><strong>OpenDaylight</strong></td>
+<td>Software-defined networking (SDN)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-security-projects">6.4 Security Projects<a class="headerlink" href="#64-security-projects" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OpenSSF</strong></td>
+<td>Cross-industry security collaboration</td>
+</tr>
+<tr>
+<td><strong>Sigstore</strong></td>
+<td>Software signing and verification</td>
+</tr>
+<tr>
+<td><strong>SLSA</strong></td>
+<td>Supply chain security framework</td>
+</tr>
+<tr>
+<td><strong>Zowe</strong></td>
+<td>Open source framework for IBM Z</td>
+</tr>
+</tbody>
+</table>
+<h3 id="65-the-cloud-native-computing-foundation-cncf">6.5 The Cloud Native Computing Foundation (CNCF)<a class="headerlink" href="#65-the-cloud-native-computing-foundation-cncf" title="Permanent link">&para;</a></h3>
+<p>The <strong>CNCF</strong> is one of the Linux Foundation's most impactful sub-foundations:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>CNCF Mission: Make cloud-native computing ubiquitous
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>CNCF Project Maturity Levels:
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>Sandbox → Incubating → Graduated
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>Graduated Projects (battle-tested):
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>- Kubernetes   (container orchestration)
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>- Prometheus   (monitoring)
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>- Envoy        (service proxy)
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>- CoreDNS      (DNS)
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>- containerd   (container runtime)
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>- Fluentd      (logging)
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>- Jaeger       (distributed tracing)
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>- Vitess       (database scaling)
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>- Argo         (workflow engine)
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>- Flux         (GitOps)
+</code></pre></div>
+<hr />
+<h2 id="7-linux-kernel-development-governance">7. Linux Kernel Development &amp; Governance<a class="headerlink" href="#7-linux-kernel-development-governance" title="Permanent link">&para;</a></h2>
+<h3 id="71-who-controls-linux">7.1 Who Controls Linux?<a class="headerlink" href="#71-who-controls-linux" title="Permanent link">&para;</a></h3>
+<p>Linux development is meritocratic and open:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Governance Hierarchy:
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Linus Torvalds (BDFL — Benevolent Dictator For Life)
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    │
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    ├── Greg Kroah-Hartman (stable kernel maintainer)
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    ├── Subsystem Maintainers (~100+ maintainers)
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    │       ├── Networking subsystem maintainer
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    │       ├── Filesystem subsystem maintainer
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    │       ├── ARM architecture maintainer
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>    │       └── ... (many more)
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    │
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    └── Individual Contributors (thousands)
+</code></pre></div>
+<h3 id="72-the-kernel-development-model">7.2 The Kernel Development Model<a class="headerlink" href="#72-the-kernel-development-model" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># How a kernel patch is submitted:</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1"># 1. Write code and test locally</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="c1"># 2. Generate patch</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>git<span class="w"> </span>format-patch<span class="w"> </span>HEAD~1
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># 3. Check patch for style issues</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>./scripts/checkpatch.pl<span class="w"> </span><span class="m">0001</span>-my-fix.patch
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1"># 4. Send to the appropriate mailing list</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>git<span class="w"> </span>send-email<span class="w"> </span>--to<span class="o">=</span>netdev@vger.kernel.org<span class="w"> </span><span class="m">0001</span>-my-fix.patch
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="c1"># 5. Respond to review feedback, revise, resubmit</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="c1"># 6. Maintainer merges into their tree</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="c1"># 7. Linus pulls from maintainer trees</span>
+</code></pre></div>
+<h3 id="73-kernel-release-cycle">7.3 Kernel Release Cycle<a class="headerlink" href="#73-kernel-release-cycle" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Week 1–2: Merge Window (new features accepted into mainline)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Week 3+:  RC Phase (Release Candidates — bug fixes only)
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>          rc1 → rc2 → rc3 → ... → rc7/rc8
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Final:    Stable release (e.g., 6.6)
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Then:     Stable team maintains 6.6.1, 6.6.2... (bug fixes)
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>LTS:      Some versions maintained for 2–6 years (e.g., 6.1 LTS)
+</code></pre></div>
+<h3 id="74-contributor-statistics">7.4 Contributor Statistics<a class="headerlink" href="#74-contributor-statistics" title="Permanent link">&para;</a></h3>
+<p>The Linux kernel is one of the most active open source projects:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Per kernel release cycle:
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>- ~10,000–15,000 patches merged
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>- ~4,000–5,000 unique contributors
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>- Changes submitted every few minutes on average
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>Top corporate contributors include:
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>- Intel, AMD (hardware support)
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>- Google (Android, security)
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>- Red Hat/IBM (enterprise features)
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>- Samsung (ARM, embedded)
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>- Meta (networking, storage)
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>- Microsoft (Hyper-V, Azure drivers)
+</code></pre></div>
+<hr />
+<h2 id="8-open-source-philosophy-licensing">8. Open Source Philosophy &amp; Licensing<a class="headerlink" href="#8-open-source-philosophy-licensing" title="Permanent link">&para;</a></h2>
+<h3 id="81-what-is-open-source">8.1 What is Open Source?<a class="headerlink" href="#81-what-is-open-source" title="Permanent link">&para;</a></h3>
+<p><strong>Open source</strong> software is software where the source code is publicly available and can be:
+- <strong>Viewed</strong> — anyone can read the code
+- <strong>Modified</strong> — anyone can change it
+- <strong>Distributed</strong> — anyone can share it
+- <strong>Used</strong> — anyone can run it (subject to license terms)</p>
+<h3 id="82-free-software-vs-open-source">8.2 Free Software vs Open Source<a class="headerlink" href="#82-free-software-vs-open-source" title="Permanent link">&para;</a></h3>
+<p>These terms are related but philosophically different:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Free Software (FSF)</th>
+<th>Open Source (OSI)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Champion</strong></td>
+<td>Richard Stallman</td>
+<td>Eric Raymond, Bruce Perens</td>
+</tr>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Freedom as a moral right</td>
+<td>Practical development benefits</td>
+</tr>
+<tr>
+<td><strong>Key document</strong></td>
+<td>GNU Manifesto</td>
+<td>Open Source Definition</td>
+</tr>
+<tr>
+<td><strong>License example</strong></td>
+<td>GPL</td>
+<td>MIT, Apache, BSD, GPL</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">The Four Freedoms (GNU)</p>
+<p>Richard Stallman defined the <strong>Four Essential Freedoms</strong> of free software:</p>
+<ul>
+<li><strong>Freedom 0</strong>: Run the program for any purpose</li>
+<li><strong>Freedom 1</strong>: Study and modify the source code</li>
+<li><strong>Freedom 2</strong>: Redistribute copies</li>
+<li><strong>Freedom 3</strong>: Distribute modified versions</li>
+</ul>
+</div>
+<h3 id="83-common-open-source-licenses">8.3 Common Open Source Licenses<a class="headerlink" href="#83-common-open-source-licenses" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>License</th>
+<th>Type</th>
+<th>Key Characteristics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GPL v2</strong></td>
+<td>Copyleft</td>
+<td>Used by Linux kernel; derivatives must also be GPL</td>
+</tr>
+<tr>
+<td><strong>GPL v3</strong></td>
+<td>Copyleft</td>
+<td>Adds anti-tivoization clause</td>
+</tr>
+<tr>
+<td><strong>LGPL</strong></td>
+<td>Weak copyleft</td>
+<td>Libraries; allows proprietary linking</td>
+</tr>
+<tr>
+<td><strong>MIT</strong></td>
+<td>Permissive</td>
+<td>Very permissive; attribution required</td>
+</tr>
+<tr>
+<td><strong>Apache 2.0</strong></td>
+<td>Permissive</td>
+<td>Patent grant; attribution required</td>
+</tr>
+<tr>
+<td><strong>BSD 2/3-clause</strong></td>
+<td>Permissive</td>
+<td>Minimal restrictions</td>
+</tr>
+<tr>
+<td><strong>MPL 2.0</strong></td>
+<td>Weak copyleft</td>
+<td>File-level copyleft</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Copyleft spectrum:
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Strong ←────────────────────────────────→ Permissive
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>GPL v3    GPL v2    LGPL    MPL    Apache    MIT    BSD
+</code></pre></div>
+<h3 id="84-why-linux-uses-gpl-v2">8.4 Why Linux Uses GPL v2<a class="headerlink" href="#84-why-linux-uses-gpl-v2" title="Permanent link">&para;</a></h3>
+<p>The Linux kernel is licensed under <strong>GPL v2 specifically</strong> (not v3). This means:</p>
+<ul>
+<li>Anyone who distributes Linux must provide the source code</li>
+<li>Any modifications to the kernel must also be GPL v2</li>
+<li>Companies <strong>cannot</strong> make the kernel proprietary</li>
+<li>This is what ensures Linux remains forever free</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&quot;I want Linux to be free in the same sense that the sun is free —
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>not as in free beer, but as in freedom.&quot;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>                                    — Linus Torvalds
+</code></pre></div>
+<hr />
+<h2 id="9-linux-foundation-training-certification">9. Linux Foundation Training &amp; Certification<a class="headerlink" href="#9-linux-foundation-training-certification" title="Permanent link">&para;</a></h2>
+<h3 id="91-training-programs">9.1 Training Programs<a class="headerlink" href="#91-training-programs" title="Permanent link">&para;</a></h3>
+<p>The Linux Foundation offers free and paid courses:</p>
+<table>
+<thead>
+<tr>
+<th>Course</th>
+<th>Level</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LFS101</strong></td>
+<td>Beginner</td>
+<td>Introduction to Linux (this course!)</td>
+</tr>
+<tr>
+<td><strong>LFS151</strong></td>
+<td>Beginner</td>
+<td>Introduction to Cloud Infrastructure</td>
+</tr>
+<tr>
+<td><strong>LFS201</strong></td>
+<td>Intermediate</td>
+<td>Essentials of Linux System Administration</td>
+</tr>
+<tr>
+<td><strong>LFS211</strong></td>
+<td>Intermediate</td>
+<td>Linux Networking and Administration</td>
+</tr>
+<tr>
+<td><strong>LFS261</strong></td>
+<td>Advanced</td>
+<td>DevOps and SRE Fundamentals</td>
+</tr>
+<tr>
+<td><strong>LFS272</strong></td>
+<td>Advanced</td>
+<td>Hyperledger Fabric Administration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-certifications">9.2 Certifications<a class="headerlink" href="#92-certifications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Certification</th>
+<th>Full Name</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LFCS</strong></td>
+<td>Linux Foundation Certified SysAdmin</td>
+<td>Linux system administration</td>
+</tr>
+<tr>
+<td><strong>LFCE</strong></td>
+<td>Linux Foundation Certified Engineer</td>
+<td>Advanced Linux engineering</td>
+</tr>
+<tr>
+<td><strong>CKA</strong></td>
+<td>Certified Kubernetes Administrator</td>
+<td>Kubernetes administration</td>
+</tr>
+<tr>
+<td><strong>CKAD</strong></td>
+<td>Certified Kubernetes Application Developer</td>
+<td>Kubernetes app development</td>
+</tr>
+<tr>
+<td><strong>CKS</strong></td>
+<td>Certified Kubernetes Security Specialist</td>
+<td>Kubernetes security</td>
+</tr>
+<tr>
+<td><strong>PCA</strong></td>
+<td>Prometheus Certified Associate</td>
+<td>Monitoring with Prometheus</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-how-to-get-certified">9.3 How to Get Certified<a class="headerlink" href="#93-how-to-get-certified" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Certification exam format:
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>- Performance-based (hands-on terminal, not multiple choice)
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>- Exam duration: 2 hours (LFCS) / 2 hours (CKA)
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>- Remote proctored — take from home
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>- Score required: 66% (LFCS) / 66% (CKA)
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>- Two attempts included
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>- Certificate valid for 3 years
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>Preparation tips:
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>1. Complete the official LF training course
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>2. Practice in a real Linux environment daily
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>3. Use KillerCoda or killer.sh for exam simulators
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>4. Join the Linux Foundation Slack/forum communities
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>5. Time yourself — exam time management is critical
+</code></pre></div>
+<hr />
+<h2 id="10-linux-in-the-real-world">10. Linux in the Real World<a class="headerlink" href="#10-linux-in-the-real-world" title="Permanent link">&para;</a></h2>
+<h3 id="101-where-linux-runs">10.1 Where Linux Runs<a class="headerlink" href="#101-where-linux-runs" title="Permanent link">&para;</a></h3>
+<p>Linux is everywhere — far beyond the desktop:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Linux Powers:
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>├── 🌐 Internet Infrastructure
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>│     ├── ~96.4% of top 1 million web servers run Linux
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>│     ├── Most routers and switches run Linux
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>│     └── DNS servers, CDNs, load balancers
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>│
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>├── ☁️ Cloud Computing
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>│     ├── AWS, Google Cloud, Azure (Linux hosts)
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>│     ├── Docker and Kubernetes (Linux containers)
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>│     └── Serverless functions run on Linux
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>│
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>├── 📱 Mobile
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>│     ├── Android (Linux kernel)
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>│     ├── 3+ billion Android devices worldwide
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>│     └── Some feature phones
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>│
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>├── 🖥️ Supercomputers
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>│     ├── 100% of Top 500 supercomputers run Linux
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>│     └── Including Frontier (world&#39;s fastest in 2022)
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>│
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a>├── 🔧 Embedded Systems
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a>│     ├── Smart TVs (Tizen, WebOS)
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a>│     ├── Routers (OpenWrt)
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a>│     ├── Raspberry Pi
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a>│     └── Industrial control systems
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a>│
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a>└── 🚀 Space &amp; Science
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a>      ├── International Space Station
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a>      ├── James Webb Space Telescope
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a>      ├── NASA Mars Ingenuity Helicopter (Linux!)
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a>      └── CERN particle accelerators
+</code></pre></div>
+<h3 id="102-linux-market-share">10.2 Linux Market Share<a class="headerlink" href="#102-linux-market-share" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Linux Market Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Servers</td>
+<td>~96%</td>
+</tr>
+<tr>
+<td>Cloud Instances</td>
+<td>~90%+</td>
+</tr>
+<tr>
+<td>Supercomputers</td>
+<td><strong>100%</strong></td>
+</tr>
+<tr>
+<td>Mobile (Android)</td>
+<td>~72% of smartphones globally</td>
+</tr>
+<tr>
+<td>Desktop</td>
+<td>~3–4%</td>
+</tr>
+<tr>
+<td>Embedded/IoT</td>
+<td>Dominant</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">The Desktop Gap</p>
+<p>Linux's desktop market share (~3–4%) is often cited as a weakness, but this is misleading. Most Linux users interact with it <strong>through Android phones, cloud services, and web apps</strong> — not traditional desktop environments.</p>
+</div>
+<h3 id="103-companies-built-on-linux">10.3 Companies Built on Linux<a class="headerlink" href="#103-companies-built-on-linux" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>These companies depend on Linux for their core business:
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>- Google     — Search, YouTube, Gmail, Android, GCP
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>- Amazon     — AWS, Alexa, Kindle, fulfillment centers
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>- Facebook/Meta — Social media infrastructure, AI/ML
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>- Netflix    — Streaming infrastructure
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>- Twitter/X  — Real-time social platform
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>- Wikipedia  — Encyclopedia infrastructure
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>- Tesla      — Infotainment and autopilot systems
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>- SpaceX     — Launch and spacecraft systems
+</code></pre></div>
+<hr />
+<h2 id="11-linux-community-ecosystem">11. Linux Community &amp; Ecosystem<a class="headerlink" href="#11-linux-community-ecosystem" title="Permanent link">&para;</a></h2>
+<h3 id="111-the-open-source-community-model">11.1 The Open Source Community Model<a class="headerlink" href="#111-the-open-source-community-model" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>How Open Source Collaboration Works:
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>┌──────────────┐     contributes     ┌──────────────────┐
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>│   Developer  │ ──────────────────&gt; │   Public Repo    │
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>│              │ &lt;────────────────── │  (GitHub, etc.)  │
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>└──────────────┘     reviews/merges  └──────────────────┘
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>        ↑                                      │
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>        │ uses/improves                        │ available to
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>        │                                      ↓
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>┌──────────────┐                    ┌──────────────────┐
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>│   End User   │ &lt;─────────────────  │    Everyone      │
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>└──────────────┘    free software   └──────────────────┘
+</code></pre></div>
+<h3 id="112-key-community-resources">11.2 Key Community Resources<a class="headerlink" href="#112-key-community-resources" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>URL</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>kernel.org</strong></td>
+<td>kernel.org</td>
+<td>Official kernel source and releases</td>
+</tr>
+<tr>
+<td><strong>LKML</strong></td>
+<td>lkml.org</td>
+<td>Linux Kernel Mailing List archive</td>
+</tr>
+<tr>
+<td><strong>Linux Foundation</strong></td>
+<td>linuxfoundation.org</td>
+<td>News, events, training</td>
+</tr>
+<tr>
+<td><strong>DistroWatch</strong></td>
+<td>distrowatch.com</td>
+<td>Track Linux distributions</td>
+</tr>
+<tr>
+<td><strong>The Linux Documentation Project</strong></td>
+<td>tldp.org</td>
+<td>HOWTOs and guides</td>
+</tr>
+<tr>
+<td><strong>Arch Wiki</strong></td>
+<td>wiki.archlinux.org</td>
+<td>Best Linux reference wiki</td>
+</tr>
+<tr>
+<td><strong>Stack Overflow</strong></td>
+<td>stackoverflow.com</td>
+<td>Q&amp;A for Linux questions</td>
+</tr>
+<tr>
+<td><strong>Reddit</strong></td>
+<td>r/linux, r/linuxquestions</td>
+<td>Community discussion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="113-annual-linux-foundation-events">11.3 Annual Linux Foundation Events<a class="headerlink" href="#113-annual-linux-foundation-events" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Open Source Summit (North America/Europe/Japan)</strong></td>
+<td>Broad open source topics</td>
+</tr>
+<tr>
+<td><strong>KubeCon + CloudNativeCon</strong></td>
+<td>Kubernetes and CNCF projects</td>
+</tr>
+<tr>
+<td><strong>Linux Security Summit</strong></td>
+<td>Kernel and Linux security</td>
+</tr>
+<tr>
+<td><strong>Embedded Linux Conference</strong></td>
+<td>IoT and embedded Linux</td>
+</tr>
+<tr>
+<td><strong>Open Networking Summit</strong></td>
+<td>Networking and SDN</td>
+</tr>
+<tr>
+<td><strong>Linux Plumbers Conference</strong></td>
+<td>Deep kernel and system-level work</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12-getting-started-with-linux">12. Getting Started with Linux<a class="headerlink" href="#12-getting-started-with-linux" title="Permanent link">&para;</a></h2>
+<h3 id="121-ways-to-try-linux">12.1 Ways to Try Linux<a class="headerlink" href="#121-ways-to-try-linux" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>Option 1 — Live USB (no installation required)
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>  → Download Ubuntu ISO
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>  → Flash to USB with Rufus (Windows) or Etcher (cross-platform)
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>  → Boot from USB and try Linux without touching your hard drive
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Option 2 — Virtual Machine (safest for beginners)
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>  → Install VirtualBox or VMware Workstation Player (free)
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>  → Create a new VM and install your chosen distro
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>  → Keeps Linux isolated from your main OS
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>Option 3 — WSL2 (Windows Subsystem for Linux)
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>  → Windows 10/11 users can run a Linux terminal natively
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>  → Run: wsl --install in PowerShell (installs Ubuntu by default)
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>  → Great for development without dual booting
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>Option 4 — Dual Boot
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>  → Install Linux alongside Windows/macOS
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>  → Choose OS at startup
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>  → Full hardware access, real performance
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>  → Risk: requires careful partitioning
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>Option 5 — Dedicated Machine
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>  → Wipe a spare laptop or PC and install Linux fully
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a>  → Best learning experience — forces you to solve real problems
+</code></pre></div>
+<h3 id="122-installing-ubuntu-most-beginner-friendly">12.2 Installing Ubuntu (Most Beginner-Friendly)<a class="headerlink" href="#122-installing-ubuntu-most-beginner-friendly" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="c1"># After booting from USB and selecting &quot;Install Ubuntu&quot;:</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="c1"># 1. Choose language and keyboard</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="c1"># 2. Select &quot;Normal Installation&quot;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1"># 3. Choose &quot;Erase disk and install Ubuntu&quot; (or alongside Windows)</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="c1"># 4. Set your timezone, username, and password</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="c1"># 5. Wait for installation (~10–20 minutes)</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="c1"># 6. Reboot and remove USB when prompted</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="c1"># First things to do after installation:</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y<span class="w">      </span><span class="c1"># Update everything</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>vim<span class="w"> </span>curl<span class="w"> </span>git<span class="w"> </span>wget<span class="w"> </span>-y<span class="w">       </span><span class="c1"># Install useful tools</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>build-essential<span class="w"> </span>-y<span class="w">         </span><span class="c1"># Install dev tools</span>
+</code></pre></div>
+<h3 id="123-essential-first-commands">12.3 Essential First Commands<a class="headerlink" href="#123-essential-first-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Who am I and where am I?</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>whoami<span class="w">              </span><span class="c1"># Your username</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>hostname<span class="w">            </span><span class="c1"># Your machine&#39;s name</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nb">pwd</span><span class="w">                 </span><span class="c1"># Current directory (Print Working Directory)</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>uname<span class="w"> </span>-a<span class="w">            </span><span class="c1"># System and kernel information</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>lsb_release<span class="w"> </span>-a<span class="w">      </span><span class="c1"># Linux distribution info</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="c1"># Navigate the filesystem</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>ls<span class="w"> </span>-la<span class="w">              </span><span class="c1"># List all files with details</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="nb">cd</span><span class="w"> </span>/home<span class="w">            </span><span class="c1"># Change directory</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="nb">cd</span><span class="w"> </span>~<span class="w">                </span><span class="c1"># Go to home directory</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w">               </span><span class="c1"># Go up one level</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="c1"># Get help</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>man<span class="w"> </span>ls<span class="w">              </span><span class="c1"># Manual page for &#39;ls&#39;</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>ls<span class="w"> </span>--help<span class="w">           </span><span class="c1"># Quick help for &#39;ls&#39;</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>info<span class="w"> </span>bash<span class="w">           </span><span class="c1"># Info pages (more detailed than man)</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="c1"># System information</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>df<span class="w"> </span>-h<span class="w">               </span><span class="c1"># Disk usage (human-readable)</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>free<span class="w"> </span>-h<span class="w">             </span><span class="c1"># Memory usage (human-readable)</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>top<span class="w">                 </span><span class="c1"># Running processes (interactive)</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>htop<span class="w">                </span><span class="c1"># Better version of top (install: apt install htop)</span>
+</code></pre></div>
+<hr />
+<h2 id="quick-reference-linux-foundation-cheat-sheet">Quick Reference: Linux Foundation Cheat Sheet<a class="headerlink" href="#quick-reference-linux-foundation-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h3 id="key-facts-to-remember">Key Facts to Remember<a class="headerlink" href="#key-facts-to-remember" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Linux Kernel Facts:
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>□ Created by Linus Torvalds in 1991
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>□ Licensed under GPL v2
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>□ ~20 million lines of code
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>□ New version released every 2–3 months
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>□ 100% of Top 500 supercomputers run Linux
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>□ Android is built on the Linux kernel
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>Linux Foundation Facts:
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>□ Founded in 2000 (officially 2007 after merger)
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>□ Non-profit consortium
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>□ Hosts 900+ open source projects
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>□ Offers LFCS, LFCE, CKA, CKAD, CKS certifications
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>□ Members include Google, Microsoft, IBM, Intel, Amazon
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>Open Source Licensing:
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>□ GPL v2 — Linux kernel license (copyleft)
+<a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>□ MIT — most permissive, widely used
+<a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>□ Apache 2.0 — permissive with patent grant
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>□ LGPL — for libraries; allows proprietary use
+</code></pre></div>
+<h3 id="check-your-system-info">Check Your System Info<a class="headerlink" href="#check-your-system-info" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="c1"># Kernel and OS info</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>uname<span class="w"> </span>-r<span class="w">                    </span><span class="c1"># Kernel version</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>uname<span class="w"> </span>-a<span class="w">                    </span><span class="c1"># Full kernel info</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>cat<span class="w"> </span>/etc/os-release<span class="w">         </span><span class="c1"># Distribution info</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>lsb_release<span class="w"> </span>-a<span class="w">              </span><span class="c1"># Distro name and version</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>hostnamectl<span class="w">                 </span><span class="c1"># Hostname, kernel, OS details</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="c1"># Hardware info</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>lscpu<span class="w">                       </span><span class="c1"># CPU details</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>free<span class="w"> </span>-h<span class="w">                     </span><span class="c1"># Memory usage</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>df<span class="w"> </span>-h<span class="w">                       </span><span class="c1"># Disk usage</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>lsblk<span class="w">                       </span><span class="c1"># Block devices (disks, partitions)</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13" href="#__codelineno-25-13"></a>lspci<span class="w">                       </span><span class="c1"># PCI devices (GPU, network card, etc.)</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14" href="#__codelineno-25-14"></a>lsusb<span class="w">                       </span><span class="c1"># USB devices</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15" href="#__codelineno-25-15"></a>
+<a id="__codelineno-25-16" name="__codelineno-25-16" href="#__codelineno-25-16"></a><span class="c1"># Who&#39;s responsible for your kernel?</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17" href="#__codelineno-25-17"></a>cat<span class="w"> </span>/proc/version<span class="w">           </span><span class="c1"># Kernel build info</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18" href="#__codelineno-25-18"></a>zcat<span class="w"> </span>/proc/config.gz<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>CONFIG_LOCALVERSION
+</code></pre></div>
+<h3 id="key-directories-to-know">Key Directories to Know<a class="headerlink" href="#key-directories-to-know" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>/<span class="w">           </span><span class="c1"># Root — top of the entire filesystem</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>/boot<span class="w">       </span><span class="c1"># Kernel images, bootloader (GRUB) files</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>/etc<span class="w">        </span><span class="c1"># System configuration files</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>/home<span class="w">       </span><span class="c1"># User home directories (/home/username)</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>/root<span class="w">       </span><span class="c1"># Root user&#39;s home directory</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>/bin<span class="w">        </span><span class="c1"># Essential binaries (ls, cp, mv, bash)</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>/sbin<span class="w">       </span><span class="c1"># System binaries (only root should run)</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>/usr<span class="w">        </span><span class="c1"># User programs and data</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>/var<span class="w">        </span><span class="c1"># Variable data (logs, databases, mail)</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>/tmp<span class="w">        </span><span class="c1"># Temporary files (cleared on reboot)</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>/dev<span class="w">        </span><span class="c1"># Device files (disks, terminals, etc.)</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>/proc<span class="w">       </span><span class="c1"># Virtual filesystem — kernel and process info</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>/sys<span class="w">        </span><span class="c1"># Virtual filesystem — hardware and kernel info</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>/lib<span class="w">        </span><span class="c1"># Shared libraries for /bin and /sbin</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a>/opt<span class="w">        </span><span class="c1"># Optional third-party software</span>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>/mnt<span class="w">        </span><span class="c1"># Mount points for temporary mounts</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>/media<span class="w">      </span><span class="c1"># Mount points for removable media (USB, CD)</span>
+</code></pre></div>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">Continue Your Journey</p>
+<p>Now that you understand <strong>The Linux Foundation</strong> and Linux's history, move on to <strong>Linux Philosophy and Concepts</strong> to learn the principles that make Linux tick — and why understanding them makes you a better Linux user.</p>
+</div>
+<hr />
+<p><em>Part of the <a href="https://github.com/Flux-Notes/Introduction-to-Linux-LFS101-">Introduction to Linux — LFS101</a> notes series.</em>
+<em>Next: <a href="../02-linux-philosophy-and-concepts/">02 — Linux Philosophy and Concepts</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/your-username/Introduction-to-Linux" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
