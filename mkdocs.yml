@@ -1,0 +1,70 @@
+site_name: "Introduction to Linux"
+site_url: https://your-username.github.io/Introduction-to-Linux/
+repo_url: https://github.com/your-username/Introduction-to-Linux
+repo_name: GitHub
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - 🏠 Home: index.md
+  - 🏛️ The Linux Foundation: 01-the-linux-foundation.md
+  - 💡 Linux Philosophy and Concepts: 02-linux-philosophy-and-concepts.md
+  - 🚀 Linux Basics and System Startup: 03-linux-basics-and-system-startup.md
+  - 🖥️ Graphical Interface: 04-graphical-interface.md
+  - ⚙️ System Configuration from Graphical Interface: 05-system-configuration-from-graphical-interface.md
+  - 📦 Common Applications: 06-common-applications.md
+  - ⌨️ Command Line Operations: 07-command-line-operations.md
+  - 📚 Finding Linux Documentation: 08-finding-linux-documentation.md
+  - 🔄 Processes: 09-processes.md
+  - 🗃️ File Operations: 10-file-operations.md
+  - 📝 Text Editors: 11-text-editors.md
+  - 👤 User Environment: 12-user-environment.md
+  - ✂️ Manipulating Text: 13-manipulating-text.md
+  - 🌐 Network Operations: 14-network-operations.md
+  - 🐚 Bash Shell and Basic Scripting: 15-bash-shell-and-basic-scripting.md
+  - 🔧 More on Bash Shell Scripting: 16-more-on-bash-shell-scripting.md
+  - 🖨️ Printing: 17-printing.md
+  - 🔒 Local Security Principles: 18-local-security-principles.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username/Introduction-to-Linux
