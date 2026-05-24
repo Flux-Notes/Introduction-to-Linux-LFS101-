@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-14-network-operations" class="md-skip">
+        <a href="#network-operations" class="md-skip">
           Skip to content
         </a>
       
@@ -696,10 +696,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-overview-of-linux-networking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. Overview of Linux Networking
       
     </span>
   </a>
@@ -707,10 +707,576 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#2-network-interface-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        2. Network Interface Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Network Interface Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ip-the-modern-tool-replaces-ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 ip — The Modern Tool (Replaces ifconfig)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ifconfig-legacy-tool-still-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 ifconfig — Legacy Tool (Still Common)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-networkmanager-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 NetworkManager Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-wireless-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Wireless Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hostname-and-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hostname and DNS Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Hostname and DNS Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-etchosts-static-name-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 /etc/hosts — Static Name Resolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-etcresolvconf-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 /etc/resolv.conf — DNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-etcnsswitchconf-name-resolution-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 /etc/nsswitch.conf — Name Resolution Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dns-lookup-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DNS Lookup Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. DNS Lookup Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-dig-dns-information-groper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 dig — DNS Information Groper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-nslookup-interactive-dns-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 nslookup — Interactive DNS Lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-host-simple-dns-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 host — Simple DNS Lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-resolvectl-systemd-resolved-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 resolvectl — systemd-resolved Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-connectivity-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Connectivity Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Connectivity Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ping-test-reachability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 ping — Test Reachability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-traceroute-tracepath-trace-network-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 traceroute / tracepath — Trace Network Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-mtr-continuous-traceroute-my-traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 mtr — Continuous Traceroute (My Traceroute)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-port-and-socket-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Port and Socket Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Port and Socket Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ss-socket-statistics-modern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 ss — Socket Statistics (Modern)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-netstat-legacy-socket-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 netstat — Legacy Socket Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-nmap-network-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 nmap — Network Scanner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-file-transfer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. File Transfer Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. File Transfer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-wget-non-interactive-downloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 wget — Non-Interactive Downloader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-curl-transfer-data-with-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 curl — Transfer Data with URLs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-scp-secure-copy-ssh-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 scp — Secure Copy (SSH-based)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-rsync-efficient-synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 rsync — Efficient Synchronisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-sftp-interactive-secure-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 sftp — Interactive Secure FTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ssh-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SSH — Secure Shell
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. SSH — Secure Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-connecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Connecting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ssh-key-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 SSH Key Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ssh-config-file-sshconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 SSH Config File (~/.ssh/config)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-port-forwarding-ssh-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Port Forwarding (SSH Tunnels)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-ssh-server-configuration-etcsshsshd_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 SSH Server Configuration (/etc/ssh/sshd_config)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-key-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Key Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-firewall-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Firewall Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Firewall Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ufw-uncomplicated-firewall-debianubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 ufw — Uncomplicated Firewall (Debian/Ubuntu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-firewalld-dynamic-firewall-rhelfedoracentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 firewalld — Dynamic Firewall (RHEL/Fedora/CentOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-iptables-low-level-packet-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 iptables — Low-Level Packet Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-packet-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Packet Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Packet Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-tcpdump-command-line-packet-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 tcpdump — Command-Line Packet Capture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-network-performance-and-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Network Performance and Diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Network Performance and Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-iperf3-bandwidth-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 iperf3 — Bandwidth Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-netcat-nc-swiss-army-knife" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 netcat (nc) — Swiss Army Knife
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-checking-network-interface-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Checking Network Interface Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-important-network-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Important Network Files and Directories
       
     </span>
   </a>
@@ -718,24 +1284,124 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+  <a href="#13-common-network-troubleshooting-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        13. Common Network Troubleshooting Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Common Network Troubleshooting Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-step-by-step-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Step-by-Step Diagnosis
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#132-common-problems-and-quick-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        13.2 Common Problems and Quick Fixes
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Quick Reference Cheat Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Quick Reference Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-sockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports &amp; Sockets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Transfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -882,10 +1548,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-overview-of-linux-networking" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. Overview of Linux Networking
       
     </span>
   </a>
@@ -893,10 +1559,576 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+  <a href="#2-network-interface-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        2. Network Interface Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Network Interface Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ip-the-modern-tool-replaces-ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 ip — The Modern Tool (Replaces ifconfig)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-ifconfig-legacy-tool-still-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 ifconfig — Legacy Tool (Still Common)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-networkmanager-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 NetworkManager Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-wireless-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Wireless Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hostname-and-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Hostname and DNS Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Hostname and DNS Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-hostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Hostname
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-etchosts-static-name-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 /etc/hosts — Static Name Resolution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-etcresolvconf-dns-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 /etc/resolv.conf — DNS Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-etcnsswitchconf-name-resolution-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 /etc/nsswitch.conf — Name Resolution Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-dns-lookup-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. DNS Lookup Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. DNS Lookup Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-dig-dns-information-groper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 dig — DNS Information Groper
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-nslookup-interactive-dns-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 nslookup — Interactive DNS Lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-host-simple-dns-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 host — Simple DNS Lookup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-resolvectl-systemd-resolved-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 resolvectl — systemd-resolved Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-connectivity-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Connectivity Testing
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Connectivity Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ping-test-reachability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 ping — Test Reachability
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-traceroute-tracepath-trace-network-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 traceroute / tracepath — Trace Network Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-mtr-continuous-traceroute-my-traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 mtr — Continuous Traceroute (My Traceroute)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-port-and-socket-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Port and Socket Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Port and Socket Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-ss-socket-statistics-modern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 ss — Socket Statistics (Modern)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-netstat-legacy-socket-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 netstat — Legacy Socket Tool
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-nmap-network-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 nmap — Network Scanner
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-file-transfer-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. File Transfer Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. File Transfer Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-wget-non-interactive-downloader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 wget — Non-Interactive Downloader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-curl-transfer-data-with-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 curl — Transfer Data with URLs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-scp-secure-copy-ssh-based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 scp — Secure Copy (SSH-based)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-rsync-efficient-synchronisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 rsync — Efficient Synchronisation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-sftp-interactive-secure-ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 sftp — Interactive Secure FTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-ssh-secure-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. SSH — Secure Shell
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. SSH — Secure Shell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-connecting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Connecting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-ssh-key-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 SSH Key Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-ssh-config-file-sshconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 SSH Config File (~/.ssh/config)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-port-forwarding-ssh-tunnels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.4 Port Forwarding (SSH Tunnels)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-ssh-server-configuration-etcsshsshd_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5 SSH Server Configuration (/etc/ssh/sshd_config)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-key-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6 Key Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-firewall-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Firewall Management
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Firewall Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-ufw-uncomplicated-firewall-debianubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 ufw — Uncomplicated Firewall (Debian/Ubuntu)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-firewalld-dynamic-firewall-rhelfedoracentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 firewalld — Dynamic Firewall (RHEL/Fedora/CentOS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-iptables-low-level-packet-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 iptables — Low-Level Packet Filtering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-packet-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Packet Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Packet Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-tcpdump-command-line-packet-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 tcpdump — Command-Line Packet Capture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-network-performance-and-diagnostics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Network Performance and Diagnostics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Network Performance and Diagnostics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-iperf3-bandwidth-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 iperf3 — Bandwidth Testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-netcat-nc-swiss-army-knife" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 netcat (nc) — Swiss Army Knife
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-checking-network-interface-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Checking Network Interface Statistics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-important-network-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Important Network Files and Directories
       
     </span>
   </a>
@@ -904,24 +2136,124 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+  <a href="#13-common-network-troubleshooting-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        13. Common Network Troubleshooting Workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Common Network Troubleshooting Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-step-by-step-diagnosis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 Step-by-Step Diagnosis
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#132-common-problems-and-quick-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        13.2 Common Problems and Quick Fixes
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Quick Reference Cheat Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Quick Reference Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connectivity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-sockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ports &amp; Sockets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-transfer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Transfer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSH
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -945,13 +2277,1113 @@
   
 
 
-<h1 id="chapter-14-network-operations">Chapter 14: Network Operations<a class="headerlink" href="#chapter-14-network-operations" title="Permanent link">&para;</a></h1>
-<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<h2 id="key-commands">Key Commands<a class="headerlink" href="#key-commands" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<h1 id="network-operations">🌐 Network Operations<a class="headerlink" href="#network-operations" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Network operations</strong> are a core Linux skill — whether you're diagnosing connectivity issues, transferring files, scanning hosts, or securing remote sessions, Linux ships with a powerful suite of networking tools that give you full visibility and control over every layer of the stack.</p>
+</blockquote>
+<hr />
+<h2 id="1-overview-of-linux-networking">1. Overview of Linux Networking<a class="headerlink" href="#1-overview-of-linux-networking" title="Permanent link">&para;</a></h2>
+<p>Linux provides both low-level and high-level tools to configure interfaces, troubleshoot connections, transfer data, and monitor traffic.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Key Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface Configuration</td>
+<td><code>ip</code>, <code>ifconfig</code>, <code>nmcli</code>, <code>nmtui</code></td>
+</tr>
+<tr>
+<td>Connectivity Testing</td>
+<td><code>ping</code>, <code>ping6</code>, <code>traceroute</code>, <code>mtr</code></td>
+</tr>
+<tr>
+<td>DNS Resolution</td>
+<td><code>dig</code>, <code>nslookup</code>, <code>host</code>, <code>resolvectl</code></td>
+</tr>
+<tr>
+<td>Port &amp; Service Scanning</td>
+<td><code>netstat</code>, <code>ss</code>, <code>nmap</code></td>
+</tr>
+<tr>
+<td>File Transfer</td>
+<td><code>wget</code>, <code>curl</code>, <code>scp</code>, <code>rsync</code>, <code>sftp</code></td>
+</tr>
+<tr>
+<td>Remote Access</td>
+<td><code>ssh</code>, <code>sshd</code>, <code>ssh-keygen</code></td>
+</tr>
+<tr>
+<td>Packet Analysis</td>
+<td><code>tcpdump</code>, <code>wireshark</code></td>
+</tr>
+<tr>
+<td>Routing</td>
+<td><code>ip route</code>, <code>route</code>, <code>traceroute</code></td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td><code>firewalld</code>, <code>ufw</code>, <code>iptables</code>, <code>nftables</code></td>
+</tr>
+<tr>
+<td>Network Info</td>
+<td><code>hostname</code>, <code>ip addr</code>, <code>ip link</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-network-interface-management">2. Network Interface Management<a class="headerlink" href="#2-network-interface-management" title="Permanent link">&para;</a></h2>
+<h3 id="21-ip-the-modern-tool-replaces-ifconfig">2.1 <code>ip</code> — The Modern Tool (Replaces <code>ifconfig</code>)<a class="headerlink" href="#21-ip-the-modern-tool-replaces-ifconfig" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w">                        </span><span class="c1"># show all interfaces and IPs</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0<span class="w">                   </span><span class="c1"># show specific interface</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>ip<span class="w"> </span>link<span class="w"> </span>show<span class="w">                        </span><span class="c1"># show link-layer status</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>ip<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span>up<span class="w">                     </span><span class="c1"># show only active interfaces</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ip<span class="w"> </span>-s<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span>eth0<span class="w">                </span><span class="c1"># show statistics (packets, errors)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>ip<span class="w"> </span>-4<span class="w"> </span>addr<span class="w"> </span>show<span class="w">                     </span><span class="c1"># IPv4 only</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>ip<span class="w"> </span>-6<span class="w"> </span>addr<span class="w"> </span>show<span class="w">                     </span><span class="c1"># IPv6 only</span>
 </code></pre></div>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p><strong>Configuring Interfaces (requires root):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ip<span class="w"> </span>addr<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.1.100/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># assign IP address</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ip<span class="w"> </span>addr<span class="w"> </span>del<span class="w"> </span><span class="m">192</span>.168.1.100/24<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">      </span><span class="c1"># remove IP address</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>up<span class="w">                         </span><span class="c1"># bring interface up</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>down<span class="w">                       </span><span class="c1"># bring interface down</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>mtu<span class="w"> </span><span class="m">9000</span><span class="w">                   </span><span class="c1"># set MTU (jumbo frames)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>eth0<span class="w"> </span>promisc<span class="w"> </span>on<span class="w">                 </span><span class="c1"># enable promiscuous mode</span>
+</code></pre></div>
+<p><strong>Routing:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w">                              </span><span class="c1"># show routing table</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>default<span class="w">                      </span><span class="c1"># show default gateway</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">       </span><span class="c1"># set default gateway</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">   </span><span class="c1"># add static route</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>ip<span class="w"> </span>route<span class="w"> </span>del<span class="w"> </span><span class="m">10</span>.0.0.0/8<span class="w">                    </span><span class="c1"># delete route</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ip<span class="w"> </span>route<span class="w"> </span>get<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">                       </span><span class="c1"># which route would be used</span>
+</code></pre></div>
+<p><strong>ARP / Neighbours:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ip<span class="w"> </span>neigh<span class="w"> </span>show<span class="w">                              </span><span class="c1"># show ARP table</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ip<span class="w"> </span>neigh<span class="w"> </span>show<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">                     </span><span class="c1"># ARP for specific interface</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>ip<span class="w"> </span>neigh<span class="w"> </span>flush<span class="w"> </span>dev<span class="w"> </span>eth0<span class="w">                    </span><span class="c1"># flush ARP cache</span>
+</code></pre></div>
+<h3 id="22-ifconfig-legacy-tool-still-common">2.2 <code>ifconfig</code> — Legacy Tool (Still Common)<a class="headerlink" href="#22-ifconfig-legacy-tool-still-common" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ifconfig<span class="w">                            </span><span class="c1"># show all active interfaces</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ifconfig<span class="w"> </span>-a<span class="w">                         </span><span class="c1"># show all interfaces (including down)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ifconfig<span class="w"> </span>eth0<span class="w">                       </span><span class="c1"># show specific interface</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>ifconfig<span class="w"> </span>eth0<span class="w"> </span>up<span class="w">                    </span><span class="c1"># bring interface up</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>ifconfig<span class="w"> </span>eth0<span class="w"> </span>down<span class="w">                  </span><span class="c1"># bring interface down</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>ifconfig<span class="w"> </span>eth0<span class="w"> </span><span class="m">192</span>.168.1.50<span class="w"> </span>netmask<span class="w"> </span><span class="m">255</span>.255.255.0<span class="w">   </span><span class="c1"># assign static IP</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>ifconfig<span class="w"> </span>eth0<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w">              </span><span class="c1"># set MTU</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">ip vs ifconfig</p>
+<p><code>ifconfig</code> is deprecated on most modern distros. Use <code>ip</code> instead. On minimal installs, <code>ifconfig</code> may not be present — install <code>net-tools</code> to get it back.</p>
+</div>
+<h3 id="23-networkmanager-tools">2.3 NetworkManager Tools<a class="headerlink" href="#23-networkmanager-tools" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>nmcli<span class="w"> </span>device<span class="w"> </span>status<span class="w">                 </span><span class="c1"># list all devices</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>show<span class="w">               </span><span class="c1"># list all connections</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>show<span class="w"> </span><span class="s2">&quot;Wired&quot;</span><span class="w">       </span><span class="c1"># details of a specific connection</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>nmcli<span class="w"> </span>device<span class="w"> </span>connect<span class="w"> </span>eth0<span class="w">           </span><span class="c1"># connect a device</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>nmcli<span class="w"> </span>device<span class="w"> </span>disconnect<span class="w"> </span>eth0<span class="w">        </span><span class="c1"># disconnect a device</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>nmcli<span class="w"> </span>networking<span class="w"> </span>off<span class="w">                </span><span class="c1"># disable all networking</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>nmcli<span class="w"> </span>networking<span class="w"> </span>on<span class="w">                 </span><span class="c1"># enable all networking</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># Create a static IP connection</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>add<span class="w"> </span><span class="nb">type</span><span class="w"> </span>ethernet<span class="w"> </span>con-name<span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="w"> </span>ifname<span class="w"> </span>eth0<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span>ip4<span class="w"> </span><span class="m">192</span>.168.1.50/24<span class="w"> </span>gw4<span class="w"> </span><span class="m">192</span>.168.1.1
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Modify DNS</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>modify<span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="w"> </span>ipv4.dns<span class="w"> </span><span class="s2">&quot;8.8.8.8 1.1.1.1&quot;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="c1"># Apply changes</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>nmcli<span class="w"> </span>connection<span class="w"> </span>up<span class="w"> </span><span class="s2">&quot;static&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>nmtui<span class="w">                               </span><span class="c1"># terminal UI for NetworkManager</span>
+</code></pre></div>
+<h3 id="24-wireless-interfaces">2.4 Wireless Interfaces<a class="headerlink" href="#24-wireless-interfaces" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>iwconfig<span class="w">                            </span><span class="c1"># show wireless interface info (legacy)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>iwlist<span class="w"> </span>wlan0<span class="w"> </span>scan<span class="w">                   </span><span class="c1"># scan for WiFi networks</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>iw<span class="w"> </span>dev<span class="w"> </span>wlan0<span class="w"> </span>scan<span class="w">                   </span><span class="c1"># modern wireless scan</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>iw<span class="w"> </span>dev<span class="w"> </span>wlan0<span class="w"> </span>link<span class="w">                   </span><span class="c1"># show current link info</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>list<span class="w">              </span><span class="c1"># list WiFi networks (NetworkManager)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>nmcli<span class="w"> </span>device<span class="w"> </span>wifi<span class="w"> </span>connect<span class="w"> </span><span class="s2">&quot;SSID&quot;</span><span class="w"> </span>password<span class="w"> </span><span class="s2">&quot;pass&quot;</span><span class="w">   </span><span class="c1"># connect to WiFi</span>
+</code></pre></div>
+<hr />
+<h2 id="3-hostname-and-dns-configuration">3. Hostname and DNS Configuration<a class="headerlink" href="#3-hostname-and-dns-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="31-hostname">3.1 Hostname<a class="headerlink" href="#31-hostname" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hostname<span class="w">                            </span><span class="c1"># display current hostname</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>hostname<span class="w"> </span>-f<span class="w">                         </span><span class="c1"># fully qualified domain name (FQDN)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>hostname<span class="w"> </span>-i<span class="w">                         </span><span class="c1"># IP address of hostname</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>hostname<span class="w"> </span>-I<span class="w">                         </span><span class="c1"># all IPs of all interfaces</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>hostnamectl<span class="w">                         </span><span class="c1"># detailed hostname info (systemd)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>hostnamectl<span class="w"> </span>set-hostname<span class="w"> </span>newname<span class="w">    </span><span class="c1"># permanently set hostname</span>
+</code></pre></div>
+<h3 id="32-etchosts-static-name-resolution">3.2 <code>/etc/hosts</code> — Static Name Resolution<a class="headerlink" href="#32-etchosts-static-name-resolution" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cat<span class="w"> </span>/etc/hosts
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1"># Format: IP  hostname  alias</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="m">127</span>.0.0.1<span class="w">   </span>localhost
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="m">127</span>.0.1.1<span class="w">   </span>mymachine.local<span class="w"> </span>mymachine
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="m">192</span>.168.1.10<span class="w">  </span>server1.local<span class="w"> </span>server1
+</code></pre></div>
+<h3 id="33-etcresolvconf-dns-configuration">3.3 <code>/etc/resolv.conf</code> — DNS Configuration<a class="headerlink" href="#33-etcresolvconf-dns-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cat<span class="w"> </span>/etc/resolv.conf
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># nameserver  8.8.8.8</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># nameserver  1.1.1.1</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># search      local.domain</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># domain      local.domain</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">resolv.conf on Systemd Systems</p>
+<p>On systemd-resolved systems, <code>/etc/resolv.conf</code> is a symlink managed automatically. Edit DNS via <code>nmcli</code> or <code>/etc/systemd/resolved.conf</code> instead.</p>
+</div>
+<h3 id="34-etcnsswitchconf-name-resolution-order">3.4 <code>/etc/nsswitch.conf</code> — Name Resolution Order<a class="headerlink" href="#34-etcnsswitchconf-name-resolution-order" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>grep<span class="w"> </span>hosts<span class="w"> </span>/etc/nsswitch.conf
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="c1"># hosts: files dns myhostname</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="c1"># Resolution order: /etc/hosts first, then DNS, then hostname</span>
+</code></pre></div>
+<hr />
+<h2 id="4-dns-lookup-tools">4. DNS Lookup Tools<a class="headerlink" href="#4-dns-lookup-tools" title="Permanent link">&para;</a></h2>
+<h3 id="41-dig-dns-information-groper">4.1 <code>dig</code> — DNS Information Groper<a class="headerlink" href="#41-dig-dns-information-groper" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>dig<span class="w"> </span>google.com<span class="w">                      </span><span class="c1"># A record (IPv4)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>dig<span class="w"> </span>google.com<span class="w"> </span>AAAA<span class="w">                 </span><span class="c1"># IPv6 record</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>dig<span class="w"> </span>google.com<span class="w"> </span>MX<span class="w">                   </span><span class="c1"># mail exchanger records</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>dig<span class="w"> </span>google.com<span class="w"> </span>NS<span class="w">                   </span><span class="c1"># name server records</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>dig<span class="w"> </span>google.com<span class="w"> </span>TXT<span class="w">                  </span><span class="c1"># TXT records (SPF, DKIM, etc.)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>dig<span class="w"> </span>google.com<span class="w"> </span>ANY<span class="w">                  </span><span class="c1"># all record types</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>dig<span class="w"> </span>@8.8.8.8<span class="w"> </span>google.com<span class="w">             </span><span class="c1"># query specific DNS server</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>dig<span class="w"> </span>+short<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># just the IP answer</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>dig<span class="w"> </span>+noall<span class="w"> </span>+answer<span class="w"> </span>google.com<span class="w">       </span><span class="c1"># clean answer section only</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>dig<span class="w"> </span>-x<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">                      </span><span class="c1"># reverse DNS lookup (PTR)</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>dig<span class="w"> </span>+trace<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># trace full DNS resolution path</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>dig<span class="w"> </span>google.com<span class="w"> </span>+dnssec<span class="w">              </span><span class="c1"># check DNSSEC</span>
+</code></pre></div>
+<h3 id="42-nslookup-interactive-dns-lookup">4.2 <code>nslookup</code> — Interactive DNS Lookup<a class="headerlink" href="#42-nslookup-interactive-dns-lookup" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>nslookup<span class="w"> </span>google.com<span class="w">                 </span><span class="c1"># basic lookup</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>nslookup<span class="w"> </span>google.com<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">        </span><span class="c1"># using specific nameserver</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>nslookup<span class="w"> </span>-type<span class="o">=</span>MX<span class="w"> </span>google.com<span class="w">        </span><span class="c1"># MX records</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>nslookup<span class="w"> </span>-type<span class="o">=</span>NS<span class="w"> </span>google.com<span class="w">        </span><span class="c1"># NS records</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="c1"># Interactive mode</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>nslookup
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>&gt;<span class="w"> </span>server<span class="w"> </span><span class="m">1</span>.1.1.1
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>&gt;<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">type</span><span class="o">=</span>MX
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>&gt;<span class="w"> </span>google.com
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>&gt;<span class="w"> </span><span class="nb">exit</span>
+</code></pre></div>
+<h3 id="43-host-simple-dns-lookup">4.3 <code>host</code> — Simple DNS Lookup<a class="headerlink" href="#43-host-simple-dns-lookup" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>host<span class="w"> </span>google.com<span class="w">                     </span><span class="c1"># A record</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>host<span class="w"> </span>-t<span class="w"> </span>MX<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># MX record</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>host<span class="w"> </span>-t<span class="w"> </span>NS<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># NS record</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>host<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">                        </span><span class="c1"># reverse lookup</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>host<span class="w"> </span>-a<span class="w"> </span>google.com<span class="w">                  </span><span class="c1"># all records</span>
+</code></pre></div>
+<h3 id="44-resolvectl-systemd-resolved-status">4.4 <code>resolvectl</code> — systemd-resolved Status<a class="headerlink" href="#44-resolvectl-systemd-resolved-status" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>resolvectl<span class="w"> </span>status<span class="w">                   </span><span class="c1"># DNS config per interface</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>resolvectl<span class="w"> </span>query<span class="w"> </span>google.com<span class="w">         </span><span class="c1"># resolve a hostname</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>resolvectl<span class="w"> </span>statistics<span class="w">               </span><span class="c1"># cache stats</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>resolvectl<span class="w"> </span>flush-caches<span class="w">             </span><span class="c1"># flush DNS cache</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>resolvectl<span class="w"> </span>dns<span class="w"> </span>eth0<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">         </span><span class="c1"># set DNS for interface</span>
+</code></pre></div>
+<hr />
+<h2 id="5-connectivity-testing">5. Connectivity Testing<a class="headerlink" href="#5-connectivity-testing" title="Permanent link">&para;</a></h2>
+<h3 id="51-ping-test-reachability">5.1 <code>ping</code> — Test Reachability<a class="headerlink" href="#51-ping-test-reachability" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>ping<span class="w"> </span>google.com<span class="w">                     </span><span class="c1"># continuous ping (Ctrl+C to stop)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">4</span><span class="w"> </span>google.com<span class="w">                </span><span class="c1"># send exactly 4 packets</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>ping<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>google.com<span class="w">              </span><span class="c1"># interval 0.5 seconds</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>ping<span class="w"> </span>-s<span class="w"> </span><span class="m">1400</span><span class="w"> </span>google.com<span class="w">             </span><span class="c1"># custom packet size (bytes)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>ping<span class="w"> </span>-t<span class="w"> </span><span class="m">64</span><span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">             </span><span class="c1"># set TTL</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>ping<span class="w"> </span>-W<span class="w"> </span><span class="m">2</span><span class="w"> </span>google.com<span class="w">                </span><span class="c1"># timeout 2 seconds per reply</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>ping<span class="w"> </span>-q<span class="w"> </span>-c<span class="w"> </span><span class="m">10</span><span class="w"> </span>google.com<span class="w">            </span><span class="c1"># quiet: summary only</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>ping6<span class="w"> </span>::1<span class="w">                           </span><span class="c1"># ping IPv6 loopback</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>ping<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span>-I<span class="w"> </span>eth0<span class="w">            </span><span class="c1"># use specific interface</span>
+</code></pre></div>
+<p><strong>Reading ping output:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>64 bytes from 142.250.195.78: icmp_seq=1 ttl=116 time=12.4 ms
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>64 bytes</code></td>
+<td>Packet size received</td>
+</tr>
+<tr>
+<td><code>icmp_seq</code></td>
+<td>Sequence number</td>
+</tr>
+<tr>
+<td><code>ttl</code></td>
+<td>Time to live (hops remaining)</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td>Round-trip time in ms</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-traceroute-tracepath-trace-network-path">5.2 <code>traceroute</code> / <code>tracepath</code> — Trace Network Path<a class="headerlink" href="#52-traceroute-tracepath-trace-network-path" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>traceroute<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># trace hops to destination</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>traceroute<span class="w"> </span>-n<span class="w"> </span>google.com<span class="w">            </span><span class="c1"># numeric only (no DNS)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>traceroute<span class="w"> </span>-I<span class="w"> </span>google.com<span class="w">            </span><span class="c1"># use ICMP (like ping)</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>traceroute<span class="w"> </span>-T<span class="w"> </span>google.com<span class="w">            </span><span class="c1"># use TCP (port 80, bypass firewalls)</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>traceroute<span class="w"> </span>-p<span class="w"> </span><span class="m">443</span><span class="w"> </span>google.com<span class="w">        </span><span class="c1"># use specific port</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>traceroute6<span class="w"> </span>google.com<span class="w">              </span><span class="c1"># IPv6 trace</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>tracepath<span class="w"> </span>google.com<span class="w">                </span><span class="c1"># similar, no root needed</span>
+</code></pre></div>
+<h3 id="53-mtr-continuous-traceroute-my-traceroute">5.3 <code>mtr</code> — Continuous Traceroute (My Traceroute)<a class="headerlink" href="#53-mtr-continuous-traceroute-my-traceroute" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>mtr<span class="w"> </span>google.com<span class="w">                      </span><span class="c1"># interactive live traceroute</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>mtr<span class="w"> </span>-r<span class="w"> </span>-c<span class="w"> </span><span class="m">20</span><span class="w"> </span>google.com<span class="w">             </span><span class="c1"># report mode, 20 cycles</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>mtr<span class="w"> </span>-n<span class="w"> </span>google.com<span class="w">                   </span><span class="c1"># no DNS resolution</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>mtr<span class="w"> </span>--tcp<span class="w"> </span>-P<span class="w"> </span><span class="m">443</span><span class="w"> </span>google.com<span class="w">         </span><span class="c1"># TCP mode on port 443</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>mtr<span class="w"> </span>--json<span class="w"> </span>google.com<span class="w">               </span><span class="c1"># JSON output</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">mtr for Diagnosing Packet Loss</p>
+<p><code>mtr</code> shows per-hop packet loss and latency in real time, making it far more useful than traceroute alone for identifying where in the path a problem exists.</p>
+</div>
+<hr />
+<h2 id="6-port-and-socket-monitoring">6. Port and Socket Monitoring<a class="headerlink" href="#6-port-and-socket-monitoring" title="Permanent link">&para;</a></h2>
+<h3 id="61-ss-socket-statistics-modern">6.1 <code>ss</code> — Socket Statistics (Modern)<a class="headerlink" href="#61-ss-socket-statistics-modern" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ss<span class="w">                                  </span><span class="c1"># all sockets</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>ss<span class="w"> </span>-t<span class="w">                               </span><span class="c1"># TCP sockets</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>ss<span class="w"> </span>-u<span class="w">                               </span><span class="c1"># UDP sockets</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>ss<span class="w"> </span>-l<span class="w">                               </span><span class="c1"># listening sockets</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>ss<span class="w"> </span>-lt<span class="w">                              </span><span class="c1"># listening TCP</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>ss<span class="w"> </span>-lu<span class="w">                              </span><span class="c1"># listening UDP</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>ss<span class="w"> </span>-p<span class="w">                               </span><span class="c1"># show process name/PID</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>ss<span class="w"> </span>-n<span class="w">                               </span><span class="c1"># numeric (no hostname/service lookup)</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>ss<span class="w"> </span>-tlnp<span class="w">                            </span><span class="c1"># all listening TCP with PIDs (most useful)</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>ss<span class="w"> </span>-s<span class="w">                               </span><span class="c1"># socket statistics summary</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>ss<span class="w"> </span>-a<span class="w">                               </span><span class="c1"># all (listening + established)</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>ss<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w">                 </span><span class="c1"># connections to specific host</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>ss<span class="w"> </span><span class="nv">sport</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>:22<span class="w">                      </span><span class="c1"># connections on source port 22</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>ss<span class="w"> </span>state<span class="w"> </span>established<span class="w">                </span><span class="c1"># only established connections</span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>ss<span class="w"> </span>-tlnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:80<span class="w">                 </span><span class="c1"># who is listening on port 80</span>
+</code></pre></div>
+<h3 id="62-netstat-legacy-socket-tool">6.2 <code>netstat</code> — Legacy Socket Tool<a class="headerlink" href="#62-netstat-legacy-socket-tool" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>netstat<span class="w"> </span>-tuln<span class="w">                       </span><span class="c1"># listening TCP and UDP (numeric)</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>netstat<span class="w"> </span>-tulnp<span class="w">                      </span><span class="c1"># add process info (root needed)</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>netstat<span class="w"> </span>-an<span class="w">                         </span><span class="c1"># all connections, numeric</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>netstat<span class="w"> </span>-rn<span class="w">                         </span><span class="c1"># routing table</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>netstat<span class="w"> </span>-i<span class="w">                          </span><span class="c1"># interface statistics</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>netstat<span class="w"> </span>-s<span class="w">                          </span><span class="c1"># per-protocol statistics</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>netstat<span class="w"> </span>-c<span class="w">                          </span><span class="c1"># continuous refresh</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">ss vs netstat</p>
+<p><code>netstat</code> is from the deprecated <code>net-tools</code> package. <code>ss</code> is faster, provides more detail, and is the modern replacement.</p>
+</div>
+<h3 id="63-nmap-network-scanner">6.3 <code>nmap</code> — Network Scanner<a class="headerlink" href="#63-nmap-network-scanner" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>nmap<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                    </span><span class="c1"># scan top 1000 ports of a host</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>nmap<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">                 </span><span class="c1"># scan entire subnet</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span>,80,443<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">      </span><span class="c1"># scan specific ports</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>nmap<span class="w"> </span>-p<span class="w"> </span><span class="m">1</span>-65535<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">        </span><span class="c1"># full port scan</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>nmap<span class="w"> </span>-sV<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">               </span><span class="c1"># detect service versions</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>nmap<span class="w"> </span>-O<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                </span><span class="c1"># OS detection (root)</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>nmap<span class="w"> </span>-A<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                </span><span class="c1"># aggressive: OS + version + scripts</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>nmap<span class="w"> </span>-sn<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">            </span><span class="c1"># ping sweep (no port scan)</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>nmap<span class="w"> </span>-Pn<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">               </span><span class="c1"># skip ping, scan anyway</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>nmap<span class="w"> </span>-sU<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">               </span><span class="c1"># UDP scan (root)</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>nmap<span class="w"> </span>-T4<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">               </span><span class="c1"># timing template (0-5, higher = faster)</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>nmap<span class="w"> </span>--open<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">         </span><span class="c1"># show only open ports</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>nmap<span class="w"> </span>-oN<span class="w"> </span>scan.txt<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">      </span><span class="c1"># save output to file (normal format)</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>nmap<span class="w"> </span>-oX<span class="w"> </span>scan.xml<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">      </span><span class="c1"># save as XML</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Ethical Use of nmap</p>
+<p>Only scan networks and hosts you own or have explicit permission to test. Unauthorized scanning may be illegal and violates network policies.</p>
+</div>
+<hr />
+<h2 id="7-file-transfer-tools">7. File Transfer Tools<a class="headerlink" href="#7-file-transfer-tools" title="Permanent link">&para;</a></h2>
+<h3 id="71-wget-non-interactive-downloader">7.1 <code>wget</code> — Non-Interactive Downloader<a class="headerlink" href="#71-wget-non-interactive-downloader" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>wget<span class="w"> </span>https://example.com/file.tar.gz<span class="w">          </span><span class="c1"># download file</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>wget<span class="w"> </span>-O<span class="w"> </span>myfile.tar.gz<span class="w"> </span>https://example.com/f<span class="w">   </span><span class="c1"># save with custom name</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>wget<span class="w"> </span>-P<span class="w"> </span>/tmp/<span class="w"> </span>https://example.com/file<span class="w">        </span><span class="c1"># download to directory</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>wget<span class="w"> </span>-c<span class="w"> </span>https://example.com/large.iso<span class="w">         </span><span class="c1"># continue interrupted download</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>wget<span class="w"> </span>-q<span class="w"> </span>https://example.com/file<span class="w">              </span><span class="c1"># quiet mode</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>wget<span class="w"> </span>--no-check-certificate<span class="w"> </span>https://...<span class="w">       </span><span class="c1"># skip SSL verification</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>wget<span class="w"> </span>-r<span class="w"> </span>-np<span class="w"> </span>https://example.com/docs/<span class="w">         </span><span class="c1"># recursive download</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>wget<span class="w"> </span>-m<span class="w"> </span>https://example.com/<span class="w">                  </span><span class="c1"># mirror a website</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>wget<span class="w"> </span>--limit-rate<span class="o">=</span>500k<span class="w"> </span>https://...<span class="w">            </span><span class="c1"># limit download speed</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>wget<span class="w"> </span>-b<span class="w"> </span>https://example.com/large.iso<span class="w">        </span><span class="c1"># background download</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>wget<span class="w"> </span>-i<span class="w"> </span>urls.txt<span class="w">                              </span><span class="c1"># download list of URLs from file</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>wget<span class="w"> </span>--user<span class="o">=</span>admin<span class="w"> </span>--password<span class="o">=</span>pass<span class="w"> </span>https://...<span class="w"> </span><span class="c1"># HTTP auth</span>
+</code></pre></div>
+<h3 id="72-curl-transfer-data-with-urls">7.2 <code>curl</code> — Transfer Data with URLs<a class="headerlink" href="#72-curl-transfer-data-with-urls" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>curl<span class="w"> </span>https://example.com<span class="w">                       </span><span class="c1"># GET request, output to stdout</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>curl<span class="w"> </span>-o<span class="w"> </span>file.html<span class="w"> </span>https://example.com<span class="w">          </span><span class="c1"># save to file</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>curl<span class="w"> </span>-O<span class="w"> </span>https://example.com/file.tar.gz<span class="w">        </span><span class="c1"># save with original name</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>curl<span class="w"> </span>-L<span class="w"> </span>https://example.com<span class="w">                    </span><span class="c1"># follow redirects</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>curl<span class="w"> </span>-I<span class="w"> </span>https://example.com<span class="w">                    </span><span class="c1"># headers only (HEAD request)</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>curl<span class="w"> </span>-v<span class="w"> </span>https://example.com<span class="w">                    </span><span class="c1"># verbose (show request/response)</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>curl<span class="w"> </span>-s<span class="w"> </span>https://example.com<span class="w">                    </span><span class="c1"># silent (no progress)</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>curl<span class="w"> </span>-C<span class="w"> </span>-<span class="w"> </span>-O<span class="w"> </span>https://example.com/large.iso<span class="w">     </span><span class="c1"># resume download</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>curl<span class="w"> </span>--limit-rate<span class="w"> </span>500K<span class="w"> </span>https://...<span class="w">             </span><span class="c1"># limit rate</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>curl<span class="w"> </span>-u<span class="w"> </span>user:pass<span class="w"> </span>https://example.com<span class="w">          </span><span class="c1"># basic authentication</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>curl<span class="w"> </span>-k<span class="w"> </span>https://self-signed.example.com<span class="w">        </span><span class="c1"># skip SSL verification</span>
+</code></pre></div>
+<p><strong>HTTP Methods:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;key=val&quot;</span><span class="w"> </span>https://api.example.com/endpoint<span class="w">     </span><span class="c1"># POST form data</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">     </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;name&quot;:&quot;Alice&quot;}&#39;</span><span class="w"> </span>https://api.example.com/users<span class="w">       </span><span class="c1"># POST JSON</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>-d<span class="w"> </span>@data.json<span class="w"> </span>https://api.example.com/item/1<span class="w">       </span><span class="c1"># PUT from file</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>curl<span class="w"> </span>-X<span class="w"> </span>DELETE<span class="w"> </span>https://api.example.com/item/1<span class="w">                  </span><span class="c1"># DELETE</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer TOKEN&quot;</span><span class="w"> </span>https://api.example.com<span class="w">  </span><span class="c1"># auth header</span>
+</code></pre></div>
+<p><strong>Useful curl Flags:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-o FILE</code></td>
+<td>Save output to FILE</td>
+</tr>
+<tr>
+<td><code>-O</code></td>
+<td>Save with server filename</td>
+</tr>
+<tr>
+<td><code>-L</code></td>
+<td>Follow redirects</td>
+</tr>
+<tr>
+<td><code>-I</code></td>
+<td>Headers only</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose output</td>
+</tr>
+<tr>
+<td><code>-s</code></td>
+<td>Silent (suppress progress)</td>
+</tr>
+<tr>
+<td><code>-k</code></td>
+<td>Insecure (skip SSL cert)</td>
+</tr>
+<tr>
+<td><code>-u user:pass</code></td>
+<td>Basic auth</td>
+</tr>
+<tr>
+<td><code>-H "Header: val"</code></td>
+<td>Add custom header</td>
+</tr>
+<tr>
+<td><code>-d "data"</code></td>
+<td>POST data</td>
+</tr>
+<tr>
+<td><code>-X METHOD</code></td>
+<td>HTTP method</td>
+</tr>
+<tr>
+<td><code>-b cookie.txt</code></td>
+<td>Send cookies</td>
+</tr>
+<tr>
+<td><code>-c cookie.txt</code></td>
+<td>Save cookies</td>
+</tr>
+<tr>
+<td><code>--proxy host:port</code></td>
+<td>Use proxy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-scp-secure-copy-ssh-based">7.3 <code>scp</code> — Secure Copy (SSH-based)<a class="headerlink" href="#73-scp-secure-copy-ssh-based" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>scp<span class="w"> </span>file.txt<span class="w"> </span>user@host:/remote/path/<span class="w">          </span><span class="c1"># local → remote</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>scp<span class="w"> </span>user@host:/remote/file.txt<span class="w"> </span>/local/path/<span class="w">   </span><span class="c1"># remote → local</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>scp<span class="w"> </span>file.txt<span class="w"> </span>user@host:~<span class="w">                       </span><span class="c1"># to home directory</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>scp<span class="w"> </span>-r<span class="w"> </span>dir/<span class="w"> </span>user@host:/remote/<span class="w">                 </span><span class="c1"># copy directory recursively</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>scp<span class="w"> </span>-P<span class="w"> </span><span class="m">2222</span><span class="w"> </span>file.txt<span class="w"> </span>user@host:/path/<span class="w">          </span><span class="c1"># non-standard SSH port</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>scp<span class="w"> </span>-i<span class="w"> </span>~/.ssh/key.pem<span class="w"> </span>file.txt<span class="w"> </span>user@host:~<span class="w">     </span><span class="c1"># use specific key</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>scp<span class="w"> </span>-C<span class="w"> </span>file.txt<span class="w"> </span>user@host:~<span class="w">                    </span><span class="c1"># compress during transfer</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>scp<span class="w"> </span>user1@host1:/file<span class="w"> </span>user2@host2:/file<span class="w">        </span><span class="c1"># remote to remote</span>
+</code></pre></div>
+<h3 id="74-rsync-efficient-synchronisation">7.4 <code>rsync</code> — Efficient Synchronisation<a class="headerlink" href="#74-rsync-efficient-synchronisation" title="Permanent link">&para;</a></h3>
+<p><code>rsync</code> transfers only changed blocks, making it ideal for backups and large syncs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>rsync<span class="w"> </span>-av<span class="w"> </span>src/<span class="w"> </span>dest/<span class="w">                           </span><span class="c1"># archive + verbose, local</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>rsync<span class="w"> </span>-av<span class="w"> </span>src/<span class="w"> </span>user@host:/dest/<span class="w">                </span><span class="c1"># push to remote</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>rsync<span class="w"> </span>-av<span class="w"> </span>user@host:/src/<span class="w"> </span>dest/<span class="w">                </span><span class="c1"># pull from remote</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>rsync<span class="w"> </span>-avz<span class="w"> </span>src/<span class="w"> </span>user@host:/dest/<span class="w">               </span><span class="c1"># compress during transfer</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>rsync<span class="w"> </span>-avP<span class="w"> </span>src/<span class="w"> </span>user@host:/dest/<span class="w">               </span><span class="c1"># progress bar + partial</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>rsync<span class="w"> </span>--delete<span class="w"> </span>src/<span class="w"> </span>dest/<span class="w">                      </span><span class="c1"># delete files not in src</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>rsync<span class="w"> </span>-n<span class="w"> </span>src/<span class="w"> </span>dest/<span class="w">                            </span><span class="c1"># dry run (simulate only)</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>rsync<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;ssh -p 2222&quot;</span><span class="w"> </span>src/<span class="w"> </span>user@host:/dest/<span class="w">   </span><span class="c1"># custom SSH port</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>rsync<span class="w"> </span>--exclude<span class="o">=</span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>src/<span class="w"> </span>dest/<span class="w">             </span><span class="c1"># exclude pattern</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>rsync<span class="w"> </span>--exclude-from<span class="o">=</span>excludes.txt<span class="w"> </span>src/<span class="w"> </span>dest/<span class="w">   </span><span class="c1"># exclude list from file</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>rsync<span class="w"> </span>--bwlimit<span class="o">=</span><span class="m">5000</span><span class="w"> </span>src/<span class="w"> </span>user@host:/dest/<span class="w">     </span><span class="c1"># limit bandwidth (KB/s)</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>rsync<span class="w"> </span>--backup<span class="w"> </span>--backup-dir<span class="o">=</span>/backup/<span class="w"> </span>src/<span class="w"> </span>dest/<span class="w"> </span><span class="c1"># keep backup copies</span>
+</code></pre></div>
+<p><strong>Common rsync flags:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-a</code></td>
+<td>Archive (recursive + preserves permissions, times, symlinks)</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>Verbose</td>
+</tr>
+<tr>
+<td><code>-z</code></td>
+<td>Compress</td>
+</tr>
+<tr>
+<td><code>-P</code></td>
+<td>Progress + keep partial</td>
+</tr>
+<tr>
+<td><code>-n</code></td>
+<td>Dry run</td>
+</tr>
+<tr>
+<td><code>--delete</code></td>
+<td>Delete extraneous destination files</td>
+</tr>
+<tr>
+<td><code>-e ssh</code></td>
+<td>Use SSH as transport</td>
+</tr>
+<tr>
+<td><code>--exclude</code></td>
+<td>Exclude pattern</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Trailing Slash in rsync</p>
+<p><code>rsync -av src/ dest/</code> syncs the <em>contents</em> of src into dest. Without the trailing slash, <code>rsync -av src dest/</code> creates <code>dest/src/</code>. Always be intentional about trailing slashes.</p>
+</div>
+<h3 id="75-sftp-interactive-secure-ftp">7.5 <code>sftp</code> — Interactive Secure FTP<a class="headerlink" href="#75-sftp-interactive-secure-ftp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>sftp<span class="w"> </span>user@host<span class="w">                      </span><span class="c1"># open session</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>sftp<span class="w"> </span>-P<span class="w"> </span><span class="m">2222</span><span class="w"> </span>user@host<span class="w">              </span><span class="c1"># non-standard port</span>
+</code></pre></div>
+<p><strong>Inside sftp session:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>ls<span class="w">                                  </span><span class="c1"># list remote files</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>lls<span class="w">                                 </span><span class="c1"># list local files</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="nb">cd</span><span class="w"> </span>/remote/dir<span class="w">                      </span><span class="c1"># change remote directory</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>lcd<span class="w"> </span>/local/dir<span class="w">                      </span><span class="c1"># change local directory</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>get<span class="w"> </span>file.txt<span class="w">                        </span><span class="c1"># download file</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>get<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w">                   </span><span class="c1"># download directory</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a>put<span class="w"> </span>file.txt<span class="w">                        </span><span class="c1"># upload file</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a>put<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w">                   </span><span class="c1"># upload directory</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="nb">pwd</span><span class="w">                                 </span><span class="c1"># remote current directory</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a>lpwd<span class="w">                                </span><span class="c1"># local current directory</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a>mkdir<span class="w"> </span>newdir<span class="w">                        </span><span class="c1"># create remote directory</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>rm<span class="w"> </span>file.txt<span class="w">                         </span><span class="c1"># delete remote file</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a>bye<span class="w">                                 </span><span class="c1"># close session</span>
+</code></pre></div>
+<hr />
+<h2 id="8-ssh-secure-shell">8. SSH — Secure Shell<a class="headerlink" href="#8-ssh-secure-shell" title="Permanent link">&para;</a></h2>
+<h3 id="81-connecting">8.1 Connecting<a class="headerlink" href="#81-connecting" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>ssh<span class="w"> </span>user@hostname<span class="w">                   </span><span class="c1"># basic connection</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>ssh<span class="w"> </span>user@192.168.1.10<span class="w">               </span><span class="c1"># connect by IP</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>ssh<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span><span class="w"> </span>user@host<span class="w">               </span><span class="c1"># non-standard port</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_rsa<span class="w"> </span>user@host<span class="w">      </span><span class="c1"># specify identity file</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>ssh<span class="w"> </span>-v<span class="w"> </span>user@host<span class="w">                    </span><span class="c1"># verbose (debug connection)</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>ssh<span class="w"> </span>-vvv<span class="w"> </span>user@host<span class="w">                  </span><span class="c1"># maximum verbosity</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>ssh<span class="w"> </span>-X<span class="w"> </span>user@host<span class="w">                    </span><span class="c1"># enable X11 forwarding (GUI apps)</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>ssh<span class="w"> </span>-A<span class="w"> </span>user@host<span class="w">                    </span><span class="c1"># forward SSH agent</span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>ssh<span class="w"> </span>-t<span class="w"> </span>user@jumphost<span class="w"> </span>ssh<span class="w"> </span>user@target<span class="w">  </span><span class="c1"># SSH through a jump host</span>
+</code></pre></div>
+<h3 id="82-ssh-key-authentication">8.2 SSH Key Authentication<a class="headerlink" href="#82-ssh-key-authentication" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># Generate a key pair</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your@email.com&quot;</span><span class="w">       </span><span class="c1"># modern Ed25519 key</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your@email.com&quot;</span><span class="w">   </span><span class="c1"># RSA 4096-bit</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-f<span class="w"> </span>~/.ssh/mykey<span class="w">            </span><span class="c1"># custom filename</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="c1"># Copy public key to server</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>ssh-copy-id<span class="w"> </span>user@host<span class="w">                            </span><span class="c1"># copies ~/.ssh/id_*.pub</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/mykey.pub<span class="w"> </span>user@host<span class="w">        </span><span class="c1"># specific key</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>ssh-copy-id<span class="w"> </span>-p<span class="w"> </span><span class="m">2222</span><span class="w"> </span>user@host<span class="w">                    </span><span class="c1"># non-standard port</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a><span class="c1"># Manually add key (if ssh-copy-id unavailable)</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>user@host<span class="w"> </span><span class="s2">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span>
+</code></pre></div>
+<h3 id="83-ssh-config-file-sshconfig">8.3 SSH Config File (<code>~/.ssh/config</code>)<a class="headerlink" href="#83-ssh-config-file-sshconfig" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># ~/.ssh/config</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>Host<span class="w"> </span>myserver
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span>HostName<span class="w"> </span><span class="m">192</span>.168.1.50
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span>User<span class="w"> </span>admin
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span>Port<span class="w"> </span><span class="m">2222</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/mykey
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="w">    </span>ForwardAgent<span class="w"> </span>yes
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>Host<span class="w"> </span>jumphost
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">    </span>HostName<span class="w"> </span>jump.example.com
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="w">    </span>User<span class="w"> </span>deploy
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a><span class="w">    </span>Port<span class="w"> </span><span class="m">22</span>
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>Host<span class="w"> </span>internal
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a><span class="w">    </span>HostName<span class="w"> </span><span class="m">10</span>.0.0.5
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a><span class="w">    </span>User<span class="w"> </span>root
+<a id="__codelineno-32-17" name="__codelineno-32-17" href="#__codelineno-32-17"></a><span class="w">    </span>ProxyJump<span class="w"> </span>jumphost
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>ssh<span class="w"> </span>myserver<span class="w">                        </span><span class="c1"># uses config above</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>ssh<span class="w"> </span>internal<span class="w">                        </span><span class="c1"># connects through jumphost automatically</span>
+</code></pre></div>
+<h3 id="84-port-forwarding-ssh-tunnels">8.4 Port Forwarding (SSH Tunnels)<a class="headerlink" href="#84-port-forwarding-ssh-tunnels" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="c1"># Local port forwarding (access remote service locally)</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">8080</span>:localhost:80<span class="w"> </span>user@host<span class="w">      </span><span class="c1"># localhost:8080 → host&#39;s port 80</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>ssh<span class="w"> </span>-L<span class="w"> </span><span class="m">5432</span>:db.internal:5432<span class="w"> </span>user@jump<span class="w"> </span><span class="c1"># access DB through jump host</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="c1"># Remote port forwarding (expose local service remotely)</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>ssh<span class="w"> </span>-R<span class="w"> </span><span class="m">8080</span>:localhost:3000<span class="w"> </span>user@host<span class="w">    </span><span class="c1"># host&#39;s port 8080 → your local 3000</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a>
+<a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="c1"># Dynamic port forwarding (SOCKS proxy)</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a>ssh<span class="w"> </span>-D<span class="w"> </span><span class="m">1080</span><span class="w"> </span>user@host<span class="w">                   </span><span class="c1"># SOCKS5 proxy on localhost:1080</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10" href="#__codelineno-34-10"></a>
+<a id="__codelineno-34-11" name="__codelineno-34-11" href="#__codelineno-34-11"></a><span class="c1"># Background tunnel</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12" href="#__codelineno-34-12"></a>ssh<span class="w"> </span>-fNL<span class="w"> </span><span class="m">8080</span>:localhost:80<span class="w"> </span>user@host<span class="w">    </span><span class="c1"># -f background, -N no command</span>
+</code></pre></div>
+<h3 id="85-ssh-server-configuration-etcsshsshd_config">8.5 SSH Server Configuration (<code>/etc/ssh/sshd_config</code>)<a class="headerlink" href="#85-ssh-server-configuration-etcsshsshd_config" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Port<span class="w"> </span><span class="m">22</span><span class="w">                             </span><span class="c1"># listening port</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>PermitRootLogin<span class="w"> </span>no<span class="w">                  </span><span class="c1"># disable root login (recommended)</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>PasswordAuthentication<span class="w"> </span>no<span class="w">           </span><span class="c1"># key-only login (recommended)</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>PubkeyAuthentication<span class="w"> </span>yes<span class="w">            </span><span class="c1"># allow key auth</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>AuthorizedKeysFile<span class="w"> </span>.ssh/authorized_keys
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>MaxAuthTries<span class="w"> </span><span class="m">3</span><span class="w">                      </span><span class="c1"># limit brute force</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>AllowUsers<span class="w"> </span>alice<span class="w"> </span>bob<span class="w">                </span><span class="c1"># whitelist users</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>DenyUsers<span class="w"> </span>root<span class="w">                      </span><span class="c1"># blacklist users</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a>X11Forwarding<span class="w"> </span>no<span class="w">                    </span><span class="c1"># disable GUI forwarding if unused</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10" href="#__codelineno-35-10"></a>ClientAliveInterval<span class="w"> </span><span class="m">300</span><span class="w">             </span><span class="c1"># keepalive every 5 minutes</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>systemctl<span class="w"> </span>restart<span class="w"> </span>sshd<span class="w">              </span><span class="c1"># apply config changes</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>sshd<span class="w"> </span>-t<span class="w">                             </span><span class="c1"># test config syntax before restart</span>
+</code></pre></div>
+<h3 id="86-key-management">8.6 Key Management<a class="headerlink" href="#86-key-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519<span class="w">           </span><span class="c1"># add key to ssh-agent</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>ssh-add<span class="w"> </span>-l<span class="w">                          </span><span class="c1"># list loaded keys</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>ssh-add<span class="w"> </span>-D<span class="w">                          </span><span class="c1"># remove all keys from agent</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="nb">eval</span><span class="w"> </span><span class="k">$(</span>ssh-agent<span class="k">)</span><span class="w">                   </span><span class="c1"># start agent in current shell</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>ssh-keygen<span class="w"> </span>-lf<span class="w"> </span>~/.ssh/id_ed25519.pub<span class="w">  </span><span class="c1"># show key fingerprint</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>ssh-keygen<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_rsa<span class="w">      </span><span class="c1"># change key passphrase</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>ssh-keygen<span class="w"> </span>-R<span class="w"> </span>hostname<span class="w">              </span><span class="c1"># remove host from known_hosts</span>
+</code></pre></div>
+<hr />
+<h2 id="9-firewall-management">9. Firewall Management<a class="headerlink" href="#9-firewall-management" title="Permanent link">&para;</a></h2>
+<h3 id="91-ufw-uncomplicated-firewall-debianubuntu">9.1 <code>ufw</code> — Uncomplicated Firewall (Debian/Ubuntu)<a class="headerlink" href="#91-ufw-uncomplicated-firewall-debianubuntu" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>ufw<span class="w"> </span>status<span class="w">                          </span><span class="c1"># show status and rules</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>ufw<span class="w"> </span>status<span class="w"> </span>verbose<span class="w">                  </span><span class="c1"># detailed status</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>ufw<span class="w"> </span>status<span class="w"> </span>numbered<span class="w">                 </span><span class="c1"># rules with numbers</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>ufw<span class="w"> </span><span class="nb">enable</span><span class="w">                          </span><span class="c1"># enable firewall</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>ufw<span class="w"> </span>disable<span class="w">                         </span><span class="c1"># disable firewall</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a><span class="c1"># Allow / Deny by port</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">22</span><span class="w">                        </span><span class="c1"># allow SSH</span>
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp<span class="w">                    </span><span class="c1"># allow HTTP</span>
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">443</span>/tcp<span class="w">                   </span><span class="c1"># allow HTTPS</span>
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>ufw<span class="w"> </span>deny<span class="w"> </span><span class="m">23</span><span class="w">                         </span><span class="c1"># deny Telnet</span>
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">8000</span>:9000/tcp<span class="w">             </span><span class="c1"># allow port range</span>
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a><span class="c1"># Allow / Deny by service name</span>
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>ufw<span class="w"> </span>allow<span class="w"> </span>ssh<span class="w">                       </span><span class="c1"># allow SSH (by name)</span>
+<a id="__codelineno-38-16" name="__codelineno-38-16" href="#__codelineno-38-16"></a>ufw<span class="w"> </span>allow<span class="w"> </span>http<span class="w">                      </span><span class="c1"># allow HTTP</span>
+<a id="__codelineno-38-17" name="__codelineno-38-17" href="#__codelineno-38-17"></a>ufw<span class="w"> </span>allow<span class="w"> </span>https<span class="w">                     </span><span class="c1"># allow HTTPS</span>
+<a id="__codelineno-38-18" name="__codelineno-38-18" href="#__codelineno-38-18"></a>
+<a id="__codelineno-38-19" name="__codelineno-38-19" href="#__codelineno-38-19"></a><span class="c1"># Allow / Deny by IP</span>
+<a id="__codelineno-38-20" name="__codelineno-38-20" href="#__codelineno-38-20"></a>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w">       </span><span class="c1"># allow entire subnet</span>
+<a id="__codelineno-38-21" name="__codelineno-38-21" href="#__codelineno-38-21"></a>ufw<span class="w"> </span>allow<span class="w"> </span>from<span class="w"> </span><span class="m">10</span>.0.0.5<span class="w"> </span>to<span class="w"> </span>any<span class="w"> </span>port<span class="w"> </span><span class="m">22</span><span class="w">  </span><span class="c1"># allow IP to port 22</span>
+<a id="__codelineno-38-22" name="__codelineno-38-22" href="#__codelineno-38-22"></a>ufw<span class="w"> </span>deny<span class="w"> </span>from<span class="w"> </span><span class="m">1</span>.2.3.4<span class="w">               </span><span class="c1"># block specific IP</span>
+<a id="__codelineno-38-23" name="__codelineno-38-23" href="#__codelineno-38-23"></a>
+<a id="__codelineno-38-24" name="__codelineno-38-24" href="#__codelineno-38-24"></a><span class="c1"># Delete rules</span>
+<a id="__codelineno-38-25" name="__codelineno-38-25" href="#__codelineno-38-25"></a>ufw<span class="w"> </span>delete<span class="w"> </span>allow<span class="w"> </span><span class="m">80</span>/tcp
+<a id="__codelineno-38-26" name="__codelineno-38-26" href="#__codelineno-38-26"></a>ufw<span class="w"> </span>delete<span class="w"> </span><span class="m">3</span><span class="w">                        </span><span class="c1"># delete rule number 3</span>
+<a id="__codelineno-38-27" name="__codelineno-38-27" href="#__codelineno-38-27"></a>ufw<span class="w"> </span>reset<span class="w">                           </span><span class="c1"># reset all rules</span>
+</code></pre></div>
+<h3 id="92-firewalld-dynamic-firewall-rhelfedoracentos">9.2 <code>firewalld</code> — Dynamic Firewall (RHEL/Fedora/CentOS)<a class="headerlink" href="#92-firewalld-dynamic-firewall-rhelfedoracentos" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>firewall-cmd<span class="w"> </span>--state<span class="w">                </span><span class="c1"># check if running</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>firewall-cmd<span class="w"> </span>--get-default-zone<span class="w">     </span><span class="c1"># current default zone</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>firewall-cmd<span class="w"> </span>--get-active-zones<span class="w">     </span><span class="c1"># active zones with interfaces</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>firewall-cmd<span class="w"> </span>--list-all<span class="w">             </span><span class="c1"># list all rules in default zone</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="c1"># Zones</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>firewall-cmd<span class="w"> </span>--get-zones<span class="w">                            </span><span class="c1"># list zones</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>firewall-cmd<span class="w"> </span>--zone<span class="o">=</span>public<span class="w"> </span>--list-all<span class="w">               </span><span class="c1"># list rules in zone</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>firewall-cmd<span class="w"> </span>--set-default-zone<span class="o">=</span>home<span class="w">                </span><span class="c1"># change default zone</span>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a>firewall-cmd<span class="w"> </span>--change-interface<span class="o">=</span>eth0<span class="w"> </span>--zone<span class="o">=</span>trusted<span class="w"> </span><span class="c1"># assign interface to zone</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>
+<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="c1"># Allow / Deny Services</span>
+<a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>http<span class="w"> </span>--permanent<span class="w">          </span><span class="c1"># allow HTTP permanently</span>
+<a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a>firewall-cmd<span class="w"> </span>--add-service<span class="o">=</span>https<span class="w"> </span>--permanent<span class="w">         </span><span class="c1"># allow HTTPS</span>
+<a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a>firewall-cmd<span class="w"> </span>--remove-service<span class="o">=</span>telnet<span class="w"> </span>--permanent<span class="w">     </span><span class="c1"># deny Telnet</span>
+<a id="__codelineno-39-16" name="__codelineno-39-16" href="#__codelineno-39-16"></a>firewall-cmd<span class="w"> </span>--list-services<span class="w">                         </span><span class="c1"># list allowed services</span>
+<a id="__codelineno-39-17" name="__codelineno-39-17" href="#__codelineno-39-17"></a>
+<a id="__codelineno-39-18" name="__codelineno-39-18" href="#__codelineno-39-18"></a><span class="c1"># Allow / Deny Ports</span>
+<a id="__codelineno-39-19" name="__codelineno-39-19" href="#__codelineno-39-19"></a>firewall-cmd<span class="w"> </span>--add-port<span class="o">=</span><span class="m">8080</span>/tcp<span class="w"> </span>--permanent<span class="w">         </span><span class="c1"># allow port</span>
+<a id="__codelineno-39-20" name="__codelineno-39-20" href="#__codelineno-39-20"></a>firewall-cmd<span class="w"> </span>--remove-port<span class="o">=</span><span class="m">8080</span>/tcp<span class="w"> </span>--permanent<span class="w">      </span><span class="c1"># remove port</span>
+<a id="__codelineno-39-21" name="__codelineno-39-21" href="#__codelineno-39-21"></a>
+<a id="__codelineno-39-22" name="__codelineno-39-22" href="#__codelineno-39-22"></a><span class="c1"># Apply changes</span>
+<a id="__codelineno-39-23" name="__codelineno-39-23" href="#__codelineno-39-23"></a>firewall-cmd<span class="w"> </span>--reload<span class="w">                                </span><span class="c1"># reload rules</span>
+<a id="__codelineno-39-24" name="__codelineno-39-24" href="#__codelineno-39-24"></a>
+<a id="__codelineno-39-25" name="__codelineno-39-25" href="#__codelineno-39-25"></a><span class="c1"># Rich rules (more specific)</span>
+<a id="__codelineno-39-26" name="__codelineno-39-26" href="#__codelineno-39-26"></a>firewall-cmd<span class="w"> </span>--add-rich-rule<span class="o">=</span><span class="s1">&#39;rule family=&quot;ipv4&quot; source address=&quot;192.168.1.5&quot; accept&#39;</span><span class="w"> </span>--permanent
+</code></pre></div>
+<h3 id="93-iptables-low-level-packet-filtering">9.3 <code>iptables</code> — Low-Level Packet Filtering<a class="headerlink" href="#93-iptables-low-level-packet-filtering" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>iptables<span class="w"> </span>-L<span class="w">                         </span><span class="c1"># list all rules</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>iptables<span class="w"> </span>-L<span class="w"> </span>-v<span class="w"> </span>-n<span class="w">                   </span><span class="c1"># verbose, numeric</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>iptables<span class="w"> </span>-L<span class="w"> </span>INPUT<span class="w"> </span>-n<span class="w">                </span><span class="c1"># INPUT chain only</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>iptables<span class="w"> </span>-F<span class="w">                         </span><span class="c1"># flush all rules (careful!)</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a>iptables<span class="w"> </span>-F<span class="w"> </span>INPUT<span class="w">                   </span><span class="c1"># flush INPUT chain</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="c1"># Allow / Deny</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">     </span><span class="c1"># allow SSH</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">     </span><span class="c1"># allow HTTP</span>
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">192</span>.168.1.0/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">     </span><span class="c1"># allow subnet</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-s<span class="w"> </span><span class="m">1</span>.2.3.4<span class="w"> </span>-j<span class="w"> </span>DROP<span class="w">              </span><span class="c1"># block IP</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a>
+<a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="c1"># Stateful rules</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+<a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>NEW<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
+<a id="__codelineno-40-16" name="__codelineno-40-16" href="#__codelineno-40-16"></a>
+<a id="__codelineno-40-17" name="__codelineno-40-17" href="#__codelineno-40-17"></a><span class="c1"># Default policy</span>
+<a id="__codelineno-40-18" name="__codelineno-40-18" href="#__codelineno-40-18"></a>iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP<span class="w">              </span><span class="c1"># default deny all input</span>
+<a id="__codelineno-40-19" name="__codelineno-40-19" href="#__codelineno-40-19"></a>iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
+<a id="__codelineno-40-20" name="__codelineno-40-20" href="#__codelineno-40-20"></a>iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>ACCEPT
+<a id="__codelineno-40-21" name="__codelineno-40-21" href="#__codelineno-40-21"></a>
+<a id="__codelineno-40-22" name="__codelineno-40-22" href="#__codelineno-40-22"></a><span class="c1"># Save / Restore</span>
+<a id="__codelineno-40-23" name="__codelineno-40-23" href="#__codelineno-40-23"></a>iptables-save<span class="w"> </span>&gt;<span class="w"> </span>/etc/iptables/rules.v4
+<a id="__codelineno-40-24" name="__codelineno-40-24" href="#__codelineno-40-24"></a>iptables-restore<span class="w"> </span>&lt;<span class="w"> </span>/etc/iptables/rules.v4
+</code></pre></div>
+<hr />
+<h2 id="10-packet-analysis">10. Packet Analysis<a class="headerlink" href="#10-packet-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="101-tcpdump-command-line-packet-capture">10.1 <code>tcpdump</code> — Command-Line Packet Capture<a class="headerlink" href="#101-tcpdump-command-line-packet-capture" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>tcpdump<span class="w">                                        </span><span class="c1"># capture on default interface</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w">                                </span><span class="c1"># specific interface</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>tcpdump<span class="w"> </span>-i<span class="w"> </span>any<span class="w">                                 </span><span class="c1"># all interfaces</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>tcpdump<span class="w"> </span>-n<span class="w">                                     </span><span class="c1"># no DNS lookup</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>tcpdump<span class="w"> </span>-nn<span class="w">                                    </span><span class="c1"># no DNS or port lookup</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>tcpdump<span class="w"> </span>-v<span class="w">                                     </span><span class="c1"># verbose</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>tcpdump<span class="w"> </span>-vvv<span class="w">                                   </span><span class="c1"># maximum verbosity</span>
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>tcpdump<span class="w"> </span>-c<span class="w"> </span><span class="m">100</span><span class="w">                                 </span><span class="c1"># capture only 100 packets</span>
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>tcpdump<span class="w"> </span>-w<span class="w"> </span>capture.pcap<span class="w">                        </span><span class="c1"># write to file</span>
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>tcpdump<span class="w"> </span>-r<span class="w"> </span>capture.pcap<span class="w">                        </span><span class="c1"># read from file</span>
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>tcpdump<span class="w"> </span>-A<span class="w">                                     </span><span class="c1"># print ASCII payload</span>
+<a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>tcpdump<span class="w"> </span>-X<span class="w">                                     </span><span class="c1"># print hex and ASCII</span>
+</code></pre></div>
+<p><strong>Filters:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>tcpdump<span class="w"> </span>host<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                       </span><span class="c1"># traffic to/from host</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>tcpdump<span class="w"> </span>src<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                        </span><span class="c1"># traffic FROM host</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>tcpdump<span class="w"> </span>dst<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w">                        </span><span class="c1"># traffic TO host</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>tcpdump<span class="w"> </span>port<span class="w"> </span><span class="m">80</span><span class="w">                                </span><span class="c1"># HTTP traffic</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>tcpdump<span class="w"> </span>port<span class="w"> </span><span class="m">443</span><span class="w">                               </span><span class="c1"># HTTPS traffic</span>
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>tcpdump<span class="w"> </span>not<span class="w"> </span>port<span class="w"> </span><span class="m">22</span><span class="w">                            </span><span class="c1"># exclude SSH</span>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>tcpdump<span class="w"> </span>tcp<span class="w">                                    </span><span class="c1"># TCP only</span>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>tcpdump<span class="w"> </span>udp<span class="w">                                    </span><span class="c1"># UDP only</span>
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>tcpdump<span class="w"> </span>icmp<span class="w">                                   </span><span class="c1"># ICMP only</span>
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span><span class="s1">&#39;port 80 and host 192.168.1.5&#39;</span><span class="w">  </span><span class="c1"># combined filter</span>
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span><span class="s1">&#39;src 10.0.0.1 and dst port 22&#39;</span><span class="w">  </span><span class="c1"># source + dest port</span>
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>tcpdump<span class="w"> </span>-i<span class="w"> </span>eth0<span class="w"> </span><span class="s1">&#39;not arp and not icmp&#39;</span><span class="w">           </span><span class="c1"># exclude noise</span>
+</code></pre></div>
+<hr />
+<h2 id="11-network-performance-and-diagnostics">11. Network Performance and Diagnostics<a class="headerlink" href="#11-network-performance-and-diagnostics" title="Permanent link">&para;</a></h2>
+<h3 id="111-iperf3-bandwidth-testing">11.1 <code>iperf3</code> — Bandwidth Testing<a class="headerlink" href="#111-iperf3-bandwidth-testing" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="c1"># On server</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>iperf3<span class="w"> </span>-s<span class="w">                           </span><span class="c1"># start server (port 5201)</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>iperf3<span class="w"> </span>-s<span class="w"> </span>-p<span class="w"> </span><span class="m">9000</span><span class="w">                   </span><span class="c1"># custom port</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a><span class="c1"># On client</span>
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w">             </span><span class="c1"># test TCP bandwidth to server</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>-u<span class="w">          </span><span class="c1"># UDP test</span>
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>-t<span class="w"> </span><span class="m">30</span><span class="w">       </span><span class="c1"># run for 30 seconds</span>
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>-P<span class="w"> </span><span class="m">4</span><span class="w">        </span><span class="c1"># 4 parallel streams</span>
+<a id="__codelineno-43-10" name="__codelineno-43-10" href="#__codelineno-43-10"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>-R<span class="w">          </span><span class="c1"># reverse (server → client)</span>
+<a id="__codelineno-43-11" name="__codelineno-43-11" href="#__codelineno-43-11"></a>iperf3<span class="w"> </span>-c<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span>-b<span class="w"> </span>100M<span class="w">     </span><span class="c1"># target 100 Mbps (UDP)</span>
+</code></pre></div>
+<h3 id="112-netcat-nc-swiss-army-knife">11.2 <code>netcat</code> (<code>nc</code>) — Swiss Army Knife<a class="headerlink" href="#112-netcat-nc-swiss-army-knife" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># Connectivity testing</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>nc<span class="w"> </span>-zv<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">22</span><span class="w">               </span><span class="c1"># test if port 22 is open (-z = scan, -v = verbose)</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>nc<span class="w"> </span>-zv<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">20</span>-25<span class="w">            </span><span class="c1"># scan port range</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>nc<span class="w"> </span>-zu<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">53</span><span class="w">               </span><span class="c1"># UDP port test</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="c1"># Simple server / client</span>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>nc<span class="w"> </span>-l<span class="w"> </span><span class="m">1234</span><span class="w">                          </span><span class="c1"># listen on port 1234</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>nc<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">1234</span><span class="w">                 </span><span class="c1"># connect to listening server</span>
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>
+<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a><span class="c1"># File transfer</span>
+<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>nc<span class="w"> </span>-l<span class="w"> </span><span class="m">1234</span><span class="w"> </span>&gt;<span class="w"> </span>received.txt<span class="w">           </span><span class="c1"># receive file on server</span>
+<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a>nc<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">1234</span><span class="w"> </span>&lt;<span class="w"> </span>file.txt<span class="w">      </span><span class="c1"># send file from client</span>
+<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a>
+<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="c1"># Chat session</span>
+<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a>nc<span class="w"> </span>-l<span class="w"> </span><span class="m">1234</span><span class="w">                          </span><span class="c1"># server listens</span>
+<a id="__codelineno-44-16" name="__codelineno-44-16" href="#__codelineno-44-16"></a>nc<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">1234</span><span class="w">                 </span><span class="c1"># client connects (type to chat)</span>
+<a id="__codelineno-44-17" name="__codelineno-44-17" href="#__codelineno-44-17"></a>
+<a id="__codelineno-44-18" name="__codelineno-44-18" href="#__codelineno-44-18"></a><span class="c1"># Port scanning (basic)</span>
+<a id="__codelineno-44-19" name="__codelineno-44-19" href="#__codelineno-44-19"></a>nc<span class="w"> </span>-zv<span class="w"> </span><span class="m">192</span>.168.1.1<span class="w"> </span><span class="m">1</span>-1024<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;succeeded&quot;</span>
+</code></pre></div>
+<h3 id="113-checking-network-interface-statistics">11.3 Checking Network Interface Statistics<a class="headerlink" href="#113-checking-network-interface-statistics" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>ip<span class="w"> </span>-s<span class="w"> </span>link<span class="w"> </span>show<span class="w"> </span>eth0<span class="w">                </span><span class="c1"># packets, bytes, errors, drops</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>cat<span class="w"> </span>/proc/net/dev<span class="w">                   </span><span class="c1"># raw interface statistics</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>ifstat<span class="w">                              </span><span class="c1"># live interface bandwidth</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">5</span><span class="w">                      </span><span class="c1"># network stats via sysstat (1s, 5 times)</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>nethogs<span class="w">                             </span><span class="c1"># per-process bandwidth usage</span>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>nload<span class="w"> </span>eth0<span class="w">                          </span><span class="c1"># visual bandwidth meter</span>
+</code></pre></div>
+<hr />
+<h2 id="12-important-network-files-and-directories">12. Important Network Files and Directories<a class="headerlink" href="#12-important-network-files-and-directories" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File / Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/hosts</code></td>
+<td>Static hostname-to-IP mappings</td>
+</tr>
+<tr>
+<td><code>/etc/resolv.conf</code></td>
+<td>DNS nameserver configuration</td>
+</tr>
+<tr>
+<td><code>/etc/nsswitch.conf</code></td>
+<td>Name resolution order</td>
+</tr>
+<tr>
+<td><code>/etc/hostname</code></td>
+<td>System hostname</td>
+</tr>
+<tr>
+<td><code>/etc/network/interfaces</code></td>
+<td>Interface config (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td><code>/etc/sysconfig/network-scripts/</code></td>
+<td>Interface config (RHEL/CentOS)</td>
+</tr>
+<tr>
+<td><code>/etc/NetworkManager/</code></td>
+<td>NetworkManager config files</td>
+</tr>
+<tr>
+<td><code>/etc/ssh/sshd_config</code></td>
+<td>SSH server configuration</td>
+</tr>
+<tr>
+<td><code>/etc/ssh/ssh_config</code></td>
+<td>SSH client configuration</td>
+</tr>
+<tr>
+<td><code>/etc/services</code></td>
+<td>Port-to-service name mappings</td>
+</tr>
+<tr>
+<td><code>/etc/protocols</code></td>
+<td>Protocol numbers</td>
+</tr>
+<tr>
+<td><code>/proc/net/dev</code></td>
+<td>Real-time interface statistics</td>
+</tr>
+<tr>
+<td><code>/proc/net/tcp</code></td>
+<td>Active TCP connections</td>
+</tr>
+<tr>
+<td><code>/proc/net/route</code></td>
+<td>Kernel routing table</td>
+</tr>
+<tr>
+<td><code>~/.ssh/config</code></td>
+<td>User SSH client config</td>
+</tr>
+<tr>
+<td><code>~/.ssh/authorized_keys</code></td>
+<td>Accepted public keys for login</td>
+</tr>
+<tr>
+<td><code>~/.ssh/known_hosts</code></td>
+<td>Trusted remote host fingerprints</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-common-network-troubleshooting-workflow">13. Common Network Troubleshooting Workflow<a class="headerlink" href="#13-common-network-troubleshooting-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="131-step-by-step-diagnosis">13.1 Step-by-Step Diagnosis<a class="headerlink" href="#131-step-by-step-diagnosis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1"># Step 1: Is the interface up?</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>ip<span class="w"> </span>link<span class="w"> </span>show
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>ip<span class="w"> </span>addr<span class="w"> </span>show
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a><span class="c1"># Step 2: Do we have an IP?</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>ip<span class="w"> </span>addr<span class="w"> </span>show<span class="w"> </span>eth0
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="c1"># Step 3: Is the gateway reachable?</span>
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>default
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a>ping<span class="w"> </span>-c3<span class="w"> </span><span class="k">$(</span>ip<span class="w"> </span>route<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>default<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $3}&#39;</span><span class="k">)</span>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a>
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a><span class="c1"># Step 4: Is DNS working?</span>
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a>cat<span class="w"> </span>/etc/resolv.conf
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a>dig<span class="w"> </span>google.com<span class="w"> </span>@8.8.8.8<span class="w"> </span>+short
+<a id="__codelineno-46-15" name="__codelineno-46-15" href="#__codelineno-46-15"></a>
+<a id="__codelineno-46-16" name="__codelineno-46-16" href="#__codelineno-46-16"></a><span class="c1"># Step 5: Can we reach the internet?</span>
+<a id="__codelineno-46-17" name="__codelineno-46-17" href="#__codelineno-46-17"></a>ping<span class="w"> </span>-c3<span class="w"> </span><span class="m">8</span>.8.8.8<span class="w">          </span><span class="c1"># test by IP (bypasses DNS)</span>
+<a id="__codelineno-46-18" name="__codelineno-46-18" href="#__codelineno-46-18"></a>ping<span class="w"> </span>-c3<span class="w"> </span>google.com<span class="w">        </span><span class="c1"># test DNS + connectivity</span>
+<a id="__codelineno-46-19" name="__codelineno-46-19" href="#__codelineno-46-19"></a>
+<a id="__codelineno-46-20" name="__codelineno-46-20" href="#__codelineno-46-20"></a><span class="c1"># Step 6: Is the target service running?</span>
+<a id="__codelineno-46-21" name="__codelineno-46-21" href="#__codelineno-46-21"></a>ss<span class="w"> </span>-tlnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>:80<span class="w">        </span><span class="c1"># is HTTP server listening?</span>
+<a id="__codelineno-46-22" name="__codelineno-46-22" href="#__codelineno-46-22"></a>nc<span class="w"> </span>-zv<span class="w"> </span><span class="m">192</span>.168.1.10<span class="w"> </span><span class="m">80</span><span class="w">     </span><span class="c1"># can we reach it?</span>
+<a id="__codelineno-46-23" name="__codelineno-46-23" href="#__codelineno-46-23"></a>
+<a id="__codelineno-46-24" name="__codelineno-46-24" href="#__codelineno-46-24"></a><span class="c1"># Step 7: Is a firewall blocking?</span>
+<a id="__codelineno-46-25" name="__codelineno-46-25" href="#__codelineno-46-25"></a>iptables<span class="w"> </span>-L<span class="w"> </span>-n<span class="w"> </span>-v
+<a id="__codelineno-46-26" name="__codelineno-46-26" href="#__codelineno-46-26"></a>ufw<span class="w"> </span>status<span class="w"> </span>verbose
+<a id="__codelineno-46-27" name="__codelineno-46-27" href="#__codelineno-46-27"></a>
+<a id="__codelineno-46-28" name="__codelineno-46-28" href="#__codelineno-46-28"></a><span class="c1"># Step 8: What path does traffic take?</span>
+<a id="__codelineno-46-29" name="__codelineno-46-29" href="#__codelineno-46-29"></a>traceroute<span class="w"> </span>-n<span class="w"> </span>google.com
+<a id="__codelineno-46-30" name="__codelineno-46-30" href="#__codelineno-46-30"></a>mtr<span class="w"> </span>-r<span class="w"> </span>google.com
+</code></pre></div>
+<h3 id="132-common-problems-and-quick-fixes">13.2 Common Problems and Quick Fixes<a class="headerlink" href="#132-common-problems-and-quick-fixes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Likely Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No IP address</td>
+<td>DHCP failure</td>
+<td><code>dhclient eth0</code> or <code>nmcli con up</code></td>
+</tr>
+<tr>
+<td>Can ping IP, not hostname</td>
+<td>DNS misconfigured</td>
+<td>Check <code>/etc/resolv.conf</code></td>
+</tr>
+<tr>
+<td>Can't reach gateway</td>
+<td>Interface down</td>
+<td><code>ip link set eth0 up</code></td>
+</tr>
+<tr>
+<td>Service unreachable</td>
+<td>Firewall blocking</td>
+<td>Check <code>ufw</code>/<code>iptables</code> rules</td>
+</tr>
+<tr>
+<td>SSH refused</td>
+<td>sshd not running</td>
+<td><code>systemctl start sshd</code></td>
+</tr>
+<tr>
+<td>Slow connection</td>
+<td>DNS timeout</td>
+<td>Add faster nameserver</td>
+</tr>
+<tr>
+<td>High packet loss</td>
+<td>Network congestion / bad cable</td>
+<td>Use <code>mtr</code> to identify hop</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-quick-reference-cheat-sheet">14. Quick Reference Cheat Sheet<a class="headerlink" href="#14-quick-reference-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h3 id="interface-management">Interface Management<a class="headerlink" href="#interface-management" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ip addr show</code></td>
+<td>Show all IPs</td>
+</tr>
+<tr>
+<td><code>ip link set eth0 up/down</code></td>
+<td>Enable/disable interface</td>
+</tr>
+<tr>
+<td><code>ip route show</code></td>
+<td>Show routing table</td>
+</tr>
+<tr>
+<td><code>ip route add default via GW</code></td>
+<td>Set default gateway</td>
+</tr>
+<tr>
+<td><code>ip neigh show</code></td>
+<td>Show ARP table</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ping -c4 host</code></td>
+<td>Test reachability</td>
+</tr>
+<tr>
+<td><code>traceroute -n host</code></td>
+<td>Trace path to host</td>
+</tr>
+<tr>
+<td><code>mtr -r host</code></td>
+<td>Report-mode traceroute</td>
+</tr>
+<tr>
+<td><code>dig host +short</code></td>
+<td>Quick DNS lookup</td>
+</tr>
+<tr>
+<td><code>nc -zv host port</code></td>
+<td>Test if port is open</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ports-sockets">Ports &amp; Sockets<a class="headerlink" href="#ports-sockets" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ss -tlnp</code></td>
+<td>Listening TCP ports + PIDs</td>
+</tr>
+<tr>
+<td><code>ss -s</code></td>
+<td>Socket summary stats</td>
+</tr>
+<tr>
+<td><code>nmap -p- host</code></td>
+<td>Full port scan</td>
+</tr>
+<tr>
+<td><code>netstat -rn</code></td>
+<td>Routing table (legacy)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="file-transfer">File Transfer<a class="headerlink" href="#file-transfer" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wget -c URL</code></td>
+<td>Resume download</td>
+</tr>
+<tr>
+<td><code>curl -O URL</code></td>
+<td>Download with original name</td>
+</tr>
+<tr>
+<td><code>scp file user@host:~</code></td>
+<td>Secure copy to remote</td>
+</tr>
+<tr>
+<td><code>rsync -avP src/ dest/</code></td>
+<td>Sync with progress</td>
+</tr>
+<tr>
+<td><code>rsync --delete src/ dest/</code></td>
+<td>Mirror sync</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssh">SSH<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ssh -p PORT user@host</code></td>
+<td>Connect on custom port</td>
+</tr>
+<tr>
+<td><code>ssh-keygen -t ed25519</code></td>
+<td>Generate Ed25519 key</td>
+</tr>
+<tr>
+<td><code>ssh-copy-id user@host</code></td>
+<td>Install public key</td>
+</tr>
+<tr>
+<td><code>ssh -L 8080:localhost:80 host</code></td>
+<td>Local port forward</td>
+</tr>
+<tr>
+<td><code>ssh -D 1080 user@host</code></td>
+<td>SOCKS proxy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dns">DNS<a class="headerlink" href="#dns" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dig domain</code></td>
+<td>Full DNS query</td>
+</tr>
+<tr>
+<td><code>dig domain +short</code></td>
+<td>IP only</td>
+</tr>
+<tr>
+<td><code>dig -x IP</code></td>
+<td>Reverse lookup</td>
+</tr>
+<tr>
+<td><code>dig @8.8.8.8 domain</code></td>
+<td>Query specific server</td>
+</tr>
+<tr>
+<td><code>resolvectl flush-caches</code></td>
+<td>Flush DNS cache</td>
+</tr>
+</tbody>
+</table>
 
 
 
