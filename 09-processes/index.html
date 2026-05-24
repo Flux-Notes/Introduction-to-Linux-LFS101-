@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-9-processes" class="md-skip">
+        <a href="#processes" class="md-skip">
           Skip to content
         </a>
       
@@ -561,43 +561,848 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-what-is-a-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. What is a Process?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is a Process?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-program-vs-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Program vs Process
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-how-processes-are-created" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        1.2 How Processes are Created
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#13-the-init-systemd-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        1.3 The init / systemd Process
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#2-process-identifiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        2. Process Identifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Process Identifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-key-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Key IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-viewing-process-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Viewing Process IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-process-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Process States
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Process States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-state-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 State Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Zombie Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-viewing-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Viewing Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Viewing Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ps-process-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 ps — Process Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-top-dynamic-real-time-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 top — Dynamic Real-Time View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-htop-enhanced-interactive-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 htop — Enhanced Interactive Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pgrep-and-pidof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 pgrep and pidof
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-proc-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 /proc Filesystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-are-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What are Signals?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-common-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Common Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sending-signals-with-kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Sending Signals with kill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-killall-and-pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 killall and pkill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-keyboard-shortcuts-for-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Keyboard Shortcuts for Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-process-priority-and-niceness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Process Priority and Niceness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Process Priority and Niceness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-starting-a-process-with-a-nice-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Starting a Process with a Nice Value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-changing-priority-of-running-process-with-renice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Changing Priority of Running Process with renice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-viewing-priority-in-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Viewing Priority in top
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-foreground-and-background-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Foreground and Background Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Foreground and Background Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-running-in-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Running in Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-job-control-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Job Control Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-suspending-and-resuming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Suspending and Resuming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-nohup-survive-terminal-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 nohup — Survive Terminal Logout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-disown-detach-from-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 disown — Detach from Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-screen-and-tmux-terminal-multiplexers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. screen and tmux — Terminal Multiplexers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. screen and tmux — Terminal Multiplexers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-why-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Why Use Them?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-screen-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 screen Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-tmux-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 tmux Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-scheduling-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Scheduling Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Scheduling Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-at-one-time-scheduled-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 at — One-Time Scheduled Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cron-recurring-scheduled-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 cron — Recurring Scheduled Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-anacron-for-non-247-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 anacron — For Non-24/7 Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resource Limits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Resource Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-ulimit-per-shell-resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 ulimit — Per-Shell Resource Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-etcsecuritylimitsconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 /etc/security/limits.conf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-cgroups-control-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 cgroups — Control Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-process-monitoring-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Process Monitoring Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Process Monitoring Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-vmstat-system-wide-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 vmstat — System-Wide Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-iostat-cpu-and-io-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 iostat — CPU and I/O Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mpstat-per-cpu-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 mpstat — Per-CPU Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-sar-system-activity-reporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 sar — System Activity Reporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-lsof-list-open-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 lsof — List Open Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-strace-system-call-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 strace — System Call Tracer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117-perf-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 perf — Performance Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Load Average
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Load Average">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-what-is-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 What is Load Average?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-interpreting-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Interpreting Load Average
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-memory-and-process-memory-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Memory and Process Memory Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Memory and Process Memory Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-free-memory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 free — Memory Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-per-process-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Per-Process Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-pmap-process-memory-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 pmap — Process Memory Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-orphan-and-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Orphan and Zombie Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Orphan and Zombie Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-orphan-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Orphan Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Zombie Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-executable-formats-and-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Executable Formats and Libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Executable Formats and Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-elf-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 ELF Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-static-vs-dynamic-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Static vs Dynamic Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-ldconfig-and-ld_library_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 ldconfig and LD_LIBRARY_PATH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Quick Reference Cheat Sheet
       
     </span>
   </a>
@@ -882,43 +1687,848 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#learning-objectives" class="md-nav__link">
+  <a href="#1-what-is-a-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Learning Objectives
+        1. What is a Process?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is a Process?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-program-vs-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Program vs Process
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#notes" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#12-how-processes-are-created" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Notes
+        1.2 How Processes are Created
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-commands" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#13-the-init-systemd-process" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key Commands
+        1.3 The init / systemd Process
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#2-process-identifiers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Summary
+        2. Process Identifiers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Process Identifiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-key-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Key IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-viewing-process-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Viewing Process IDs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-process-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Process States
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Process States">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-state-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 State Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Zombie Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-viewing-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Viewing Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Viewing Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-ps-process-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 ps — Process Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-top-dynamic-real-time-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 top — Dynamic Real-Time View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-htop-enhanced-interactive-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 htop — Enhanced Interactive Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-pgrep-and-pidof" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 pgrep and pidof
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-proc-filesystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 /proc Filesystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Signals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Signals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-what-are-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 What are Signals?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-common-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Common Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-sending-signals-with-kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Sending Signals with kill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-killall-and-pkill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 killall and pkill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-keyboard-shortcuts-for-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Keyboard Shortcuts for Signals
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-process-priority-and-niceness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Process Priority and Niceness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Process Priority and Niceness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-starting-a-process-with-a-nice-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Starting a Process with a Nice Value
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-changing-priority-of-running-process-with-renice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Changing Priority of Running Process with renice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-viewing-priority-in-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Viewing Priority in top
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-foreground-and-background-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Foreground and Background Jobs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Foreground and Background Jobs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-running-in-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Running in Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-job-control-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Job Control Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-suspending-and-resuming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Suspending and Resuming
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-nohup-survive-terminal-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 nohup — Survive Terminal Logout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76-disown-detach-from-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 disown — Detach from Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-screen-and-tmux-terminal-multiplexers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. screen and tmux — Terminal Multiplexers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. screen and tmux — Terminal Multiplexers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-why-use-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 Why Use Them?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-screen-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 screen Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-tmux-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 tmux Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-scheduling-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Scheduling Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Scheduling Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-at-one-time-scheduled-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 at — One-Time Scheduled Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-cron-recurring-scheduled-jobs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 cron — Recurring Scheduled Jobs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93-anacron-for-non-247-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3 anacron — For Non-24/7 Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Resource Limits
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Resource Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-ulimit-per-shell-resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 ulimit — Per-Shell Resource Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-etcsecuritylimitsconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 /etc/security/limits.conf
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#103-cgroups-control-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 cgroups — Control Groups
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-process-monitoring-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Process Monitoring Tools
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Process Monitoring Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-vmstat-system-wide-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 vmstat — System-Wide Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-iostat-cpu-and-io-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 iostat — CPU and I/O Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-mpstat-per-cpu-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 mpstat — Per-CPU Stats
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-sar-system-activity-reporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 sar — System Activity Reporter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-lsof-list-open-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 lsof — List Open Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#116-strace-system-call-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 strace — System Call Tracer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#117-perf-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 perf — Performance Analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Load Average
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Load Average">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-what-is-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 What is Load Average?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-interpreting-load-average" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 Interpreting Load Average
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-memory-and-process-memory-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Memory and Process Memory Usage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Memory and Process Memory Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-free-memory-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 free — Memory Overview
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-per-process-memory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 Per-Process Memory
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-pmap-process-memory-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 pmap — Process Memory Map
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-orphan-and-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Orphan and Zombie Processes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Orphan and Zombie Processes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-orphan-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.1 Orphan Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-zombie-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14.2 Zombie Processes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-executable-formats-and-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Executable Formats and Libraries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Executable Formats and Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-elf-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 ELF Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-static-vs-dynamic-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Static vs Dynamic Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-ldconfig-and-ld_library_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 ldconfig and LD_LIBRARY_PATH
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-quick-reference-cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Quick Reference Cheat Sheet
       
     </span>
   </a>
@@ -945,13 +2555,1098 @@
   
 
 
-<h1 id="chapter-9-processes">Chapter 9: Processes<a class="headerlink" href="#chapter-9-processes" title="Permanent link">&para;</a></h1>
-<h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
-<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
-<h2 id="key-commands">Key Commands<a class="headerlink" href="#key-commands" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>
+<h1 id="processes">⚙️ Processes<a class="headerlink" href="#processes" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>A <strong>process</strong> is an instance of a running program. Linux is a multitasking OS — it manages hundreds of processes simultaneously, each with its own memory space, resources, and state. Understanding how to monitor, control, and manage processes is a core Linux skill.</p>
+</blockquote>
+<hr />
+<h2 id="1-what-is-a-process">1. What is a Process?<a class="headerlink" href="#1-what-is-a-process" title="Permanent link">&para;</a></h2>
+<h3 id="11-program-vs-process">1.1 Program vs Process<a class="headerlink" href="#11-program-vs-process" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Program</strong></td>
+<td>A static set of instructions stored on disk (binary/script)</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>A running instance of a program, loaded into memory</td>
+</tr>
+<tr>
+<td><strong>Thread</strong></td>
+<td>A lightweight execution unit within a process (shared memory)</td>
+</tr>
+</tbody>
+</table>
+<p>A single program can spawn multiple processes. Each process is independent and isolated.</p>
+<h3 id="12-how-processes-are-created">1.2 How Processes are Created<a class="headerlink" href="#12-how-processes-are-created" title="Permanent link">&para;</a></h3>
+<p>Linux uses a <strong>fork-exec</strong> model:</p>
+<ul>
+<li><strong><code>fork()</code></strong> — The kernel duplicates the parent process (creates a child)</li>
+<li><strong><code>exec()</code></strong> — The child replaces itself with a new program</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Every process has a parent — the first process is always PID 1</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pstree<span class="w"> </span>-p<span class="w">    </span><span class="c1"># View the full parent-child process tree</span>
 </code></pre></div>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h3 id="13-the-init-systemd-process">1.3 The init / systemd Process<a class="headerlink" href="#13-the-init-systemd-process" title="Permanent link">&para;</a></h3>
+<p>The very first process started by the kernel is <strong>PID 1</strong>. On modern Linux systems this is <code>systemd</code>. It is the ancestor of all other processes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ps<span class="w"> </span>-p<span class="w"> </span><span class="m">1</span><span class="w">      </span><span class="c1"># Confirm PID 1</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cat<span class="w"> </span>/proc/1/comm<span class="w">   </span><span class="c1"># Shows: systemd</span>
+</code></pre></div>
+<hr />
+<h2 id="2-process-identifiers">2. Process Identifiers<a class="headerlink" href="#2-process-identifiers" title="Permanent link">&para;</a></h2>
+<h3 id="21-key-ids">2.1 Key IDs<a class="headerlink" href="#21-key-ids" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PID</strong></td>
+<td>Process ID</td>
+<td>Unique ID assigned to each process</td>
+</tr>
+<tr>
+<td><strong>PPID</strong></td>
+<td>Parent PID</td>
+<td>PID of the process that spawned this one</td>
+</tr>
+<tr>
+<td><strong>UID</strong></td>
+<td>User ID</td>
+<td>The user who owns the process</td>
+</tr>
+<tr>
+<td><strong>GID</strong></td>
+<td>Group ID</td>
+<td>The primary group of the process owner</td>
+</tr>
+<tr>
+<td><strong>EUID</strong></td>
+<td>Effective UID</td>
+<td>UID used for permission checks (can differ with SUID)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="w">        </span><span class="c1"># PID of current shell</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$PPID</span><span class="w">     </span><span class="c1"># PID of parent shell</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>id<span class="w">             </span><span class="c1"># Show UID, GID, groups of current user</span>
+</code></pre></div>
+<h3 id="22-viewing-process-ids">2.2 Viewing Process IDs<a class="headerlink" href="#22-viewing-process-ids" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ps<span class="w"> </span>aux<span class="w">             </span><span class="c1"># Show all processes with PID, PPID, UID</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>ps<span class="w"> </span>-ef<span class="w">             </span><span class="c1"># BSD-style full listing</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>pgrep<span class="w"> </span>bash<span class="w">         </span><span class="c1"># Find PIDs by name</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>pidof<span class="w"> </span>firefox<span class="w">      </span><span class="c1"># Find PID of a named program</span>
+</code></pre></div>
+<hr />
+<h2 id="3-process-states">3. Process States<a class="headerlink" href="#3-process-states" title="Permanent link">&para;</a></h2>
+<h3 id="31-state-table">3.1 State Table<a class="headerlink" href="#31-state-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td><code>R</code></td>
+<td>Actively using CPU or in run queue</td>
+</tr>
+<tr>
+<td><strong>Sleeping (Interruptible)</strong></td>
+<td><code>S</code></td>
+<td>Waiting for an event (e.g., I/O); can be interrupted</td>
+</tr>
+<tr>
+<td><strong>Sleeping (Uninterruptible)</strong></td>
+<td><code>D</code></td>
+<td>Waiting for I/O that cannot be interrupted (disk, NFS)</td>
+</tr>
+<tr>
+<td><strong>Stopped</strong></td>
+<td><code>T</code></td>
+<td>Paused by a signal (e.g., <code>SIGSTOP</code> or Ctrl+Z)</td>
+</tr>
+<tr>
+<td><strong>Zombie</strong></td>
+<td><code>Z</code></td>
+<td>Finished but parent hasn't read exit status yet</td>
+</tr>
+<tr>
+<td><strong>Dead</strong></td>
+<td><code>X</code></td>
+<td>Fully terminated (rarely seen)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $8, $11}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20<span class="w">   </span><span class="c1"># Show state + command</span>
+</code></pre></div>
+<h3 id="32-zombie-processes">3.2 Zombie Processes<a class="headerlink" href="#32-zombie-processes" title="Permanent link">&para;</a></h3>
+<p>A <strong>zombie</strong> process has exited but its parent hasn't called <code>wait()</code> to collect its exit status. It holds an entry in the process table.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Z<span class="w">    </span><span class="c1"># Find zombie processes</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Zombie Accumulation</p>
+<p>Zombies are harmless in small numbers but if they accumulate they exhaust the process table. The fix is to restart or fix the parent process, not kill the zombie.</p>
+</div>
+<hr />
+<h2 id="4-viewing-processes">4. Viewing Processes<a class="headerlink" href="#4-viewing-processes" title="Permanent link">&para;</a></h2>
+<h3 id="41-ps-process-snapshot">4.1 <code>ps</code> — Process Snapshot<a class="headerlink" href="#41-ps-process-snapshot" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ps<span class="w">                  </span><span class="c1"># Processes in current shell session</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ps<span class="w"> </span>aux<span class="w">              </span><span class="c1"># All processes (a=all users, u=user format, x=no tty)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>ps<span class="w"> </span>-ef<span class="w">              </span><span class="c1"># Full-format listing (UID, PID, PPID, CMD)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>ps<span class="w"> </span>-eLf<span class="w">             </span><span class="c1"># Include threads</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>ps<span class="w"> </span>--sort<span class="o">=</span>-%cpu<span class="w">     </span><span class="c1"># Sort by CPU usage descending</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>ps<span class="w"> </span>--sort<span class="o">=</span>-%mem<span class="w">     </span><span class="c1"># Sort by memory usage descending</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>ps<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">          </span><span class="c1"># Info for a specific PID</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>ps<span class="w"> </span>-u<span class="w"> </span>username<span class="w">      </span><span class="c1"># Processes owned by a user</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>ps<span class="w"> </span>-C<span class="w"> </span>firefox<span class="w">       </span><span class="c1"># Processes by command name</span>
+</code></pre></div>
+<p><strong>Common <code>ps aux</code> columns:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USER</td>
+<td>Owner of the process</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>Process ID</td>
+</tr>
+<tr>
+<td>%CPU</td>
+<td>CPU usage percentage</td>
+</tr>
+<tr>
+<td>%MEM</td>
+<td>Memory usage percentage</td>
+</tr>
+<tr>
+<td>VSZ</td>
+<td>Virtual memory size (KB)</td>
+</tr>
+<tr>
+<td>RSS</td>
+<td>Resident Set Size — actual RAM used (KB)</td>
+</tr>
+<tr>
+<td>TTY</td>
+<td>Controlling terminal</td>
+</tr>
+<tr>
+<td>STAT</td>
+<td>Process state code</td>
+</tr>
+<tr>
+<td>START</td>
+<td>Start time</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>Cumulative CPU time</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>Command that started the process</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-top-dynamic-real-time-view">4.2 <code>top</code> — Dynamic Real-Time View<a class="headerlink" href="#42-top-dynamic-real-time-view" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>top<span class="w">              </span><span class="c1"># Launch interactive process viewer</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>top<span class="w"> </span>-u<span class="w"> </span>username<span class="w">  </span><span class="c1"># Show only processes for a user</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>top<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">      </span><span class="c1"># Monitor a specific PID</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>top<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w">         </span><span class="c1"># Run 5 iterations then exit</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>top<span class="w"> </span>-b<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="w">      </span><span class="c1"># Batch mode — pipe-friendly snapshot</span>
+</code></pre></div>
+<p><strong>Interactive <code>top</code> keys:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h</code></td>
+<td>Help</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><code>k</code></td>
+<td>Kill a process (enter PID)</td>
+</tr>
+<tr>
+<td><code>r</code></td>
+<td>Renice a process</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>Sort by memory</td>
+</tr>
+<tr>
+<td><code>P</code></td>
+<td>Sort by CPU</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Sort by cumulative time</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>Filter by user</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>Toggle individual CPU cores</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>Change refresh delay</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>Add/remove display fields</td>
+</tr>
+<tr>
+<td><code>W</code></td>
+<td>Save config to <code>~/.toprc</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>top</code> header explained:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>top - 14:32:01 up 3 days,  2:15,  2 users,  load average: 0.52, 0.48, 0.45
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Tasks: 215 total,   1 running, 214 sleeping,   0 stopped,   0 zombie
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>%Cpu(s):  3.2 us,  1.1 sy,  0.0 ni, 95.4 id,  0.0 wa,  0.0 hi,  0.3 si,  0.0 st
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>MiB Mem :  15886.3 total,   4123.7 free,   7845.2 used,   3917.4 buff/cache
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   7654.3 avail Mem
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>us</code></td>
+<td>User space CPU %</td>
+</tr>
+<tr>
+<td><code>sy</code></td>
+<td>Kernel/system CPU %</td>
+</tr>
+<tr>
+<td><code>ni</code></td>
+<td>Nice'd process CPU %</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Idle CPU %</td>
+</tr>
+<tr>
+<td><code>wa</code></td>
+<td>I/O wait CPU %</td>
+</tr>
+<tr>
+<td><code>hi</code></td>
+<td>Hardware interrupt %</td>
+</tr>
+<tr>
+<td><code>si</code></td>
+<td>Software interrupt %</td>
+</tr>
+<tr>
+<td><code>st</code></td>
+<td>CPU stolen by hypervisor (VMs)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-htop-enhanced-interactive-viewer">4.3 <code>htop</code> — Enhanced Interactive Viewer<a class="headerlink" href="#43-htop-enhanced-interactive-viewer" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>htop<span class="w">             </span><span class="c1"># Colorful, mouse-friendly process viewer</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Install htop</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>htop<span class="w">      </span><span class="c1"># Debian/Ubuntu</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>htop<span class="w">      </span><span class="c1"># Fedora/RHEL</span>
+</code></pre></div>
+</div>
+<p><strong><code>htop</code> advantages over <code>top</code>:</strong>
+- Color-coded CPU/memory bars
+- Mouse click support
+- Easier kill/renice via F-keys
+- Horizontal and vertical process tree view
+- Easier searching with <code>F3</code></p>
+<h3 id="44-pgrep-and-pidof">4.4 <code>pgrep</code> and <code>pidof</code><a class="headerlink" href="#44-pgrep-and-pidof" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pgrep<span class="w"> </span>firefox<span class="w">            </span><span class="c1"># Find PID(s) by name</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>pgrep<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>sshd<span class="w">       </span><span class="c1"># sshd processes owned by root</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>pgrep<span class="w"> </span>-l<span class="w"> </span>bash<span class="w">            </span><span class="c1"># List PID + name</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>pidof<span class="w"> </span>nginx<span class="w">              </span><span class="c1"># All PIDs of nginx</span>
+</code></pre></div>
+<h3 id="45-proc-filesystem">4.5 <code>/proc</code> Filesystem<a class="headerlink" href="#45-proc-filesystem" title="Permanent link">&para;</a></h3>
+<p>Every process has a directory at <code>/proc/&lt;PID&gt;/</code> exposing its internals:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ls<span class="w"> </span>/proc/1/<span class="w">              </span><span class="c1"># PID 1 (systemd) info</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>cat<span class="w"> </span>/proc/1/status<span class="w">       </span><span class="c1"># Detailed status</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>cat<span class="w"> </span>/proc/1/cmdline<span class="w">      </span><span class="c1"># Command-line args (null-separated)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>cat<span class="w"> </span>/proc/1/environ<span class="w">      </span><span class="c1"># Environment variables</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>ls<span class="w"> </span>-l<span class="w"> </span>/proc/1/fd/<span class="w">        </span><span class="c1"># Open file descriptors</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>cat<span class="w"> </span>/proc/1/maps<span class="w">         </span><span class="c1"># Memory maps</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>cat<span class="w"> </span>/proc/self/status<span class="w">    </span><span class="c1"># Your own process info</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status</code></td>
+<td>Human-readable state, memory, UID</td>
+</tr>
+<tr>
+<td><code>cmdline</code></td>
+<td>Command used to start the process</td>
+</tr>
+<tr>
+<td><code>environ</code></td>
+<td>Environment variables</td>
+</tr>
+<tr>
+<td><code>fd/</code></td>
+<td>Open file descriptors</td>
+</tr>
+<tr>
+<td><code>maps</code></td>
+<td>Virtual memory mappings</td>
+</tr>
+<tr>
+<td><code>stat</code></td>
+<td>Machine-readable stats (used by <code>ps</code>)</td>
+</tr>
+<tr>
+<td><code>io</code></td>
+<td>I/O statistics</td>
+</tr>
+<tr>
+<td><code>limits</code></td>
+<td>Resource limits</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-signals">5. Signals<a class="headerlink" href="#5-signals" title="Permanent link">&para;</a></h2>
+<h3 id="51-what-are-signals">5.1 What are Signals?<a class="headerlink" href="#51-what-are-signals" title="Permanent link">&para;</a></h3>
+<p>Signals are software interrupts sent to processes to notify them of events. They are the primary way to communicate with and control processes.</p>
+<h3 id="52-common-signals">5.2 Common Signals<a class="headerlink" href="#52-common-signals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Number</th>
+<th>Default Action</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SIGHUP</code></td>
+<td>1</td>
+<td>Terminate</td>
+<td>Hangup — often used to reload config</td>
+</tr>
+<tr>
+<td><code>SIGINT</code></td>
+<td>2</td>
+<td>Terminate</td>
+<td>Interrupt from keyboard (Ctrl+C)</td>
+</tr>
+<tr>
+<td><code>SIGQUIT</code></td>
+<td>3</td>
+<td>Core dump</td>
+<td>Quit from keyboard (Ctrl+\)</td>
+</tr>
+<tr>
+<td><code>SIGKILL</code></td>
+<td>9</td>
+<td>Terminate</td>
+<td>Force kill — cannot be caught or ignored</td>
+</tr>
+<tr>
+<td><code>SIGTERM</code></td>
+<td>15</td>
+<td>Terminate</td>
+<td>Graceful termination request (default)</td>
+</tr>
+<tr>
+<td><code>SIGSTOP</code></td>
+<td>19</td>
+<td>Stop</td>
+<td>Pause process — cannot be caught or ignored</td>
+</tr>
+<tr>
+<td><code>SIGCONT</code></td>
+<td>18</td>
+<td>Continue</td>
+<td>Resume a stopped process</td>
+</tr>
+<tr>
+<td><code>SIGCHLD</code></td>
+<td>17</td>
+<td>Ignore</td>
+<td>Child process stopped or terminated</td>
+</tr>
+<tr>
+<td><code>SIGUSR1</code></td>
+<td>10</td>
+<td>Terminate</td>
+<td>User-defined signal 1</td>
+</tr>
+<tr>
+<td><code>SIGUSR2</code></td>
+<td>12</td>
+<td>Terminate</td>
+<td>User-defined signal 2</td>
+</tr>
+<tr>
+<td><code>SIGPIPE</code></td>
+<td>13</td>
+<td>Terminate</td>
+<td>Broken pipe (write to closed socket)</td>
+</tr>
+<tr>
+<td><code>SIGALRM</code></td>
+<td>14</td>
+<td>Terminate</td>
+<td>Alarm clock timeout</td>
+</tr>
+<tr>
+<td><code>SIGSEGV</code></td>
+<td>11</td>
+<td>Core dump</td>
+<td>Segmentation fault (invalid memory access)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">kill</span><span class="w"> </span>-l<span class="w">          </span><span class="c1"># List all signal names and numbers</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">SIGKILL vs SIGTERM</p>
+<p>Always try <code>SIGTERM</code> (15) first — it lets the process clean up. Use <code>SIGKILL</code> (9) only if the process doesn't respond. <code>SIGKILL</code> cannot be caught, blocked, or ignored.</p>
+</div>
+<h3 id="53-sending-signals-with-kill">5.3 Sending Signals with <code>kill</code><a class="headerlink" href="#53-sending-signals-with-kill" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">kill</span><span class="w"> </span><span class="m">1234</span><span class="w">              </span><span class="c1"># Send SIGTERM to PID 1234</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span><span class="m">1234</span><span class="w">           </span><span class="c1"># Send SIGKILL to PID 1234</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nb">kill</span><span class="w"> </span>-SIGTERM<span class="w"> </span><span class="m">1234</span><span class="w">     </span><span class="c1"># Explicit name</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nb">kill</span><span class="w"> </span>-15<span class="w"> </span><span class="m">1234</span><span class="w">          </span><span class="c1"># Explicit number</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nb">kill</span><span class="w"> </span>-HUP<span class="w"> </span><span class="m">1234</span><span class="w">         </span><span class="c1"># Reload config (SIGHUP)</span>
+</code></pre></div>
+<h3 id="54-killall-and-pkill">5.4 <code>killall</code> and <code>pkill</code><a class="headerlink" href="#54-killall-and-pkill" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>killall<span class="w"> </span>firefox<span class="w">          </span><span class="c1"># Kill all processes named &quot;firefox&quot;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>killall<span class="w"> </span>-9<span class="w"> </span>firefox<span class="w">       </span><span class="c1"># Force kill all firefox processes</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>pkill<span class="w"> </span>-u<span class="w"> </span>alice<span class="w">           </span><span class="c1"># Kill all processes owned by alice</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>pkill<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;python script.py&quot;</span><span class="w">   </span><span class="c1"># Kill by full command match</span>
+</code></pre></div>
+<h3 id="55-keyboard-shortcuts-for-signals">5.5 Keyboard Shortcuts for Signals<a class="headerlink" href="#55-keyboard-shortcuts-for-signals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Signal Sent</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+C</code></td>
+<td><code>SIGINT</code> (2)</td>
+<td>Interrupt/terminate foreground process</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td><code>SIGTSTP</code> (20)</td>
+<td>Suspend/stop foreground process</td>
+</tr>
+<tr>
+<td><code>Ctrl+\</code></td>
+<td><code>SIGQUIT</code> (3)</td>
+<td>Quit with core dump</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-process-priority-and-niceness">6. Process Priority and Niceness<a class="headerlink" href="#6-process-priority-and-niceness" title="Permanent link">&para;</a></h2>
+<h3 id="61-concept">6.1 Concept<a class="headerlink" href="#61-concept" title="Permanent link">&para;</a></h3>
+<p>Linux assigns CPU time using a priority scheduler. <strong>Niceness</strong> is a user-adjustable value that influences priority.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Range</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nice</strong></td>
+<td>-20 to 19</td>
+<td>Lower = higher priority; higher = more "nice" to others</td>
+</tr>
+<tr>
+<td><strong>Priority (PR)</strong></td>
+<td>0 to 39 (in <code>top</code>)</td>
+<td>Kernel's actual scheduling priority</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">Priority Math</p>
+<p><code>Priority = 20 + Nice</code> (in top's display). So nice -20 → PR 0 (highest). Nice 19 → PR 39 (lowest).</p>
+</div>
+<h3 id="62-starting-a-process-with-a-nice-value">6.2 Starting a Process with a Nice Value<a class="headerlink" href="#62-starting-a-process-with-a-nice-value" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>nice<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>./backup.sh<span class="w">         </span><span class="c1"># Start with niceness +10 (lower priority)</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>nice<span class="w"> </span>-n<span class="w"> </span>-5<span class="w"> </span>./urgent-task<span class="w">       </span><span class="c1"># Start with niceness -5 (higher priority, needs sudo)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>sudo<span class="w"> </span>nice<span class="w"> </span>-n<span class="w"> </span>-20<span class="w"> </span>./critical<span class="w">    </span><span class="c1"># Highest priority</span>
+</code></pre></div>
+<h3 id="63-changing-priority-of-running-process-with-renice">6.3 Changing Priority of Running Process with <code>renice</code><a class="headerlink" href="#63-changing-priority-of-running-process-with-renice" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>renice<span class="w"> </span><span class="m">10</span><span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">              </span><span class="c1"># Set niceness of PID 1234 to 10</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>renice<span class="w"> </span>-5<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">              </span><span class="c1"># Increase priority (needs sudo)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>sudo<span class="w"> </span>renice<span class="w"> </span>-10<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">        </span><span class="c1"># High priority</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>renice<span class="w"> </span><span class="m">5</span><span class="w"> </span>-u<span class="w"> </span>username<span class="w">           </span><span class="c1"># Renice all processes of a user</span>
+</code></pre></div>
+<h3 id="64-viewing-priority-in-top">6.4 Viewing Priority in <code>top</code><a class="headerlink" href="#64-viewing-priority-in-top" title="Permanent link">&para;</a></h3>
+<p>In <code>top</code>, the <code>PR</code> and <code>NI</code> columns show priority and niceness. Processes with <code>PR = rt</code> are real-time processes with the highest possible priority.</p>
+<hr />
+<h2 id="7-foreground-and-background-jobs">7. Foreground and Background Jobs<a class="headerlink" href="#7-foreground-and-background-jobs" title="Permanent link">&para;</a></h2>
+<h3 id="71-concept">7.1 Concept<a class="headerlink" href="#71-concept" title="Permanent link">&para;</a></h3>
+<p>The shell can run processes in:
+- <strong>Foreground</strong> — occupies the terminal, you must wait for it
+- <strong>Background</strong> — runs independently, shell remains usable</p>
+<h3 id="72-running-in-background">7.2 Running in Background<a class="headerlink" href="#72-running-in-background" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>./long-script.sh<span class="w"> </span><span class="p">&amp;</span><span class="w">       </span><span class="c1"># Start in background (append &amp;)</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>sleep<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="p">&amp;</span><span class="w">              </span><span class="c1"># Background sleep</span>
+</code></pre></div>
+<p>The shell prints <code>[job_number] PID</code> when backgrounding a process.</p>
+<h3 id="73-job-control-commands">7.3 Job Control Commands<a class="headerlink" href="#73-job-control-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">jobs</span><span class="w">               </span><span class="c1"># List all background/stopped jobs</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nb">jobs</span><span class="w"> </span>-l<span class="w">            </span><span class="c1"># Include PIDs</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="nb">fg</span><span class="w">                 </span><span class="c1"># Bring most recent background job to foreground</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="nb">fg</span><span class="w"> </span>%2<span class="w">              </span><span class="c1"># Bring job number 2 to foreground</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="nb">bg</span><span class="w">                 </span><span class="c1"># Resume most recent stopped job in background</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="nb">bg</span><span class="w"> </span>%2<span class="w">              </span><span class="c1"># Resume job 2 in background</span>
+</code></pre></div>
+<h3 id="74-suspending-and-resuming">7.4 Suspending and Resuming<a class="headerlink" href="#74-suspending-and-resuming" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="c1"># While a process is running in foreground:</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Ctrl+Z<span class="w">             </span><span class="c1"># Suspend it (sends SIGTSTP)</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="c1"># Then:</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nb">bg</span><span class="w">                 </span><span class="c1"># Resume it in background</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="nb">fg</span><span class="w">                 </span><span class="c1"># Resume it in foreground</span>
+</code></pre></div>
+<h3 id="75-nohup-survive-terminal-logout">7.5 <code>nohup</code> — Survive Terminal Logout<a class="headerlink" href="#75-nohup-survive-terminal-logout" title="Permanent link">&para;</a></h3>
+<p>By default, background jobs receive <code>SIGHUP</code> when the terminal closes. <code>nohup</code> prevents this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>nohup<span class="w"> </span>./backup.sh<span class="w"> </span><span class="p">&amp;</span><span class="w">               </span><span class="c1"># Continues after logout</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>nohup<span class="w"> </span>./script.sh<span class="w"> </span>&gt;<span class="w"> </span>output.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">&amp;</span><span class="w">   </span><span class="c1"># With log file</span>
+</code></pre></div>
+<p>Output goes to <code>nohup.out</code> by default if no redirection is specified.</p>
+<h3 id="76-disown-detach-from-shell">7.6 <code>disown</code> — Detach from Shell<a class="headerlink" href="#76-disown-detach-from-shell" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>./script.sh<span class="w"> </span><span class="p">&amp;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nb">disown</span><span class="w">             </span><span class="c1"># Detach most recent background job from shell</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="nb">disown</span><span class="w"> </span>%2<span class="w">          </span><span class="c1"># Detach job 2</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nb">disown</span><span class="w"> </span>-h<span class="w"> </span>%1<span class="w">       </span><span class="c1"># Mark to not receive SIGHUP on shell exit</span>
+</code></pre></div>
+<hr />
+<h2 id="8-screen-and-tmux-terminal-multiplexers">8. <code>screen</code> and <code>tmux</code> — Terminal Multiplexers<a class="headerlink" href="#8-screen-and-tmux-terminal-multiplexers" title="Permanent link">&para;</a></h2>
+<h3 id="81-why-use-them">8.1 Why Use Them?<a class="headerlink" href="#81-why-use-them" title="Permanent link">&para;</a></h3>
+<p>Terminal multiplexers let you create persistent sessions that survive SSH disconnections, and manage multiple terminal windows in one SSH connection.</p>
+<h3 id="82-screen-basics">8.2 <code>screen</code> Basics<a class="headerlink" href="#82-screen-basics" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>screen<span class="w">             </span><span class="c1"># Start new session</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>screen<span class="w"> </span>-S<span class="w"> </span>mysession<span class="w">      </span><span class="c1"># Named session</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>screen<span class="w"> </span>-ls<span class="w">         </span><span class="c1"># List sessions</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>screen<span class="w"> </span>-r<span class="w"> </span>mysession<span class="w">      </span><span class="c1"># Reattach to session</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>screen<span class="w"> </span>-r<span class="w">          </span><span class="c1"># Reattach (if only one)</span>
+</code></pre></div>
+<p><strong>Inside screen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+A, D</code></td>
+<td>Detach session</td>
+</tr>
+<tr>
+<td><code>Ctrl+A, C</code></td>
+<td>New window</td>
+</tr>
+<tr>
+<td><code>Ctrl+A, N</code></td>
+<td>Next window</td>
+</tr>
+<tr>
+<td><code>Ctrl+A, P</code></td>
+<td>Previous window</td>
+</tr>
+<tr>
+<td><code>Ctrl+A, "</code></td>
+<td>List windows</td>
+</tr>
+<tr>
+<td><code>Ctrl+A, K</code></td>
+<td>Kill current window</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-tmux-basics">8.3 <code>tmux</code> Basics<a class="headerlink" href="#83-tmux-basics" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>tmux<span class="w">               </span><span class="c1"># Start new session</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>tmux<span class="w"> </span>new<span class="w"> </span>-s<span class="w"> </span>mysession<span class="w">    </span><span class="c1"># Named session</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>tmux<span class="w"> </span>ls<span class="w">            </span><span class="c1"># List sessions</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>tmux<span class="w"> </span>attach<span class="w"> </span>-t<span class="w"> </span>mysession<span class="w"> </span><span class="c1"># Attach to session</span>
+</code></pre></div>
+<p><strong>Inside tmux (prefix = <code>Ctrl+B</code>):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Ctrl+B, D</code></td>
+<td>Detach session</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, C</code></td>
+<td>New window</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, N</code></td>
+<td>Next window</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, %</code></td>
+<td>Vertical split</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, "</code></td>
+<td>Horizontal split</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, Arrow</code></td>
+<td>Move between panes</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, X</code></td>
+<td>Close pane</td>
+</tr>
+<tr>
+<td><code>Ctrl+B, ?</code></td>
+<td>Help / key list</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-scheduling-processes">9. Scheduling Processes<a class="headerlink" href="#9-scheduling-processes" title="Permanent link">&para;</a></h2>
+<h3 id="91-at-one-time-scheduled-jobs">9.1 <code>at</code> — One-Time Scheduled Jobs<a class="headerlink" href="#91-at-one-time-scheduled-jobs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>at<span class="w"> </span><span class="m">10</span>:30pm<span class="w">                    </span><span class="c1"># Schedule a job interactively</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>at<span class="w"> </span>now<span class="w"> </span>+<span class="w"> </span><span class="m">2</span><span class="w"> </span>hours<span class="w">              </span><span class="c1"># 2 hours from now</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>at<span class="w"> </span>midnight<span class="w">                   </span><span class="c1"># Tonight at midnight</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>at<span class="w"> </span><span class="m">10</span>:30pm<span class="w"> </span><span class="m">2025</span>-12-25<span class="w">         </span><span class="c1"># Specific date</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="c1"># Inside at prompt, type commands, then Ctrl+D to submit</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;backup.sh&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>at<span class="w"> </span>2am
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>atq<span class="w">                    </span><span class="c1"># List pending at jobs</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>atrm<span class="w"> </span><span class="m">3</span><span class="w">                 </span><span class="c1"># Remove job number 3</span>
+</code></pre></div>
+<h3 id="92-cron-recurring-scheduled-jobs">9.2 <code>cron</code> — Recurring Scheduled Jobs<a class="headerlink" href="#92-cron-recurring-scheduled-jobs" title="Permanent link">&para;</a></h3>
+<p><code>cron</code> runs jobs on a schedule defined in a <strong>crontab</strong> file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>crontab<span class="w"> </span>-e<span class="w">             </span><span class="c1"># Edit your crontab</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>crontab<span class="w"> </span>-l<span class="w">             </span><span class="c1"># List your crontab</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>crontab<span class="w"> </span>-r<span class="w">             </span><span class="c1"># Remove your crontab</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>sudo<span class="w"> </span>crontab<span class="w"> </span>-e<span class="w"> </span>-u<span class="w"> </span>alice<span class="w">    </span><span class="c1"># Edit another user&#39;s crontab</span>
+</code></pre></div>
+<p><strong>Crontab format:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>┌───────────── minute (0 - 59)
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>│ ┌───────────── hour (0 - 23)
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>│ │ ┌───────────── day of month (1 - 31)
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>│ │ │ ┌───────────── month (1 - 12)
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>│ │ │ │ ┌───────────── day of week (0 - 7, Sun=0 or 7)
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>│ │ │ │ │
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>* * * * *  command to execute
+</code></pre></div>
+<p><strong>Crontab examples:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="c1"># Run backup every day at 2:30 AM</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="m">30</span><span class="w"> </span><span class="m">2</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/user/backup.sh
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="c1"># Run every 5 minutes</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a>*/5<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/local/bin/monitor.sh
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="c1"># Run every Monday at 9 AM</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="m">0</span><span class="w"> </span><span class="m">9</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">1</span><span class="w"> </span>/usr/local/bin/report.sh
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="c1"># Run at noon on the 1st of every month</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="m">0</span><span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="m">1</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/usr/local/bin/monthly.sh
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="c1"># Run every weekday (Mon-Fri) at 8 PM</span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span><span class="m">1</span>-5<span class="w"> </span>/usr/local/bin/notify.sh
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a>
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="c1"># Redirect output</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="m">0</span><span class="w"> </span><span class="m">3</span><span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>*<span class="w"> </span>/home/user/backup.sh<span class="w"> </span>&gt;&gt;<span class="w"> </span>/var/log/backup.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></div>
+<p><strong>Special crontab strings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Equivalent</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@reboot</code></td>
+<td>—</td>
+<td>Run once at startup</td>
+</tr>
+<tr>
+<td><code>@hourly</code></td>
+<td><code>0 * * * *</code></td>
+<td>Run every hour</td>
+</tr>
+<tr>
+<td><code>@daily</code></td>
+<td><code>0 0 * * *</code></td>
+<td>Run every day at midnight</td>
+</tr>
+<tr>
+<td><code>@weekly</code></td>
+<td><code>0 0 * * 0</code></td>
+<td>Run every Sunday at midnight</td>
+</tr>
+<tr>
+<td><code>@monthly</code></td>
+<td><code>0 0 1 * *</code></td>
+<td>Run on the 1st of every month</td>
+</tr>
+<tr>
+<td><code>@yearly</code></td>
+<td><code>0 0 1 1 *</code></td>
+<td>Run on Jan 1st at midnight</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-anacron-for-non-247-systems">9.3 <code>anacron</code> — For Non-24/7 Systems<a class="headerlink" href="#93-anacron-for-non-247-systems" title="Permanent link">&para;</a></h3>
+<p><code>cron</code> misses jobs if the machine is off. <code>anacron</code> reruns missed jobs on next boot.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>cat<span class="w"> </span>/etc/anacrontab<span class="w">      </span><span class="c1"># View anacron schedule</span>
+</code></pre></div>
+<hr />
+<h2 id="10-resource-limits">10. Resource Limits<a class="headerlink" href="#10-resource-limits" title="Permanent link">&para;</a></h2>
+<h3 id="101-ulimit-per-shell-resource-limits">10.1 <code>ulimit</code> — Per-Shell Resource Limits<a class="headerlink" href="#101-ulimit-per-shell-resource-limits" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nb">ulimit</span><span class="w"> </span>-a<span class="w">                </span><span class="c1"># Show all current limits</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nb">ulimit</span><span class="w"> </span>-n<span class="w">                </span><span class="c1"># Max open file descriptors</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="nb">ulimit</span><span class="w"> </span>-u<span class="w">                </span><span class="c1"># Max user processes</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="nb">ulimit</span><span class="w"> </span>-v<span class="w">                </span><span class="c1"># Max virtual memory (KB)</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="nb">ulimit</span><span class="w"> </span>-s<span class="w">                </span><span class="c1"># Max stack size (KB)</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="nb">ulimit</span><span class="w"> </span>-c<span class="w">                </span><span class="c1"># Max core dump size (0 = disabled)</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="nb">ulimit</span><span class="w"> </span>-t<span class="w">                </span><span class="c1"># Max CPU time (seconds)</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="c1"># Set limits (soft)</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a><span class="nb">ulimit</span><span class="w"> </span>-n<span class="w"> </span><span class="m">4096</span><span class="w">           </span><span class="c1"># Increase open file limit for this session</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a><span class="nb">ulimit</span><span class="w"> </span>-Hn<span class="w">               </span><span class="c1"># Show hard limit</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a><span class="nb">ulimit</span><span class="w"> </span>-Sn<span class="w">               </span><span class="c1"># Show soft limit</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Soft vs Hard Limits</p>
+<p><strong>Soft limit</strong> — the actual enforced limit; users can raise up to the hard limit.<br />
+<strong>Hard limit</strong> — ceiling that only root can raise. Set in <code>/etc/security/limits.conf</code>.</p>
+</div>
+<h3 id="102-etcsecuritylimitsconf">10.2 <code>/etc/security/limits.conf</code><a class="headerlink" href="#102-etcsecuritylimitsconf" title="Permanent link">&para;</a></h3>
+<p>Persistent limits for users/groups:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="c1"># /etc/security/limits.conf format:</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="c1"># &lt;domain&gt;  &lt;type&gt;  &lt;item&gt;   &lt;value&gt;</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>alice<span class="w">        </span>soft<span class="w">    </span>nofile<span class="w">   </span><span class="m">4096</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>alice<span class="w">        </span>hard<span class="w">    </span>nofile<span class="w">   </span><span class="m">8192</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>@developers<span class="w">  </span>soft<span class="w">    </span>nproc<span class="w">    </span><span class="m">200</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>*<span class="w">            </span>hard<span class="w">    </span>core<span class="w">     </span><span class="m">0</span>
+</code></pre></div>
+<h3 id="103-cgroups-control-groups">10.3 <code>cgroups</code> — Control Groups<a class="headerlink" href="#103-cgroups-control-groups" title="Permanent link">&para;</a></h3>
+<p><code>cgroups</code> (control groups) is the kernel feature that lets you limit, account for, and isolate resource usage of process groups. It's the backbone of containers (Docker, LXC).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="c1"># View cgroup hierarchy</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>ls<span class="w"> </span>/sys/fs/cgroup/
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>cat<span class="w"> </span>/proc/self/cgroup<span class="w">      </span><span class="c1"># Your process&#39;s cgroups</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="c1"># systemd uses cgroups by default</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>systemd-cgls<span class="w">               </span><span class="c1"># View cgroup tree</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>systemctl<span class="w"> </span>status<span class="w">           </span><span class="c1"># Shows cgroup info per service</span>
+</code></pre></div>
+<hr />
+<h2 id="11-process-monitoring-tools">11. Process Monitoring Tools<a class="headerlink" href="#11-process-monitoring-tools" title="Permanent link">&para;</a></h2>
+<h3 id="111-vmstat-system-wide-stats">11.1 <code>vmstat</code> — System-Wide Stats<a class="headerlink" href="#111-vmstat-system-wide-stats" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>vmstat<span class="w">                     </span><span class="c1"># One-time snapshot</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>vmstat<span class="w"> </span><span class="m">2</span><span class="w">                   </span><span class="c1"># Update every 2 seconds</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>vmstat<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">10</span><span class="w">                </span><span class="c1"># 10 updates every 2 seconds</span>
+</code></pre></div>
+<p>Key columns: <code>r</code> (run queue), <code>b</code> (blocked), <code>si</code>/<code>so</code> (swap in/out), <code>us</code>/<code>sy</code>/<code>id</code>/<code>wa</code> (CPU).</p>
+<h3 id="112-iostat-cpu-and-io-stats">11.2 <code>iostat</code> — CPU and I/O Stats<a class="headerlink" href="#112-iostat-cpu-and-io-stats" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>iostat<span class="w">                     </span><span class="c1"># CPU + disk I/O snapshot</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>iostat<span class="w"> </span>-x<span class="w"> </span><span class="m">2</span><span class="w">                </span><span class="c1"># Extended stats every 2s</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>iostat<span class="w"> </span>-d<span class="w"> </span>/dev/sda<span class="w">         </span><span class="c1"># Specific device</span>
+</code></pre></div>
+<h3 id="113-mpstat-per-cpu-stats">11.3 <code>mpstat</code> — Per-CPU Stats<a class="headerlink" href="#113-mpstat-per-cpu-stats" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>mpstat<span class="w">                     </span><span class="c1"># All CPUs combined</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>mpstat<span class="w"> </span>-P<span class="w"> </span>ALL<span class="w"> </span><span class="m">2</span><span class="w">            </span><span class="c1"># All individual CPUs every 2s</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>mpstat<span class="w"> </span>-P<span class="w"> </span><span class="m">0</span><span class="w">                </span><span class="c1"># CPU 0 only</span>
+</code></pre></div>
+<h3 id="114-sar-system-activity-reporter">11.4 <code>sar</code> — System Activity Reporter<a class="headerlink" href="#114-sar-system-activity-reporter" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>sar<span class="w">                        </span><span class="c1"># CPU usage from today&#39;s log</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>sar<span class="w"> </span>-u<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">                 </span><span class="c1"># CPU, 5 samples every 2s</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>sar<span class="w"> </span>-r<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">                 </span><span class="c1"># Memory usage</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>sar<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">                 </span><span class="c1"># Disk activity</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>sar<span class="w"> </span>-n<span class="w"> </span>DEV<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">5</span><span class="w">             </span><span class="c1"># Network interface stats</span>
+</code></pre></div>
+<h3 id="115-lsof-list-open-files">11.5 <code>lsof</code> — List Open Files<a class="headerlink" href="#115-lsof-list-open-files" title="Permanent link">&para;</a></h3>
+<p>Every process holds open files, sockets, devices. <code>lsof</code> lists them all.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>lsof<span class="w">                       </span><span class="c1"># All open files (huge output)</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>lsof<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">               </span><span class="c1"># Open files for PID 1234</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>lsof<span class="w"> </span>-u<span class="w"> </span>username<span class="w">           </span><span class="c1"># Open files by user</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>lsof<span class="w"> </span>/var/log/syslog<span class="w">       </span><span class="c1"># Who has this file open?</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>lsof<span class="w"> </span>-i<span class="w">                    </span><span class="c1"># All network connections</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>lsof<span class="w"> </span>-i<span class="w"> </span>:80<span class="w">                </span><span class="c1"># Processes using port 80</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>lsof<span class="w"> </span>-i<span class="w"> </span>TCP<span class="w">                </span><span class="c1"># All TCP connections</span>
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>lsof<span class="w"> </span>+D<span class="w"> </span>/tmp<span class="w">               </span><span class="c1"># All files under /tmp</span>
+</code></pre></div>
+<h3 id="116-strace-system-call-tracer">11.6 <code>strace</code> — System Call Tracer<a class="headerlink" href="#116-strace-system-call-tracer" title="Permanent link">&para;</a></h3>
+<p>Traces every system call a process makes — invaluable for debugging.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>strace<span class="w"> </span>ls<span class="w">                  </span><span class="c1"># Trace system calls of &#39;ls&#39;</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>strace<span class="w"> </span>-p<span class="w"> </span><span class="m">1234</span><span class="w">             </span><span class="c1"># Attach to running PID 1234</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>strace<span class="w"> </span>-e<span class="w"> </span>open,read<span class="w"> </span>ls<span class="w">     </span><span class="c1"># Trace only open() and read() calls</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>strace<span class="w"> </span>-o<span class="w"> </span>trace.log<span class="w"> </span>ls<span class="w">     </span><span class="c1"># Write trace to file</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>strace<span class="w"> </span>-c<span class="w"> </span>ls<span class="w">               </span><span class="c1"># Summary count of calls</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>strace<span class="w"> </span>-f<span class="w"> </span>./script.sh<span class="w">      </span><span class="c1"># Follow child processes too</span>
+</code></pre></div>
+<h3 id="117-perf-performance-analysis">11.7 <code>perf</code> — Performance Analysis<a class="headerlink" href="#117-perf-performance-analysis" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>sudo<span class="w"> </span>perf<span class="w"> </span>top<span class="w">              </span><span class="c1"># Live CPU profiling (like top but by function)</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>sudo<span class="w"> </span>perf<span class="w"> </span>stat<span class="w"> </span>ls<span class="w">          </span><span class="c1"># Count hardware events for &#39;ls&#39;</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>sudo<span class="w"> </span>perf<span class="w"> </span>record<span class="w"> </span>./app<span class="w">     </span><span class="c1"># Record profile data</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>sudo<span class="w"> </span>perf<span class="w"> </span>report<span class="w">           </span><span class="c1"># View recorded data</span>
+</code></pre></div>
+<hr />
+<h2 id="12-load-average">12. Load Average<a class="headerlink" href="#12-load-average" title="Permanent link">&para;</a></h2>
+<h3 id="121-what-is-load-average">12.1 What is Load Average?<a class="headerlink" href="#121-what-is-load-average" title="Permanent link">&para;</a></h3>
+<p>Load average represents the <strong>average number of processes waiting for CPU time</strong> over 1, 5, and 15 minutes. Shown in <code>top</code>, <code>uptime</code>, and <code>w</code>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>uptime
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="c1"># 14:45:03 up 3 days, 2:28, 2 users, load average: 1.20, 0.95, 0.85</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="c1">#                                                    1min  5min  15min</span>
+</code></pre></div>
+<h3 id="122-interpreting-load-average">12.2 Interpreting Load Average<a class="headerlink" href="#122-interpreting-load-average" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Load vs CPUs</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Load &lt; # CPUs</td>
+<td>System is fine, CPUs have idle time</td>
+</tr>
+<tr>
+<td>Load ≈ # CPUs</td>
+<td>System is fully utilized</td>
+</tr>
+<tr>
+<td>Load &gt; # CPUs</td>
+<td>System is overloaded, processes are queuing</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>nproc<span class="w">                      </span><span class="c1"># Number of CPU cores</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>cat<span class="w"> </span>/proc/cpuinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>processor<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w">   </span><span class="c1"># Alternative</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Rule of Thumb</p>
+<p>On a 4-core machine, a sustained load average of 4.0 means fully utilized. 6.0 means overloaded.</p>
+</div>
+<hr />
+<h2 id="13-memory-and-process-memory-usage">13. Memory and Process Memory Usage<a class="headerlink" href="#13-memory-and-process-memory-usage" title="Permanent link">&para;</a></h2>
+<h3 id="131-free-memory-overview">13.1 <code>free</code> — Memory Overview<a class="headerlink" href="#131-free-memory-overview" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>free<span class="w"> </span>-h<span class="w">                    </span><span class="c1"># Human-readable (MB/GB)</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>free<span class="w"> </span>-m<span class="w">                    </span><span class="c1"># In megabytes</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>free<span class="w"> </span>-s<span class="w"> </span><span class="m">2</span><span class="w">                  </span><span class="c1"># Update every 2 seconds</span>
+</code></pre></div>
+<h3 id="132-per-process-memory">13.2 Per-Process Memory<a class="headerlink" href="#132-per-process-memory" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%mem<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-10<span class="w">     </span><span class="c1"># Top 10 memory consumers</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>top<span class="w">                                </span><span class="c1"># M key to sort by memory</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>cat<span class="w"> </span>/proc/1234/status<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>vm<span class="w"> </span><span class="c1"># Virtual memory stats for PID 1234</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VSZ</strong></td>
+<td>Virtual memory size (all mapped memory, including not-yet-used)</td>
+</tr>
+<tr>
+<td><strong>RSS</strong></td>
+<td>Resident Set Size (actual RAM currently in use)</td>
+</tr>
+<tr>
+<td><strong>SHR</strong></td>
+<td>Shared memory (shared with other processes)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="133-pmap-process-memory-map">13.3 <code>pmap</code> — Process Memory Map<a class="headerlink" href="#133-pmap-process-memory-map" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>pmap<span class="w"> </span><span class="m">1234</span><span class="w">                  </span><span class="c1"># Memory map of PID 1234</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>pmap<span class="w"> </span>-x<span class="w"> </span><span class="m">1234</span><span class="w">               </span><span class="c1"># Extended with RSS and dirty pages</span>
+</code></pre></div>
+<hr />
+<h2 id="14-orphan-and-zombie-processes">14. Orphan and Zombie Processes<a class="headerlink" href="#14-orphan-and-zombie-processes" title="Permanent link">&para;</a></h2>
+<h3 id="141-orphan-processes">14.1 Orphan Processes<a class="headerlink" href="#141-orphan-processes" title="Permanent link">&para;</a></h3>
+<p>An <strong>orphan</strong> process is one whose parent has died. The kernel automatically re-parents orphans to <strong>PID 1 (init/systemd)</strong>, which then cleans them up properly.</p>
+<h3 id="142-zombie-processes">14.2 Zombie Processes<a class="headerlink" href="#142-zombie-processes" title="Permanent link">&para;</a></h3>
+<p>A <strong>zombie</strong> process has exited but its parent has not called <code>wait()</code> to collect its exit status, so its entry remains in the process table.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;$8 == &quot;Z&quot;&#39;</span><span class="w">   </span><span class="c1"># Find zombies (state = Z)</span>
+</code></pre></div>
+<p>To eliminate zombies: kill or fix the parent process. On the next <code>wait()</code> call (or when the parent dies), the zombie is reaped.</p>
+<hr />
+<h2 id="15-executable-formats-and-libraries">15. Executable Formats and Libraries<a class="headerlink" href="#15-executable-formats-and-libraries" title="Permanent link">&para;</a></h2>
+<h3 id="151-elf-format">15.1 ELF Format<a class="headerlink" href="#151-elf-format" title="Permanent link">&para;</a></h3>
+<p>Linux executables use the <strong>ELF (Executable and Linkable Format)</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>file<span class="w"> </span>/bin/ls<span class="w">               </span><span class="c1"># Confirms it&#39;s an ELF executable</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>readelf<span class="w"> </span>-h<span class="w"> </span>/bin/ls<span class="w">         </span><span class="c1"># ELF header details</span>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>objdump<span class="w"> </span>-f<span class="w"> </span>/bin/ls<span class="w">         </span><span class="c1"># File format info</span>
+</code></pre></div>
+<h3 id="152-static-vs-dynamic-linking">15.2 Static vs Dynamic Linking<a class="headerlink" href="#152-static-vs-dynamic-linking" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Static</strong></td>
+<td>All libraries compiled into the binary</td>
+<td>Larger binary</td>
+</tr>
+<tr>
+<td><strong>Dynamic</strong></td>
+<td>Libraries loaded at runtime from system</td>
+<td>Smaller binary</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>ldd<span class="w"> </span>/bin/ls<span class="w">                </span><span class="c1"># List dynamic library dependencies</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>ldd<span class="w"> </span>/usr/bin/python3<span class="w">       </span><span class="c1"># Dependencies for python3</span>
+</code></pre></div>
+<h3 id="153-ldconfig-and-ld_library_path">15.3 <code>ldconfig</code> and <code>LD_LIBRARY_PATH</code><a class="headerlink" href="#153-ldconfig-and-ld_library_path" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>sudo<span class="w"> </span>ldconfig<span class="w">              </span><span class="c1"># Rebuild dynamic library cache</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>ldconfig<span class="w"> </span>-p<span class="w">                </span><span class="c1"># Print all cached libraries</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$LD_LIBRARY_PATH</span><span class="w">      </span><span class="c1"># Custom library search paths</span>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/opt/mylib:<span class="nv">$LD_LIBRARY_PATH</span>
+</code></pre></div>
+<hr />
+<h2 id="16-quick-reference-cheat-sheet">16. Quick Reference Cheat Sheet<a class="headerlink" href="#16-quick-reference-cheat-sheet" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="c1"># ─── Viewing Processes ───────────────────────────────────────────────</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a>ps<span class="w"> </span>aux<span class="w">                     </span><span class="c1"># Snapshot of all processes</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a>ps<span class="w"> </span>-ef<span class="w">                     </span><span class="c1"># Full-format listing</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a>top<span class="w">                        </span><span class="c1"># Interactive real-time view</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>htop<span class="w">                       </span><span class="c1"># Enhanced interactive view</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a>pgrep<span class="w"> </span>firefox<span class="w">              </span><span class="c1"># Find PID by name</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>pidof<span class="w"> </span>nginx<span class="w">                </span><span class="c1"># PID of named program</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a>cat<span class="w"> </span>/proc/&lt;PID&gt;/status<span class="w">     </span><span class="c1"># Detailed process info</span>
+<a id="__codelineno-50-9" name="__codelineno-50-9" href="#__codelineno-50-9"></a>
+<a id="__codelineno-50-10" name="__codelineno-50-10" href="#__codelineno-50-10"></a><span class="c1"># ─── Signals ─────────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-11" name="__codelineno-50-11" href="#__codelineno-50-11"></a><span class="nb">kill</span><span class="w"> </span>-15<span class="w"> </span>&lt;PID&gt;<span class="w">             </span><span class="c1"># Graceful terminate (SIGTERM)</span>
+<a id="__codelineno-50-12" name="__codelineno-50-12" href="#__codelineno-50-12"></a><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;PID&gt;<span class="w">              </span><span class="c1"># Force kill (SIGKILL)</span>
+<a id="__codelineno-50-13" name="__codelineno-50-13" href="#__codelineno-50-13"></a><span class="nb">kill</span><span class="w"> </span>-HUP<span class="w"> </span>&lt;PID&gt;<span class="w">            </span><span class="c1"># Reload config (SIGHUP)</span>
+<a id="__codelineno-50-14" name="__codelineno-50-14" href="#__codelineno-50-14"></a>killall<span class="w"> </span>firefox<span class="w">            </span><span class="c1"># Kill by name</span>
+<a id="__codelineno-50-15" name="__codelineno-50-15" href="#__codelineno-50-15"></a>pkill<span class="w"> </span>-u<span class="w"> </span>alice<span class="w">             </span><span class="c1"># Kill by user</span>
+<a id="__codelineno-50-16" name="__codelineno-50-16" href="#__codelineno-50-16"></a>Ctrl+C<span class="w">                     </span><span class="c1"># Interrupt foreground (SIGINT)</span>
+<a id="__codelineno-50-17" name="__codelineno-50-17" href="#__codelineno-50-17"></a>Ctrl+Z<span class="w">                     </span><span class="c1"># Suspend foreground (SIGTSTP)</span>
+<a id="__codelineno-50-18" name="__codelineno-50-18" href="#__codelineno-50-18"></a>
+<a id="__codelineno-50-19" name="__codelineno-50-19" href="#__codelineno-50-19"></a><span class="c1"># ─── Priority / Niceness ─────────────────────────────────────────────</span>
+<a id="__codelineno-50-20" name="__codelineno-50-20" href="#__codelineno-50-20"></a>nice<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>./script.sh<span class="w">     </span><span class="c1"># Start with niceness 10</span>
+<a id="__codelineno-50-21" name="__codelineno-50-21" href="#__codelineno-50-21"></a>sudo<span class="w"> </span>nice<span class="w"> </span>-n<span class="w"> </span>-5<span class="w"> </span>./app<span class="w">      </span><span class="c1"># Start with higher priority</span>
+<a id="__codelineno-50-22" name="__codelineno-50-22" href="#__codelineno-50-22"></a>renice<span class="w"> </span><span class="m">5</span><span class="w"> </span>-p<span class="w"> </span>&lt;PID&gt;<span class="w">          </span><span class="c1"># Change running process niceness</span>
+<a id="__codelineno-50-23" name="__codelineno-50-23" href="#__codelineno-50-23"></a>
+<a id="__codelineno-50-24" name="__codelineno-50-24" href="#__codelineno-50-24"></a><span class="c1"># ─── Job Control ─────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-25" name="__codelineno-50-25" href="#__codelineno-50-25"></a>./script.sh<span class="w"> </span><span class="p">&amp;</span><span class="w">              </span><span class="c1"># Run in background</span>
+<a id="__codelineno-50-26" name="__codelineno-50-26" href="#__codelineno-50-26"></a><span class="nb">jobs</span><span class="w"> </span>-l<span class="w">                    </span><span class="c1"># List jobs with PIDs</span>
+<a id="__codelineno-50-27" name="__codelineno-50-27" href="#__codelineno-50-27"></a><span class="nb">fg</span><span class="w"> </span>%1<span class="w">                      </span><span class="c1"># Foreground job 1</span>
+<a id="__codelineno-50-28" name="__codelineno-50-28" href="#__codelineno-50-28"></a><span class="nb">bg</span><span class="w"> </span>%1<span class="w">                      </span><span class="c1"># Background job 1</span>
+<a id="__codelineno-50-29" name="__codelineno-50-29" href="#__codelineno-50-29"></a>nohup<span class="w"> </span>./script.sh<span class="w"> </span><span class="p">&amp;</span><span class="w">        </span><span class="c1"># Survive logout</span>
+<a id="__codelineno-50-30" name="__codelineno-50-30" href="#__codelineno-50-30"></a><span class="nb">disown</span><span class="w"> </span>%1<span class="w">                  </span><span class="c1"># Detach job from shell</span>
+<a id="__codelineno-50-31" name="__codelineno-50-31" href="#__codelineno-50-31"></a>
+<a id="__codelineno-50-32" name="__codelineno-50-32" href="#__codelineno-50-32"></a><span class="c1"># ─── Scheduling ──────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-33" name="__codelineno-50-33" href="#__codelineno-50-33"></a>at<span class="w"> </span>10pm<span class="w">                    </span><span class="c1"># One-time scheduled job</span>
+<a id="__codelineno-50-34" name="__codelineno-50-34" href="#__codelineno-50-34"></a>atq<span class="w">                        </span><span class="c1"># List pending at jobs</span>
+<a id="__codelineno-50-35" name="__codelineno-50-35" href="#__codelineno-50-35"></a>atrm<span class="w"> </span><span class="m">3</span><span class="w">                     </span><span class="c1"># Remove at job 3</span>
+<a id="__codelineno-50-36" name="__codelineno-50-36" href="#__codelineno-50-36"></a>crontab<span class="w"> </span>-e<span class="w">                 </span><span class="c1"># Edit recurring cron jobs</span>
+<a id="__codelineno-50-37" name="__codelineno-50-37" href="#__codelineno-50-37"></a>crontab<span class="w"> </span>-l<span class="w">                 </span><span class="c1"># List cron jobs</span>
+<a id="__codelineno-50-38" name="__codelineno-50-38" href="#__codelineno-50-38"></a>
+<a id="__codelineno-50-39" name="__codelineno-50-39" href="#__codelineno-50-39"></a><span class="c1"># ─── Resource Limits ─────────────────────────────────────────────────</span>
+<a id="__codelineno-50-40" name="__codelineno-50-40" href="#__codelineno-50-40"></a><span class="nb">ulimit</span><span class="w"> </span>-a<span class="w">                  </span><span class="c1"># Show all limits</span>
+<a id="__codelineno-50-41" name="__codelineno-50-41" href="#__codelineno-50-41"></a><span class="nb">ulimit</span><span class="w"> </span>-n<span class="w"> </span><span class="m">4096</span><span class="w">             </span><span class="c1"># Set open files limit</span>
+<a id="__codelineno-50-42" name="__codelineno-50-42" href="#__codelineno-50-42"></a>
+<a id="__codelineno-50-43" name="__codelineno-50-43" href="#__codelineno-50-43"></a><span class="c1"># ─── Monitoring ──────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-44" name="__codelineno-50-44" href="#__codelineno-50-44"></a>vmstat<span class="w"> </span><span class="m">2</span><span class="w">                   </span><span class="c1"># System stats every 2s</span>
+<a id="__codelineno-50-45" name="__codelineno-50-45" href="#__codelineno-50-45"></a>iostat<span class="w"> </span>-x<span class="w"> </span><span class="m">2</span><span class="w">                </span><span class="c1"># I/O stats every 2s</span>
+<a id="__codelineno-50-46" name="__codelineno-50-46" href="#__codelineno-50-46"></a>lsof<span class="w"> </span>-p<span class="w"> </span>&lt;PID&gt;<span class="w">              </span><span class="c1"># Open files of a process</span>
+<a id="__codelineno-50-47" name="__codelineno-50-47" href="#__codelineno-50-47"></a>lsof<span class="w"> </span>-i<span class="w"> </span>:80<span class="w">                </span><span class="c1"># Process using port 80</span>
+<a id="__codelineno-50-48" name="__codelineno-50-48" href="#__codelineno-50-48"></a>strace<span class="w"> </span>-p<span class="w"> </span>&lt;PID&gt;<span class="w">            </span><span class="c1"># Trace system calls</span>
+<a id="__codelineno-50-49" name="__codelineno-50-49" href="#__codelineno-50-49"></a>uptime<span class="w">                     </span><span class="c1"># Load averages</span>
+<a id="__codelineno-50-50" name="__codelineno-50-50" href="#__codelineno-50-50"></a>
+<a id="__codelineno-50-51" name="__codelineno-50-51" href="#__codelineno-50-51"></a><span class="c1"># ─── Memory ──────────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-52" name="__codelineno-50-52" href="#__codelineno-50-52"></a>free<span class="w"> </span>-h<span class="w">                    </span><span class="c1"># Memory overview</span>
+<a id="__codelineno-50-53" name="__codelineno-50-53" href="#__codelineno-50-53"></a>pmap<span class="w"> </span>&lt;PID&gt;<span class="w">                 </span><span class="c1"># Process memory map</span>
+<a id="__codelineno-50-54" name="__codelineno-50-54" href="#__codelineno-50-54"></a>ps<span class="w"> </span>aux<span class="w"> </span>--sort<span class="o">=</span>-%mem<span class="w">        </span><span class="c1"># Sort by memory usage</span>
+<a id="__codelineno-50-55" name="__codelineno-50-55" href="#__codelineno-50-55"></a>
+<a id="__codelineno-50-56" name="__codelineno-50-56" href="#__codelineno-50-56"></a><span class="c1"># ─── Libraries ───────────────────────────────────────────────────────</span>
+<a id="__codelineno-50-57" name="__codelineno-50-57" href="#__codelineno-50-57"></a>ldd<span class="w"> </span>/bin/ls<span class="w">                </span><span class="c1"># Dynamic library dependencies</span>
+<a id="__codelineno-50-58" name="__codelineno-50-58" href="#__codelineno-50-58"></a>ldconfig<span class="w"> </span>-p<span class="w">                </span><span class="c1"># List cached libraries</span>
+</code></pre></div>
 
 
 
